@@ -7,4 +7,10 @@
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\TGG-DAL\TGG-DAL.csproj" />
+    <ProjectReference Include="..\TGG-Logic\TGG-Logic.csproj" />
+    <ProjectReference Include="..\TGG-Model\TGG-Model.csproj" />
+  </ItemGroup>
+
 </Project>
