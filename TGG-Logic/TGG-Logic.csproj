@@ -44,5 +44,18 @@
     <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TGG-DAL\TGG-DAL.csproj">
+      <Project>{a3bf34ea-d6c4-4f68-85be-9c4932903d96}</Project>
+      <Name>TGG-DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TGG-Model\TGG-Model.csproj">
+      <Project>{e2625e1c-bc15-40a7-a510-1dadf2841447}</Project>
+      <Name>TGG-Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
