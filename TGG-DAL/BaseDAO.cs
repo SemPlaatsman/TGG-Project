@@ -6,18 +6,21 @@ using System.Threading.Tasks;
 using System.Configuration;
 using MongoDB.Bson;
 using MongoDB.Driver;
+using TGG_Model;
 
 namespace TGG_DAL
 {
     public abstract class BaseDAO
     {
-        private MongoClient mongoClient;
-        private IMongoDatabase mongoDatabase;
+        private readonly MongoClient mongoClient;
+        private readonly IMongoDatabase mongoDatabase;
+        private readonly IMongoCollection<BsonDocument> currentCollection;
 
-        public BaseDAO()
+        public BaseDAO(TGGCollections collection)
         {
             mongoClient = new MongoClient(ConfigurationManager.ConnectionStrings["MongoConnection"].ConnectionString);
             mongoDatabase = mongoClient.GetDatabase(ConfigurationManager.AppSettings["MongoDBName"]);
+            currentCollection = mongoDatabase.GetCollection<BsonDocument>(collection.ToString());
         }
     }
 }
