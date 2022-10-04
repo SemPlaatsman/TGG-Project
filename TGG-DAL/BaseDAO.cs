@@ -22,5 +22,12 @@ namespace TGG_DAL
             mongoDatabase = mongoClient.GetDatabase(ConfigurationManager.AppSettings["MongoDBName"]);
             currentCollection = mongoDatabase.GetCollection<BsonDocument>(collection.ToString());
         }
+
+        public List<BsonDocument> ReadOperation(FilterDefinition<BsonDocument> filter, SortDefinition<BsonDocument> sort = null)
+        {
+            if (sort == null)
+                return currentCollection.Find(filter).ToList();
+            return currentCollection.Find(filter).Sort(sort).ToList();
+        }
     }
 }
