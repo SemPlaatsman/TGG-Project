@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TGG_Logic;
+using TGG_Model;
 
 namespace TGG_UI
 {
@@ -15,6 +17,13 @@ namespace TGG_UI
         public Login()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            EmployeeService employeeService = new EmployeeService(); 
+            List<Employee> employees = employeeService.ReadAllEmployees();
+            MessageBox.Show($"{employees.FirstOrDefault().Id}");
         }
     }
 }
