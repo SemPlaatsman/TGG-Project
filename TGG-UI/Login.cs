@@ -22,7 +22,7 @@ namespace TGG_UI
         private void button1_Click(object sender, EventArgs e)
         {
             EmployeeService employeeService = new EmployeeService(); 
-            List<Employee> employees = employeeService.ReadAllEmployees();
+            List<Employee> employees = employeeService.GetAllEmployees();
             MessageBox.Show($"{employees.FirstOrDefault().Id}");
         }
     }

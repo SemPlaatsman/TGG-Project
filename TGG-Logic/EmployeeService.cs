@@ -17,9 +17,9 @@ namespace TGG_Logic
             employeeDAO = new EmployeeDAO();
         }
 
-        public List<Employee> ReadAllEmployees()
+        public List<Employee> GetAllEmployees()
         {
-            return employeeDAO.ReadAllEmployees();
+            return employeeDAO.GetAllEmployees();
         }
     }
 }

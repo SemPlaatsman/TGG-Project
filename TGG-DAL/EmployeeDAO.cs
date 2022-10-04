@@ -14,22 +14,31 @@ namespace TGG_DAL
     {
         public EmployeeDAO() : base(TGGCollections.Employees) { }
 
-        public List<Employee> ReadAllEmployees()
+        public List<Employee> GetAllEmployees()
+        {
+            FilterDefinition<BsonDocument> filter = Builders<BsonDocument>.Filter.Empty;
+
+            return ReadEmployees(ReadOperation(filter));
+        }
+
+        private List<Employee> ReadEmployees(List<BsonDocument> bsonDocs)
         {
             List<Employee> employees = new List<Employee>();
 
-            List<BsonDocument> bsonDocs = ReadOperation(Builders<BsonDocument>.Filter.Empty);
-
             foreach (BsonDocument bsonDoc in bsonDocs)
-            {
-                Employee employee = new Employee();
-                employee.Id = (int)bsonDoc["Id"];
-                employee.Email = (string)bsonDoc["email"];
-                employee.FullName = (string)bsonDoc["fullName"];
-                employee.IsSDEmployee = (bool)bsonDoc["isSDEmployee"];
-            }
+                employees.Add(ReadEmployee(bsonDoc));
 
             return employees;
+        }
+
+        private Employee ReadEmployee(BsonDocument bsonDoc)
+        {
+            Employee employee = new Employee();
+            employee.Id = (int)bsonDoc["employeeId"];
+            employee.Email = (string)bsonDoc["email"];
+            employee.FullName = (string)bsonDoc["fullName"];
+            employee.IsSDEmployee = (bool)bsonDoc["isSDEmployee"];
+            return employee;
         }
     }
 }
