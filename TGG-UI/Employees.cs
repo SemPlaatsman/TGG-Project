@@ -29,12 +29,14 @@ namespace TGG_UI
             this.timer.Tick += EmployeesTickEvent;
             this.timer.Interval = 30000;
             this.timer.Start();
+
+            Test();
         }
 
         public void Test()
         {
-            //List<Employee> employees = employeeService.GetAllEmployees();
-            //MessageBox.Show($"{employees.FirstOrDefault().employeeId}");
+            List<Employee> employees = employeeService.GetAllEmployees();
+            MessageBox.Show($"{employees.FirstOrDefault().EmployeeId}");
             //employeeService.UpdateEmployeeByElement(new BsonElement("employeeId", 2), new BsonElement("employeeId", 2), new BsonElement("isSDEmployee", false));
             //employeeService.DeleteEmployeeByElement(new BsonElement("employeeId", 4));
             MessageBox.Show("SUCCESS");
