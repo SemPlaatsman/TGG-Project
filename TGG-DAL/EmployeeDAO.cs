@@ -14,11 +14,34 @@ namespace TGG_DAL
     {
         public EmployeeDAO() : base(TGGCollections.Employees) { }
 
+        public void AddEmployee(Employee employee)
+        {
+            CreateOperation(employee.ToBsonDocument());
+        }
+
         public List<Employee> GetAllEmployees()
         {
             FilterDefinition<BsonDocument> filter = Builders<BsonDocument>.Filter.Empty;
-
             return ReadEmployees(ReadOperation(filter));
+        }
+
+        public void UpdateEmployeeByElement(BsonElement filterElement, BsonElement updateElement, params BsonElement[] extraUpdateElements)
+        {
+            FilterDefinition<BsonDocument> filter = Builders<BsonDocument>.Filter.Eq(filterElement.Name, filterElement.Value);
+            UpdateDefinition<BsonDocument> update = Builders<BsonDocument>.Update.Set(updateElement.Name, updateElement.Value);
+            UpdateOperation(filter, update);
+
+            foreach (BsonElement extraUpdateElement in extraUpdateElements)
+            {
+                update = Builders<BsonDocument>.Update.Set(extraUpdateElement.Name, extraUpdateElement.Value);
+                UpdateOperation(filter, update);
+            }
+        }
+
+        public void DeleteEmployeeByElement(BsonElement filterElement)
+        {
+            FilterDefinition<BsonDocument> filter = Builders<BsonDocument>.Filter.Eq(filterElement.Name, filterElement.Value);
+            DeleteOperation(filter);
         }
 
         private List<Employee> ReadEmployees(List<BsonDocument> bsonDocs)
@@ -26,19 +49,9 @@ namespace TGG_DAL
             List<Employee> employees = new List<Employee>();
 
             foreach (BsonDocument bsonDoc in bsonDocs)
-                employees.Add(ReadEmployee(bsonDoc));
+                employees.Add(BsonSerializer.Deserialize<Employee>(bsonDoc));
 
             return employees;
-        }
-
-        private Employee ReadEmployee(BsonDocument bsonDoc)
-        {
-            Employee employee = new Employee();
-            employee.Id = (int)bsonDoc["employeeId"];
-            employee.Email = (string)bsonDoc["email"];
-            employee.FullName = (string)bsonDoc["fullName"];
-            employee.IsSDEmployee = (bool)bsonDoc["isSDEmployee"];
-            return employee;
         }
     }
 }

@@ -23,7 +23,7 @@ namespace TGG_UI
         {
             EmployeeService employeeService = new EmployeeService(); 
             List<Employee> employees = employeeService.GetAllEmployees();
-            MessageBox.Show($"{employees.FirstOrDefault().Id}");
+            MessageBox.Show($"{employees.FirstOrDefault().employeeId}");
         }
     }
 }
