@@ -23,11 +23,26 @@ namespace TGG_DAL
             currentCollection = mongoDatabase.GetCollection<BsonDocument>(collection.ToString());
         }
 
+        public void CreateOperation(BsonDocument bsonDoc)
+        {
+            currentCollection.InsertOne(bsonDoc);
+        }
+
         public List<BsonDocument> ReadOperation(FilterDefinition<BsonDocument> filter, SortDefinition<BsonDocument> sort = null)
         {
             if (sort == null)
                 return currentCollection.Find(filter).ToList();
             return currentCollection.Find(filter).Sort(sort).ToList();
+        }
+
+        public UpdateResult UpdateOperation(FilterDefinition<BsonDocument> filter, UpdateDefinition<BsonDocument> update)
+        {
+            return currentCollection.UpdateMany(filter, update);
+        }
+
+        public DeleteResult DeleteOperation(FilterDefinition<BsonDocument> filter)
+        {
+            return currentCollection.DeleteMany(filter);
         }
     }
 }
