@@ -51,6 +51,7 @@
     <Compile Include="TGGCollections.cs" />
     <Compile Include="TGGException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Ticket.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
