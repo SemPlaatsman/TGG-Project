@@ -19,15 +19,5 @@ namespace TGG_UI
         {
             InitializeComponent();
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            EmployeeService employeeService = new EmployeeService();
-            //List<Employee> employees = employeeService.GetAllEmployees();
-            //MessageBox.Show($"{employees.FirstOrDefault().employeeId}");
-            //employeeService.UpdateEmployeeByElement(new BsonElement("employeeId", 2), new BsonElement("employeeId", 2), new BsonElement("isSDEmployee", false));
-            //employeeService.DeleteEmployeeByElement(new BsonElement("employeeId", 4));
-            MessageBox.Show("SUCCESS");
-        }
     }
 }

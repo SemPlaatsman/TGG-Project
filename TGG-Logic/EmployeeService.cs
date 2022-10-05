@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using TGG_DAL;
 using TGG_Model;
 using MongoDB.Bson;
+using MongoDB.Driver;
 
 namespace TGG_Logic
 {
@@ -28,14 +29,14 @@ namespace TGG_Logic
             return employeeDAO.GetAllEmployees();
         }
 
-        public void UpdateEmployeeByElement(BsonElement filterElement, BsonElement updateElement, params BsonElement[] extraUpdateElements)
+        public List<UpdateResult> UpdateEmployeeByElement(BsonElement filterElement, BsonElement updateElement, params BsonElement[] extraUpdateElements)
         {
-            employeeDAO.UpdateEmployeeByElement(filterElement, updateElement, extraUpdateElements);
+            return employeeDAO.UpdateEmployeeByElement(filterElement, updateElement, extraUpdateElements);
         }
 
-        public void DeleteEmployeeByElement(BsonElement filterElement)
+        public DeleteResult DeleteEmployeeByElement(BsonElement filterElement)
         {
-            employeeDAO.DeleteEmployeeByElement(filterElement);
+            return employeeDAO.DeleteEmployeeByElement(filterElement);
         }
     }
 }
