@@ -16,7 +16,7 @@ namespace TGG_Model
         //private ObjectId mongoId { get; set; }
 
         [BsonElement("employeeId"), BsonRepresentation(BsonType.Int32)]
-        public int employeeId { get; set; }
+        public int EmployeeId { get; set; }
 
         [BsonElement("email"), BsonRepresentation(BsonType.String)]
         public string Email { get; set; }
@@ -24,7 +24,19 @@ namespace TGG_Model
         [BsonElement("fullName"), BsonRepresentation(BsonType.String)]
         public string FullName { get; set; }
 
+        [BsonElement("password"), BsonRepresentation(BsonType.String)]
+        private string password;
+
         [BsonElement("isSDEmployee"), BsonRepresentation(BsonType.Boolean)]
         public bool IsSDEmployee { get; set; }
+
+        public Employee(int employeeId, string email, string fullName, string password, bool isSDEmployee)
+        {
+            EmployeeId = employeeId;
+            Email = email;
+            FullName = fullName;
+            this.password = password;
+            IsSDEmployee = isSDEmployee;
+        }
     }
 }

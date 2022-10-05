@@ -25,15 +25,24 @@ namespace TGG_DAL
             return ReadEmployees(ReadOperation(filter));
         }
 
-        public void UpdateEmployeeByElement(BsonElement filterElement, BsonElement updateElement, params BsonElement[] extraUpdateElements)
+        public void UpdateEmployeeByElement(BsonElement filterElement, BsonElement requiredUpdateElement, params BsonElement[] extraUpdateElements)
         {
             FilterDefinition<BsonDocument> filter = Builders<BsonDocument>.Filter.Eq(filterElement.Name, filterElement.Value);
-            UpdateDefinition<BsonDocument> update = Builders<BsonDocument>.Update.Set(updateElement.Name, updateElement.Value);
-            UpdateOperation(filter, update);
 
-            foreach (BsonElement extraUpdateElement in extraUpdateElements)
+            List<BsonElement> allUpdateElements = new List<BsonElement>() { requiredUpdateElement };
+            allUpdateElements.AddRange(extraUpdateElements);
+            foreach (BsonElement bsonElement in allUpdateElements.ToList())
             {
-                update = Builders<BsonDocument>.Update.Set(extraUpdateElement.Name, extraUpdateElement.Value);
+                if (bsonElement.Name == "employeeId")
+                {
+                    allUpdateElements[allUpdateElements.IndexOf(bsonElement)] = allUpdateElements.Last();
+                    allUpdateElements[allUpdateElements.Count - 1] = bsonElement;
+                }
+            }
+
+            foreach (BsonElement updateElement in allUpdateElements)
+            {
+                UpdateDefinition<BsonDocument> update = Builders<BsonDocument>.Update.Set(updateElement.Name, updateElement.Value);
                 UpdateOperation(filter, update);
             }
         }

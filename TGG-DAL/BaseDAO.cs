@@ -35,14 +35,14 @@ namespace TGG_DAL
             return currentCollection.Find(filter).Sort(sort).ToList();
         }
 
-        public void UpdateOperation(FilterDefinition<BsonDocument> filter, UpdateDefinition<BsonDocument> update)
+        public UpdateResult UpdateOperation(FilterDefinition<BsonDocument> filter, UpdateDefinition<BsonDocument> update)
         {
-            currentCollection.UpdateMany(filter, update);
+            return currentCollection.UpdateMany(filter, update);
         }
 
-        public void DeleteOperation(FilterDefinition<BsonDocument> filter)
+        public DeleteResult DeleteOperation(FilterDefinition<BsonDocument> filter)
         {
-            currentCollection.DeleteMany(filter);
+            return currentCollection.DeleteMany(filter);
         }
     }
 }
