@@ -24,7 +24,7 @@ namespace TGG_UI
 
         private void buttonAddTicketsForm_Click(object sender, EventArgs e)
         {
-            AddTickets addTicketsForm = new AddTickets();
+            AddTicket addTicketsForm = new AddTicket();
             addTicketsForm.Show();
         }
 
@@ -36,12 +36,8 @@ namespace TGG_UI
 
         private void ItemsToGridview(List<Ticket> tickets)
         {
-            foreach (Ticket ticket in tickets)
-            {
-                gridViewTickets.Rows.Add(ticket);
-            }
-
             gridViewTickets.DataSource = tickets;
+            this.gridViewTickets.Columns["Time"].DefaultCellStyle.Format = "dd/MM/yyyy HH:mm:ss";
         }
     }
 }

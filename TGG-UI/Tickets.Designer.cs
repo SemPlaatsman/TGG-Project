@@ -31,69 +31,31 @@ namespace TGG_UI
         {
             this.gridViewTickets = new System.Windows.Forms.DataGridView();
             this.buttonAddTicketsForm = new System.Windows.Forms.Button();
-            this.ColumnTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnEmployee = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnBranch = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnPriorityLevel = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewTickets)).BeginInit();
             this.SuspendLayout();
             // 
             // gridViewTickets
             // 
+            this.gridViewTickets.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.gridViewTickets.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridViewTickets.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ColumnTime,
-            this.ColumnEmployee,
-            this.ColumnTitle,
-            this.ColumnBranch,
-            this.ColumnPriorityLevel,
-            this.ColumnDescription});
-            this.gridViewTickets.Location = new System.Drawing.Point(139, 139);
+            this.gridViewTickets.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.gridViewTickets.Location = new System.Drawing.Point(71, 139);
             this.gridViewTickets.Name = "gridViewTickets";
-            this.gridViewTickets.Size = new System.Drawing.Size(609, 690);
+            this.gridViewTickets.Size = new System.Drawing.Size(744, 690);
             this.gridViewTickets.TabIndex = 0;
             // 
             // buttonAddTicketsForm
             // 
-            this.buttonAddTicketsForm.Location = new System.Drawing.Point(324, 79);
+            this.buttonAddTicketsForm.BackColor = System.Drawing.Color.DodgerBlue;
+            this.buttonAddTicketsForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAddTicketsForm.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonAddTicketsForm.Location = new System.Drawing.Point(312, 79);
             this.buttonAddTicketsForm.Name = "buttonAddTicketsForm";
             this.buttonAddTicketsForm.Size = new System.Drawing.Size(266, 54);
             this.buttonAddTicketsForm.TabIndex = 1;
             this.buttonAddTicketsForm.Text = "Add Tickets";
-            this.buttonAddTicketsForm.UseVisualStyleBackColor = true;
+            this.buttonAddTicketsForm.UseVisualStyleBackColor = false;
             this.buttonAddTicketsForm.Click += new System.EventHandler(this.buttonAddTicketsForm_Click);
-            // 
-            // ColumnTime
-            // 
-            this.ColumnTime.HeaderText = "Date/time reported ";
-            this.ColumnTime.Name = "ColumnTime";
-            // 
-            // ColumnEmployee
-            // 
-            this.ColumnEmployee.HeaderText = "Employee ID";
-            this.ColumnEmployee.Name = "ColumnEmployee";
-            // 
-            // ColumnTitle
-            // 
-            this.ColumnTitle.HeaderText = "Title";
-            this.ColumnTitle.Name = "ColumnTitle";
-            // 
-            // ColumnBranch
-            // 
-            this.ColumnBranch.HeaderText = "Branch";
-            this.ColumnBranch.Name = "ColumnBranch";
-            // 
-            // ColumnPriorityLevel
-            // 
-            this.ColumnPriorityLevel.HeaderText = "Priority Level";
-            this.ColumnPriorityLevel.Name = "ColumnPriorityLevel";
-            // 
-            // ColumnDescription
-            // 
-            this.ColumnDescription.HeaderText = "Description";
-            this.ColumnDescription.Name = "ColumnDescription";
             // 
             // Tickets
             // 
@@ -114,11 +76,5 @@ namespace TGG_UI
 
         private System.Windows.Forms.DataGridView gridViewTickets;
         private System.Windows.Forms.Button buttonAddTicketsForm;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnTime;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnEmployee;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnTitle;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnBranch;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnPriorityLevel;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnDescription;
     }
 }
