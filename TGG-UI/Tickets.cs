@@ -37,6 +37,7 @@ namespace TGG_UI
         private void ItemsToGridview(List<Ticket> tickets)
         {
             gridViewTickets.DataSource = tickets;
+            this.gridViewTickets.Columns["Time"].DefaultCellStyle.Format = "dd/MM/yyyy HH:mm:ss";
         }
     }
 }
