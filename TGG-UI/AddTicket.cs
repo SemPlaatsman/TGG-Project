@@ -11,9 +11,9 @@ using TGG_Model;
 
 namespace TGG_UI
 {
-    public partial class AddTickets : Form
+    public partial class AddTicket : Form
     {
-        public AddTickets()
+        public AddTicket()
         {
             InitializeComponent();
         }

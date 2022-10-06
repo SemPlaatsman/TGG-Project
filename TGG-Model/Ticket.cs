@@ -9,10 +9,8 @@ using MongoDB.Bson.Serialization.Attributes;
 
 namespace TGG_Model
 {
-    public class Ticket
+    public class Ticket : TGG_MongoModel
     {
-        [BsonId, BsonElement("_id"), BsonRepresentation(BsonType.ObjectId)]
-        private ObjectId MongoId { get; set; }
 
         [BsonElement("ticketId"), BsonRepresentation(BsonType.Int32)]
         public int TicketID { get; set; }

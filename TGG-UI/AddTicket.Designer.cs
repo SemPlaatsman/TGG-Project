@@ -1,7 +1,7 @@
 ﻿
 namespace TGG_UI
 {
-    partial class AddTickets
+    partial class AddTicket
     {
         /// <summary>
         /// Required designer variable.
