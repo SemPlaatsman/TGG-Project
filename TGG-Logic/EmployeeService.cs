@@ -19,14 +19,19 @@ namespace TGG_Logic
             employeeDAO = new EmployeeDAO();
         }
 
-        public void AddEmployee(Employee employee)
+        public Employee AddEmployee(Employee employee)
         {
-            employeeDAO.AddEmployee(employee);
+            return employeeDAO.AddEmployee(employee);
         }
 
         public List<Employee> GetAllEmployees()
         {
             return employeeDAO.GetAllEmployees();
+        }
+
+        public List<Employee> GetEmployeesByElement(BsonElement filterElement)
+        {
+            return employeeDAO.GetEmployeesByElement(filterElement);
         }
 
         public List<UpdateResult> UpdateEmployeeByElement(BsonElement filterElement, BsonElement updateElement, params BsonElement[] extraUpdateElements)

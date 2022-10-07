@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Configuration;
+using TGG_Logic;
 
 namespace TGG_UI
 {
@@ -17,7 +18,7 @@ namespace TGG_UI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Tickets());
+            Application.Run(new AddEmployee(new Login()));
         }
     }
 }

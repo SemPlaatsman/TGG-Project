@@ -36,7 +36,7 @@ namespace TGG_UI
         public void Test()
         {
             List<Employee> employees = employeeService.GetAllEmployees();
-            MessageBox.Show($"{employees.FirstOrDefault().EmployeeId}");
+            MessageBox.Show("SUCCASS!");
             //employeeService.UpdateEmployeeByElement(new BsonElement("employeeId", 2), new BsonElement("employeeId", 2), new BsonElement("isSDEmployee", false));
             //employeeService.DeleteEmployeeByElement(new BsonElement("employeeId", 4));
             MessageBox.Show("SUCCESS");

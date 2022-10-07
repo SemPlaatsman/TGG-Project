@@ -14,14 +14,20 @@ namespace TGG_DAL
     {
         public EmployeeDAO() : base(TGGCollections.Employees) { }
 
-        public void AddEmployee(Employee employee)
+        public Employee AddEmployee(Employee employee)
         {
-            CreateOperation(employee.ToBsonDocument());
+            return BsonSerializer.Deserialize<Employee>(CreateOperation(employee.ToBsonDocument()));
         }
 
         public List<Employee> GetAllEmployees()
         {
             FilterDefinition<BsonDocument> filter = Builders<BsonDocument>.Filter.Empty;
+            return ReadEmployees(ReadOperation(filter));
+        }
+
+        public List<Employee> GetEmployeesByElement(BsonElement filterElement)
+        {
+            FilterDefinition<BsonDocument> filter = Builders<BsonDocument>.Filter.Eq(filterElement.Name, filterElement.Value);
             return ReadEmployees(ReadOperation(filter));
         }
 

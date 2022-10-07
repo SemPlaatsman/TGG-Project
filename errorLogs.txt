@@ -1,0 +1,113 @@
+[6-10-2022 17:45:42] : Sem is de beste 
+[6-10-2022 17:51:12] : Exception of type 'System.Exception' was thrown.    at TGG_UI.AddEmployee.btnCreate_Click(Object sender, EventArgs e) in C:\Users\sempl\source\repos\TGG-Project\TGG-UI\AddEmployee.cs:line 31
+[6-10-2022 17:54:19] : Exception of type 'System.Exception' was thrown.    at TGG_UI.AddEmployee.btnCreate_Click(Object sender, EventArgs e) in C:\Users\sempl\source\repos\TGG-Project\TGG-UI\AddEmployee.cs:line 31
+[6-10-2022 20:23:29] : A write operation resulted in an error. WriteError: { Category : "DuplicateKey", Code : 11000, Message : "E11000 duplicate key error collection: TGGDB.Employees index: employeeId_1 dup key: { employeeId: 0 }" }.    at MongoDB.Driver.MongoCollectionBase`1.InsertOne(TDocument document, InsertOneOptions options, Action`2 bulkWrite)
+   at MongoDB.Driver.MongoCollectionBase`1.InsertOne(TDocument document, InsertOneOptions options, CancellationToken cancellationToken)
+   at TGG_DAL.BaseDAO.CreateOperation(BsonDocument bsonDoc) in C:\Users\sempl\source\repos\TGG-Project\TGG-DAL\BaseDAO.cs:line 28
+   at TGG_DAL.EmployeeDAO.AddEmployee(Employee employee) in C:\Users\sempl\source\repos\TGG-Project\TGG-DAL\EmployeeDAO.cs:line 19
+   at TGG_Logic.EmployeeService.AddEmployee(Employee employee) in C:\Users\sempl\source\repos\TGG-Project\TGG-Logic\EmployeeService.cs:line 24
+   at TGG_UI.AddEmployee.btnCreate_Click(Object sender, EventArgs e) in C:\Users\sempl\source\repos\TGG-Project\TGG-UI\AddEmployee.cs:line 33
+[6-10-2022 20:23:35] : A write operation resulted in an error. WriteError: { Category : "DuplicateKey", Code : 11000, Message : "E11000 duplicate key error collection: TGGDB.Employees index: employeeId_1 dup key: { employeeId: 0 }" }.    at MongoDB.Driver.MongoCollectionBase`1.InsertOne(TDocument document, InsertOneOptions options, Action`2 bulkWrite)
+   at MongoDB.Driver.MongoCollectionBase`1.InsertOne(TDocument document, InsertOneOptions options, CancellationToken cancellationToken)
+   at TGG_DAL.BaseDAO.CreateOperation(BsonDocument bsonDoc) in C:\Users\sempl\source\repos\TGG-Project\TGG-DAL\BaseDAO.cs:line 28
+   at TGG_DAL.EmployeeDAO.AddEmployee(Employee employee) in C:\Users\sempl\source\repos\TGG-Project\TGG-DAL\EmployeeDAO.cs:line 19
+   at TGG_Logic.EmployeeService.AddEmployee(Employee employee) in C:\Users\sempl\source\repos\TGG-Project\TGG-Logic\EmployeeService.cs:line 24
+   at TGG_UI.AddEmployee.btnCreate_Click(Object sender, EventArgs e) in C:\Users\sempl\source\repos\TGG-Project\TGG-UI\AddEmployee.cs:line 33
+[6-10-2022 20:23:36] : A write operation resulted in an error. WriteError: { Category : "DuplicateKey", Code : 11000, Message : "E11000 duplicate key error collection: TGGDB.Employees index: employeeId_1 dup key: { employeeId: 0 }" }.    at MongoDB.Driver.MongoCollectionBase`1.InsertOne(TDocument document, InsertOneOptions options, Action`2 bulkWrite)
+   at MongoDB.Driver.MongoCollectionBase`1.InsertOne(TDocument document, InsertOneOptions options, CancellationToken cancellationToken)
+   at TGG_DAL.BaseDAO.CreateOperation(BsonDocument bsonDoc) in C:\Users\sempl\source\repos\TGG-Project\TGG-DAL\BaseDAO.cs:line 28
+   at TGG_DAL.EmployeeDAO.AddEmployee(Employee employee) in C:\Users\sempl\source\repos\TGG-Project\TGG-DAL\EmployeeDAO.cs:line 19
+   at TGG_Logic.EmployeeService.AddEmployee(Employee employee) in C:\Users\sempl\source\repos\TGG-Project\TGG-Logic\EmployeeService.cs:line 24
+   at TGG_UI.AddEmployee.btnCreate_Click(Object sender, EventArgs e) in C:\Users\sempl\source\repos\TGG-Project\TGG-UI\AddEmployee.cs:line 33
+[6-10-2022 20:23:37] : A write operation resulted in an error. WriteError: { Category : "DuplicateKey", Code : 11000, Message : "E11000 duplicate key error collection: TGGDB.Employees index: employeeId_1 dup key: { employeeId: 0 }" }.    at MongoDB.Driver.MongoCollectionBase`1.InsertOne(TDocument document, InsertOneOptions options, Action`2 bulkWrite)
+   at MongoDB.Driver.MongoCollectionBase`1.InsertOne(TDocument document, InsertOneOptions options, CancellationToken cancellationToken)
+   at TGG_DAL.BaseDAO.CreateOperation(BsonDocument bsonDoc) in C:\Users\sempl\source\repos\TGG-Project\TGG-DAL\BaseDAO.cs:line 28
+   at TGG_DAL.EmployeeDAO.AddEmployee(Employee employee) in C:\Users\sempl\source\repos\TGG-Project\TGG-DAL\EmployeeDAO.cs:line 19
+   at TGG_Logic.EmployeeService.AddEmployee(Employee employee) in C:\Users\sempl\source\repos\TGG-Project\TGG-Logic\EmployeeService.cs:line 24
+   at TGG_UI.AddEmployee.btnCreate_Click(Object sender, EventArgs e) in C:\Users\sempl\source\repos\TGG-Project\TGG-UI\AddEmployee.cs:line 33
+[6-10-2022 20:23:38] : A write operation resulted in an error. WriteError: { Category : "DuplicateKey", Code : 11000, Message : "E11000 duplicate key error collection: TGGDB.Employees index: employeeId_1 dup key: { employeeId: 0 }" }.    at MongoDB.Driver.MongoCollectionBase`1.InsertOne(TDocument document, InsertOneOptions options, Action`2 bulkWrite)
+   at MongoDB.Driver.MongoCollectionBase`1.InsertOne(TDocument document, InsertOneOptions options, CancellationToken cancellationToken)
+   at TGG_DAL.BaseDAO.CreateOperation(BsonDocument bsonDoc) in C:\Users\sempl\source\repos\TGG-Project\TGG-DAL\BaseDAO.cs:line 28
+   at TGG_DAL.EmployeeDAO.AddEmployee(Employee employee) in C:\Users\sempl\source\repos\TGG-Project\TGG-DAL\EmployeeDAO.cs:line 19
+   at TGG_Logic.EmployeeService.AddEmployee(Employee employee) in C:\Users\sempl\source\repos\TGG-Project\TGG-Logic\EmployeeService.cs:line 24
+   at TGG_UI.AddEmployee.btnCreate_Click(Object sender, EventArgs e) in C:\Users\sempl\source\repos\TGG-Project\TGG-UI\AddEmployee.cs:line 33
+[6-10-2022 20:25:59] : A write operation resulted in an error. WriteError: { Category : "DuplicateKey", Code : 11000, Message : "E11000 duplicate key error collection: TGGDB.Employees index: employeeId_1 dup key: { employeeId: null }" }.    at MongoDB.Driver.MongoCollectionBase`1.InsertOne(TDocument document, InsertOneOptions options, Action`2 bulkWrite)
+   at MongoDB.Driver.MongoCollectionBase`1.InsertOne(TDocument document, InsertOneOptions options, CancellationToken cancellationToken)
+   at TGG_DAL.BaseDAO.CreateOperation(BsonDocument bsonDoc) in C:\Users\sempl\source\repos\TGG-Project\TGG-DAL\BaseDAO.cs:line 28
+   at TGG_DAL.EmployeeDAO.AddEmployee(Employee employee) in C:\Users\sempl\source\repos\TGG-Project\TGG-DAL\EmployeeDAO.cs:line 19
+   at TGG_Logic.EmployeeService.AddEmployee(Employee employee) in C:\Users\sempl\source\repos\TGG-Project\TGG-Logic\EmployeeService.cs:line 24
+   at TGG_UI.AddEmployee.btnCreate_Click(Object sender, EventArgs e) in C:\Users\sempl\source\repos\TGG-Project\TGG-UI\AddEmployee.cs:line 33
+[6-10-2022 20:26:01] : A write operation resulted in an error. WriteError: { Category : "DuplicateKey", Code : 11000, Message : "E11000 duplicate key error collection: TGGDB.Employees index: employeeId_1 dup key: { employeeId: null }" }.    at MongoDB.Driver.MongoCollectionBase`1.InsertOne(TDocument document, InsertOneOptions options, Action`2 bulkWrite)
+   at MongoDB.Driver.MongoCollectionBase`1.InsertOne(TDocument document, InsertOneOptions options, CancellationToken cancellationToken)
+   at TGG_DAL.BaseDAO.CreateOperation(BsonDocument bsonDoc) in C:\Users\sempl\source\repos\TGG-Project\TGG-DAL\BaseDAO.cs:line 28
+   at TGG_DAL.EmployeeDAO.AddEmployee(Employee employee) in C:\Users\sempl\source\repos\TGG-Project\TGG-DAL\EmployeeDAO.cs:line 19
+   at TGG_Logic.EmployeeService.AddEmployee(Employee employee) in C:\Users\sempl\source\repos\TGG-Project\TGG-Logic\EmployeeService.cs:line 24
+   at TGG_UI.AddEmployee.btnCreate_Click(Object sender, EventArgs e) in C:\Users\sempl\source\repos\TGG-Project\TGG-UI\AddEmployee.cs:line 33
+[6-10-2022 20:26:02] : A write operation resulted in an error. WriteError: { Category : "DuplicateKey", Code : 11000, Message : "E11000 duplicate key error collection: TGGDB.Employees index: employeeId_1 dup key: { employeeId: null }" }.    at MongoDB.Driver.MongoCollectionBase`1.InsertOne(TDocument document, InsertOneOptions options, Action`2 bulkWrite)
+   at MongoDB.Driver.MongoCollectionBase`1.InsertOne(TDocument document, InsertOneOptions options, CancellationToken cancellationToken)
+   at TGG_DAL.BaseDAO.CreateOperation(BsonDocument bsonDoc) in C:\Users\sempl\source\repos\TGG-Project\TGG-DAL\BaseDAO.cs:line 28
+   at TGG_DAL.EmployeeDAO.AddEmployee(Employee employee) in C:\Users\sempl\source\repos\TGG-Project\TGG-DAL\EmployeeDAO.cs:line 19
+   at TGG_Logic.EmployeeService.AddEmployee(Employee employee) in C:\Users\sempl\source\repos\TGG-Project\TGG-Logic\EmployeeService.cs:line 24
+   at TGG_UI.AddEmployee.btnCreate_Click(Object sender, EventArgs e) in C:\Users\sempl\source\repos\TGG-Project\TGG-UI\AddEmployee.cs:line 33
+[6-10-2022 20:26:03] : A write operation resulted in an error. WriteError: { Category : "DuplicateKey", Code : 11000, Message : "E11000 duplicate key error collection: TGGDB.Employees index: employeeId_1 dup key: { employeeId: null }" }.    at MongoDB.Driver.MongoCollectionBase`1.InsertOne(TDocument document, InsertOneOptions options, Action`2 bulkWrite)
+   at MongoDB.Driver.MongoCollectionBase`1.InsertOne(TDocument document, InsertOneOptions options, CancellationToken cancellationToken)
+   at TGG_DAL.BaseDAO.CreateOperation(BsonDocument bsonDoc) in C:\Users\sempl\source\repos\TGG-Project\TGG-DAL\BaseDAO.cs:line 28
+   at TGG_DAL.EmployeeDAO.AddEmployee(Employee employee) in C:\Users\sempl\source\repos\TGG-Project\TGG-DAL\EmployeeDAO.cs:line 19
+   at TGG_Logic.EmployeeService.AddEmployee(Employee employee) in C:\Users\sempl\source\repos\TGG-Project\TGG-Logic\EmployeeService.cs:line 24
+   at TGG_UI.AddEmployee.btnCreate_Click(Object sender, EventArgs e) in C:\Users\sempl\source\repos\TGG-Project\TGG-UI\AddEmployee.cs:line 33
+[6-10-2022 20:27:31] : A write operation resulted in an error. WriteError: { Category : "DuplicateKey", Code : 11000, Message : "E11000 duplicate key error collection: TGGDB.Employees index: employeeId_1 dup key: { employeeId: 0 }" }.    at MongoDB.Driver.MongoCollectionBase`1.InsertOne(TDocument document, InsertOneOptions options, Action`2 bulkWrite)
+   at MongoDB.Driver.MongoCollectionBase`1.InsertOne(TDocument document, InsertOneOptions options, CancellationToken cancellationToken)
+   at TGG_DAL.BaseDAO.CreateOperation(BsonDocument bsonDoc) in C:\Users\sempl\source\repos\TGG-Project\TGG-DAL\BaseDAO.cs:line 28
+   at TGG_DAL.EmployeeDAO.AddEmployee(Employee employee) in C:\Users\sempl\source\repos\TGG-Project\TGG-DAL\EmployeeDAO.cs:line 19
+   at TGG_Logic.EmployeeService.AddEmployee(Employee employee) in C:\Users\sempl\source\repos\TGG-Project\TGG-Logic\EmployeeService.cs:line 24
+   at TGG_UI.AddEmployee.btnCreate_Click(Object sender, EventArgs e) in C:\Users\sempl\source\repos\TGG-Project\TGG-UI\AddEmployee.cs:line 33
+[6-10-2022 20:27:32] : A write operation resulted in an error. WriteError: { Category : "DuplicateKey", Code : 11000, Message : "E11000 duplicate key error collection: TGGDB.Employees index: employeeId_1 dup key: { employeeId: 0 }" }.    at MongoDB.Driver.MongoCollectionBase`1.InsertOne(TDocument document, InsertOneOptions options, Action`2 bulkWrite)
+   at MongoDB.Driver.MongoCollectionBase`1.InsertOne(TDocument document, InsertOneOptions options, CancellationToken cancellationToken)
+   at TGG_DAL.BaseDAO.CreateOperation(BsonDocument bsonDoc) in C:\Users\sempl\source\repos\TGG-Project\TGG-DAL\BaseDAO.cs:line 28
+   at TGG_DAL.EmployeeDAO.AddEmployee(Employee employee) in C:\Users\sempl\source\repos\TGG-Project\TGG-DAL\EmployeeDAO.cs:line 19
+   at TGG_Logic.EmployeeService.AddEmployee(Employee employee) in C:\Users\sempl\source\repos\TGG-Project\TGG-Logic\EmployeeService.cs:line 24
+   at TGG_UI.AddEmployee.btnCreate_Click(Object sender, EventArgs e) in C:\Users\sempl\source\repos\TGG-Project\TGG-UI\AddEmployee.cs:line 33
+[6-10-2022 20:27:33] : A write operation resulted in an error. WriteError: { Category : "DuplicateKey", Code : 11000, Message : "E11000 duplicate key error collection: TGGDB.Employees index: employeeId_1 dup key: { employeeId: 0 }" }.    at MongoDB.Driver.MongoCollectionBase`1.InsertOne(TDocument document, InsertOneOptions options, Action`2 bulkWrite)
+   at MongoDB.Driver.MongoCollectionBase`1.InsertOne(TDocument document, InsertOneOptions options, CancellationToken cancellationToken)
+   at TGG_DAL.BaseDAO.CreateOperation(BsonDocument bsonDoc) in C:\Users\sempl\source\repos\TGG-Project\TGG-DAL\BaseDAO.cs:line 28
+   at TGG_DAL.EmployeeDAO.AddEmployee(Employee employee) in C:\Users\sempl\source\repos\TGG-Project\TGG-DAL\EmployeeDAO.cs:line 19
+   at TGG_Logic.EmployeeService.AddEmployee(Employee employee) in C:\Users\sempl\source\repos\TGG-Project\TGG-Logic\EmployeeService.cs:line 24
+   at TGG_UI.AddEmployee.btnCreate_Click(Object sender, EventArgs e) in C:\Users\sempl\source\repos\TGG-Project\TGG-UI\AddEmployee.cs:line 33
+[6-10-2022 20:27:34] : A write operation resulted in an error. WriteError: { Category : "DuplicateKey", Code : 11000, Message : "E11000 duplicate key error collection: TGGDB.Employees index: employeeId_1 dup key: { employeeId: 0 }" }.    at MongoDB.Driver.MongoCollectionBase`1.InsertOne(TDocument document, InsertOneOptions options, Action`2 bulkWrite)
+   at MongoDB.Driver.MongoCollectionBase`1.InsertOne(TDocument document, InsertOneOptions options, CancellationToken cancellationToken)
+   at TGG_DAL.BaseDAO.CreateOperation(BsonDocument bsonDoc) in C:\Users\sempl\source\repos\TGG-Project\TGG-DAL\BaseDAO.cs:line 28
+   at TGG_DAL.EmployeeDAO.AddEmployee(Employee employee) in C:\Users\sempl\source\repos\TGG-Project\TGG-DAL\EmployeeDAO.cs:line 19
+   at TGG_Logic.EmployeeService.AddEmployee(Employee employee) in C:\Users\sempl\source\repos\TGG-Project\TGG-Logic\EmployeeService.cs:line 24
+   at TGG_UI.AddEmployee.btnCreate_Click(Object sender, EventArgs e) in C:\Users\sempl\source\repos\TGG-Project\TGG-UI\AddEmployee.cs:line 33
+[6-10-2022 21:34:19] : A write operation resulted in an error. WriteError: { Category : "DuplicateKey", Code : 11000, Message : "E11000 duplicate key error collection: TGGDB.Employees index: employeeId_1 dup key: { employeeId: 0 }" }.    at MongoDB.Driver.MongoCollectionBase`1.InsertOne(TDocument document, InsertOneOptions options, Action`2 bulkWrite)
+   at MongoDB.Driver.MongoCollectionBase`1.InsertOne(TDocument document, InsertOneOptions options, CancellationToken cancellationToken)
+   at TGG_DAL.BaseDAO.CreateOperation(BsonDocument bsonDoc) in C:\Users\sempl\source\repos\TGG-Project\TGG-DAL\BaseDAO.cs:line 28
+   at TGG_DAL.EmployeeDAO.AddEmployee(Employee employee) in C:\Users\sempl\source\repos\TGG-Project\TGG-DAL\EmployeeDAO.cs:line 19
+   at TGG_Logic.EmployeeService.AddEmployee(Employee employee) in C:\Users\sempl\source\repos\TGG-Project\TGG-Logic\EmployeeService.cs:line 24
+   at TGG_UI.AddEmployee.btnCreate_Click(Object sender, EventArgs e) in C:\Users\sempl\source\repos\TGG-Project\TGG-UI\AddEmployee.cs:line 33
+[6-10-2022 21:34:20] : A write operation resulted in an error. WriteError: { Category : "DuplicateKey", Code : 11000, Message : "E11000 duplicate key error collection: TGGDB.Employees index: employeeId_1 dup key: { employeeId: 0 }" }.    at MongoDB.Driver.MongoCollectionBase`1.InsertOne(TDocument document, InsertOneOptions options, Action`2 bulkWrite)
+   at MongoDB.Driver.MongoCollectionBase`1.InsertOne(TDocument document, InsertOneOptions options, CancellationToken cancellationToken)
+   at TGG_DAL.BaseDAO.CreateOperation(BsonDocument bsonDoc) in C:\Users\sempl\source\repos\TGG-Project\TGG-DAL\BaseDAO.cs:line 28
+   at TGG_DAL.EmployeeDAO.AddEmployee(Employee employee) in C:\Users\sempl\source\repos\TGG-Project\TGG-DAL\EmployeeDAO.cs:line 19
+   at TGG_Logic.EmployeeService.AddEmployee(Employee employee) in C:\Users\sempl\source\repos\TGG-Project\TGG-Logic\EmployeeService.cs:line 24
+   at TGG_UI.AddEmployee.btnCreate_Click(Object sender, EventArgs e) in C:\Users\sempl\source\repos\TGG-Project\TGG-UI\AddEmployee.cs:line 33
+[6-10-2022 21:34:21] : A write operation resulted in an error. WriteError: { Category : "DuplicateKey", Code : 11000, Message : "E11000 duplicate key error collection: TGGDB.Employees index: employeeId_1 dup key: { employeeId: 0 }" }.    at MongoDB.Driver.MongoCollectionBase`1.InsertOne(TDocument document, InsertOneOptions options, Action`2 bulkWrite)
+   at MongoDB.Driver.MongoCollectionBase`1.InsertOne(TDocument document, InsertOneOptions options, CancellationToken cancellationToken)
+   at TGG_DAL.BaseDAO.CreateOperation(BsonDocument bsonDoc) in C:\Users\sempl\source\repos\TGG-Project\TGG-DAL\BaseDAO.cs:line 28
+   at TGG_DAL.EmployeeDAO.AddEmployee(Employee employee) in C:\Users\sempl\source\repos\TGG-Project\TGG-DAL\EmployeeDAO.cs:line 19
+   at TGG_Logic.EmployeeService.AddEmployee(Employee employee) in C:\Users\sempl\source\repos\TGG-Project\TGG-Logic\EmployeeService.cs:line 24
+   at TGG_UI.AddEmployee.btnCreate_Click(Object sender, EventArgs e) in C:\Users\sempl\source\repos\TGG-Project\TGG-UI\AddEmployee.cs:line 33
+[6-10-2022 22:14:06] : A write operation resulted in an error. WriteError: { Category : "Uncategorized", Code : 121, Message : "Document failed validation", Details : "{ "failingDocumentId" : ObjectId("633f370d693b34ed0caeb018"), "details" : { "operatorName" : "$jsonSchema", "schemaRulesNotSatisfied" : [{ "operatorName" : "properties", "propertiesNotSatisfied" : [{ "propertyName" : "employeeId", "details" : [{ "operatorName" : "bsonType", "specifiedAs" : { "bsonType" : "int" }, "reason" : "type did not match", "consideredValue" : null, "consideredType" : "null" }] }] }] } }" }.    at MongoDB.Driver.MongoCollectionBase`1.InsertOne(TDocument document, InsertOneOptions options, Action`2 bulkWrite)
+   at MongoDB.Driver.MongoCollectionBase`1.InsertOne(TDocument document, InsertOneOptions options, CancellationToken cancellationToken)
+   at TGG_DAL.BaseDAO.CreateOperation(BsonDocument bsonDoc) in C:\Users\sempl\source\repos\TGG-Project\TGG-DAL\BaseDAO.cs:line 28
+   at TGG_DAL.EmployeeDAO.AddEmployee(Employee employee) in C:\Users\sempl\source\repos\TGG-Project\TGG-DAL\EmployeeDAO.cs:line 19
+   at TGG_Logic.EmployeeService.AddEmployee(Employee employee) in C:\Users\sempl\source\repos\TGG-Project\TGG-Logic\EmployeeService.cs:line 24
+   at TGG_UI.AddEmployee.btnCreate_Click(Object sender, EventArgs e) in C:\Users\sempl\source\repos\TGG-Project\TGG-UI\AddEmployee.cs:line 33
+[6-10-2022 22:16:18] : A write operation resulted in an error. WriteError: { Category : "Uncategorized", Code : 121, Message : "Document failed validation", Details : "{ "failingDocumentId" : ObjectId("633f3790fe08cbb2814529da"), "details" : { "operatorName" : "$jsonSchema", "schemaRulesNotSatisfied" : [{ "operatorName" : "properties", "propertiesNotSatisfied" : [{ "propertyName" : "employeeId", "details" : [{ "operatorName" : "bsonType", "specifiedAs" : { "bsonType" : "int" }, "reason" : "type did not match", "consideredValue" : null, "consideredType" : "null" }] }] }] } }" }.    at MongoDB.Driver.MongoCollectionBase`1.InsertOne(TDocument document, InsertOneOptions options, Action`2 bulkWrite)
+   at MongoDB.Driver.MongoCollectionBase`1.InsertOne(TDocument document, InsertOneOptions options, CancellationToken cancellationToken)
+   at TGG_DAL.BaseDAO.CreateOperation(BsonDocument bsonDoc) in C:\Users\sempl\source\repos\TGG-Project\TGG-DAL\BaseDAO.cs:line 28
+   at TGG_DAL.EmployeeDAO.AddEmployee(Employee employee) in C:\Users\sempl\source\repos\TGG-Project\TGG-DAL\EmployeeDAO.cs:line 19
+   at TGG_Logic.EmployeeService.AddEmployee(Employee employee) in C:\Users\sempl\source\repos\TGG-Project\TGG-Logic\EmployeeService.cs:line 24
+   at TGG_UI.AddEmployee.btnCreate_Click(Object sender, EventArgs e) in C:\Users\sempl\source\repos\TGG-Project\TGG-UI\AddEmployee.cs:line 33
+[7-10-2022 19:48:24] : Sequence contains no elements    at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at TGG_UI.AddEmployee.btnCreate_Click(Object sender, EventArgs e) in C:\Users\sempl\source\repos\TGG-Project\TGG-UI\AddEmployee.cs:line 35
