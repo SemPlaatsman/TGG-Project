@@ -27,9 +27,8 @@ namespace TGG_Model
         [BsonElement("isSDEmployee"), BsonRepresentation(BsonType.Boolean)]
         public bool IsSDEmployee { get; set; }
 
-        public Employee(int employeeId, string email, string fullName, string password, bool isSDEmployee)
+        public Employee(string email, string fullName, string password, bool isSDEmployee)
         {
-            EmployeeId = employeeId;
             Email = email;
             FullName = fullName;
             this.password = password;

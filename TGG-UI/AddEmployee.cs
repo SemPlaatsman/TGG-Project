@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
 using TGG_Logic;
 using TGG_Model;
@@ -17,6 +18,7 @@ namespace TGG_UI
     public partial class AddEmployee : Form
     {
         private EmployeeService employeeService;
+        const int maxSecondsToAddEmployee = 3;
         public AddEmployee(EmployeeService employeeService)
         {
             InitializeComponent();
@@ -30,15 +32,26 @@ namespace TGG_UI
             {
                 if (!ValidateData())
                     return;
-                MessageBox.Show("SUCCESS!");
-            }
-            catch (TGGException tggex)
-            {
-                
+                Employee addedEmployee = employeeService.AddEmployee(new Employee(txtEmail.Text, txtFullName.Text, txtPassword.Text, Convert.ToBoolean(cBoxEmployeeType.SelectedIndex)));
+                addedEmployee = employeeService.GetEmployeesByElement(addedEmployee.ToBsonDocument().GetElement("_id")).First();
+                for (int i = 0; addedEmployee.EmployeeId == 0; i++)
+                {
+                    Thread.Sleep(100);
+                    addedEmployee = employeeService.GetEmployeesByElement(addedEmployee.ToBsonDocument().GetElement("_id")).First();
+                    if (i >= (maxSecondsToAddEmployee * 10))
+                    {
+                        throw new Exception($"max wait time of {maxSecondsToAddEmployee} seconds to add an employee was exceeded!");
+                    }
+                }
+                MessageBox.Show($"{addedEmployee.FullName} was successfully added as a {(addedEmployee.IsSDEmployee ? "service desk employee" : "regular employee")} " +
+                    $"with the email address '{addedEmployee.Email}' and employee ID '{addedEmployee.EmployeeId}'", 
+                    "Successfully added an employee...", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Hide();
             }
             catch (Exception ex)
             {
-
+                MessageBox.Show("Something went wrong while trying to create an employee!\nPlease contact the application administrator!", "Something went wrong...", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                TGGErrorLogger.WriteLogToFile(ex);
             }
         }
 
@@ -101,6 +114,12 @@ namespace TGG_UI
         {
             btnPasswordShow.BringToFront();
             txtPassword.UseSystemPasswordChar = true;
+        }
+
+        private void btnPasswordShow_Click(object sender, EventArgs e)
+        {
+            btnPasswordHide.BringToFront();
+            txtPassword.UseSystemPasswordChar = false;
         }
     }
 }

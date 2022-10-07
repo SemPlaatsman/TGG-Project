@@ -23,9 +23,11 @@ namespace TGG_DAL
             currentCollection = mongoDatabase.GetCollection<BsonDocument>(collection.ToString());
         }
 
-        public void CreateOperation(BsonDocument bsonDoc)
+        public BsonDocument CreateOperation(BsonDocument bsonDoc)
         {
+            bsonDoc.Remove("employeeId");
             currentCollection.InsertOne(bsonDoc);
+            return bsonDoc;
         }
 
         public List<BsonDocument> ReadOperation(FilterDefinition<BsonDocument> filter, SortDefinition<BsonDocument> sort = null)
