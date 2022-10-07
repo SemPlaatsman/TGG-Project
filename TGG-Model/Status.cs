@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace TGG_Model
 {
-    enum Status
+    public enum Status
     {
-        Open, 
         Pending, 
+        Open, 
         Resolved, 
         Closed, 
         WaitingOnThirdParty
