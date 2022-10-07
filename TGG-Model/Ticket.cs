@@ -24,7 +24,7 @@ namespace TGG_Model
         [BsonElement("description"), BsonRepresentation(BsonType.String)]
         public string Description { get; set; }
 
-        [BsonElement("time"), BsonRepresentation(BsonType.DateTime)]
+        [BsonElement("timeAdded"), BsonRepresentation(BsonType.DateTime)]
         public DateTime Time { get; set; }
 
         [BsonElement("priorityLevel"), BsonRepresentation(BsonType.String)]
