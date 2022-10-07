@@ -18,7 +18,7 @@ namespace TGG_UI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AddEmployee(new EmployeeService()));
+            Application.Run(new AddEmployee(new Login()));
         }
     }
 }
