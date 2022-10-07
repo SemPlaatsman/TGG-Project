@@ -21,5 +21,10 @@ namespace TGG_Logic
         {
             return ticketDAO.GetAllTickets();
         }
+
+        public void AddTicket(Ticket ticket)
+        {
+            ticketDAO.AddTicket(ticket);
+        }
     }
 }
