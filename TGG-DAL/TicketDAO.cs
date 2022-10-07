@@ -31,5 +31,10 @@ namespace TGG_DAL
 
             return tickets;
         }
+
+        public void AddTicket(Ticket ticket)
+        {
+            CreateOperation(ticket.ToBsonDocument());
+        }
     }
 }
