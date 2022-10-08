@@ -30,10 +30,6 @@ namespace TGG_UI
         }
         public void FillCharts()
         {
-            ////chartHighUrgency.Series["Tickets Status"].Points.AddXY("Resolved", tickets.Count(n => n.Status == Status.Resolved));
-            ////chartHighUrgency.Series["Tickets Status"].Points[1].LegendText = "Resolved";
-            ////chartHighUrgency.Series["Tickets Status"].Points.AddXY("Pending", tickets.Count(n => n.Status == Status.Pending));
-            ////chartHighUrgency.Series["Tickets Status"].Points[1].LegendText = "Pending";
             for(int i = Enum.GetValues(typeof(TGGPriorityLevel)).Length - 1; i >= 0; i--)
             {
                 FillChart((TGGPriorityLevel)i);
@@ -61,7 +57,12 @@ namespace TGG_UI
             }
             if(count == chart.Series[0].Points.Count())
             {
-                chart.BackImage = "Properties.Resources.noun_ticket_3263895.png";
+                TextAnnotation ta = new TextAnnotation();
+                ta.X = 30;
+                ta.Y = 45;
+                ta.Text = $"No tickets found with \n{chart.Titles[0].Text}";
+                ta.Font = new Font(Font.FontFamily, 10f);
+                chart.Annotations.Add(ta);
             }
         }
         public void UpdateTopBar(List<Ticket> tickets)
