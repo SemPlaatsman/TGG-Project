@@ -26,5 +26,10 @@ namespace TGG_Logic
         {
             ticketDAO.AddTicket(ticket);
         }
+
+        public void Archive(List<Ticket> tickets)
+        {
+            ticketDAO.Archive(tickets);
+        }
     }
 }

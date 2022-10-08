@@ -21,9 +21,17 @@ namespace TGG_UI
         const int maxSecondsToAddEmployee = 3;
         public AddEmployee(EmployeeService employeeService)
         {
-            InitializeComponent();
+            try
+            {
+                InitializeComponent();
 
-            this.employeeService = employeeService;
+                this.employeeService = employeeService;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Something went wrong while trying to load the add employee form!\nPlease contact the application administrator!", "Something went wrong...", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                TGGErrorLogger.WriteLogToFile(ex);
+            }
         }
 
         private void btnCreate_Click(object sender, EventArgs e)
@@ -86,7 +94,7 @@ namespace TGG_UI
             if (txtBox.Text == String.Empty)
             {
                 txtBox.Focus();
-                errorProvider.SetError(txtBox, $"Please enter your {txtBox.Tag.ToString()}!");
+                errorProvider.SetError(txtBox, $"Please enter your {txtBox.Tag}!");
                 return false;
             }
             errorProvider.SetError(txtBox, null);
@@ -98,7 +106,7 @@ namespace TGG_UI
             if (cBox.SelectedIndex == -1)
             {
                 cBox.Focus();
-                errorProvider.SetError(cBox, $"Please choose an {cBox.Tag.ToString()}!");
+                errorProvider.SetError(cBox, $"Please choose an {cBox.Tag}!");
                 return false;
             }
             errorProvider.SetError(cBox, null);
