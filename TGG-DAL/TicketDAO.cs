@@ -36,5 +36,13 @@ namespace TGG_DAL
         {
             CreateOperation(ticket.ToBsonDocument());
         }
+
+        public void Archive(List<Ticket> tickets)
+        {
+            List<BsonDocument> bsonDocs = new List<BsonDocument>();
+            foreach (Ticket ticket in tickets)
+                bsonDocs.Add(ticket.ToBsonDocument());
+            ArchiveOperation(bsonDocs);
+        }
     }
 }
