@@ -224,6 +224,7 @@
     <Content Include="Core\Compression\Snappy\lib\win\snappy64.dll" />
     <Content Include="Core\Compression\Zstandard\lib\win\libzstd.dll" />
     <Content Include="mongocrypt.dll" />
+    <None Include="Resources\noun-deadline-4657504.png" />
     <None Include="Resources\noun-urgent-3883376.png" />
     <None Include="Resources\noun-urgent-2078688.png" />
   </ItemGroup>
