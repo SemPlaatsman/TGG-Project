@@ -160,11 +160,11 @@
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <Compile Include="Tickets.cs">
+    <Compile Include="TicketsOverview.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Tickets.Designer.cs">
-      <DependentUpon>Tickets.cs</DependentUpon>
+    <Compile Include="TicketsOverview.Designer.cs">
+      <DependentUpon>TicketsOverview.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -182,8 +182,8 @@
     <None Include="libmongocrypt.dylib" />
     <None Include="libmongocrypt.so" />
     <None Include="packages.config" />
-    <EmbeddedResource Include="Tickets.resx">
-      <DependentUpon>Tickets.cs</DependentUpon>
+    <EmbeddedResource Include="TicketsOverview.resx">
+      <DependentUpon>TicketsOverview.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

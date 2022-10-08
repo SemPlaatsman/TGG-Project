@@ -43,7 +43,11 @@ namespace TGG_UI
             this.label7 = new System.Windows.Forms.Label();
             this.buttonCreate = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
+            this.dateTimePickerDeadline = new System.Windows.Forms.DateTimePicker();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.comboBoxPrioLevel = new System.Windows.Forms.ComboBox();
+            this.comboBoxStatus = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -52,7 +56,7 @@ namespace TGG_UI
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(137, 59);
+            this.label1.Location = new System.Drawing.Point(138, 36);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(346, 37);
             this.label1.TabIndex = 0;
@@ -60,14 +64,14 @@ namespace TGG_UI
             // 
             // textBoxEmployeeId
             // 
-            this.textBoxEmployeeId.Location = new System.Drawing.Point(257, 200);
+            this.textBoxEmployeeId.Location = new System.Drawing.Point(257, 218);
             this.textBoxEmployeeId.Name = "textBoxEmployeeId";
             this.textBoxEmployeeId.Size = new System.Drawing.Size(255, 20);
             this.textBoxEmployeeId.TabIndex = 1;
             // 
             // textBoxBranch
             // 
-            this.textBoxBranch.Location = new System.Drawing.Point(257, 309);
+            this.textBoxBranch.Location = new System.Drawing.Point(257, 311);
             this.textBoxBranch.Name = "textBoxBranch";
             this.textBoxBranch.Size = new System.Drawing.Size(255, 20);
             this.textBoxBranch.TabIndex = 5;
@@ -75,14 +79,14 @@ namespace TGG_UI
             // textBoxTitle
             // 
             this.textBoxTitle.BackColor = System.Drawing.SystemColors.Window;
-            this.textBoxTitle.Location = new System.Drawing.Point(257, 254);
+            this.textBoxTitle.Location = new System.Drawing.Point(257, 265);
             this.textBoxTitle.Name = "textBoxTitle";
             this.textBoxTitle.Size = new System.Drawing.Size(255, 20);
             this.textBoxTitle.TabIndex = 6;
             // 
             // dateTimePickerTimeReported
             // 
-            this.dateTimePickerTimeReported.Location = new System.Drawing.Point(257, 148);
+            this.dateTimePickerTimeReported.Location = new System.Drawing.Point(257, 123);
             this.dateTimePickerTimeReported.Name = "dateTimePickerTimeReported";
             this.dateTimePickerTimeReported.Size = new System.Drawing.Size(255, 20);
             this.dateTimePickerTimeReported.TabIndex = 9;
@@ -93,7 +97,7 @@ namespace TGG_UI
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(105, 148);
+            this.label2.Location = new System.Drawing.Point(105, 123);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(146, 20);
             this.label2.TabIndex = 10;
@@ -105,7 +109,7 @@ namespace TGG_UI
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(105, 254);
+            this.label3.Location = new System.Drawing.Point(105, 263);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(42, 20);
             this.label3.TabIndex = 11;
@@ -129,7 +133,7 @@ namespace TGG_UI
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(105, 365);
+            this.label5.Location = new System.Drawing.Point(105, 404);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(95, 20);
             this.label5.TabIndex = 13;
@@ -141,7 +145,7 @@ namespace TGG_UI
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(105, 200);
+            this.label6.Location = new System.Drawing.Point(105, 216);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(104, 20);
             this.label6.TabIndex = 14;
@@ -149,7 +153,7 @@ namespace TGG_UI
             // 
             // richTextBoxDescription
             // 
-            this.richTextBoxDescription.Location = new System.Drawing.Point(257, 428);
+            this.richTextBoxDescription.Location = new System.Drawing.Point(257, 455);
             this.richTextBoxDescription.Name = "richTextBoxDescription";
             this.richTextBoxDescription.Size = new System.Drawing.Size(255, 117);
             this.richTextBoxDescription.TabIndex = 15;
@@ -161,7 +165,7 @@ namespace TGG_UI
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(105, 426);
+            this.label7.Location = new System.Drawing.Point(105, 453);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(93, 20);
             this.label7.TabIndex = 16;
@@ -172,7 +176,7 @@ namespace TGG_UI
             this.buttonCreate.BackColor = System.Drawing.Color.PaleGreen;
             this.buttonCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCreate.ForeColor = System.Drawing.Color.Black;
-            this.buttonCreate.Location = new System.Drawing.Point(366, 572);
+            this.buttonCreate.Location = new System.Drawing.Point(366, 597);
             this.buttonCreate.Name = "buttonCreate";
             this.buttonCreate.Size = new System.Drawing.Size(146, 65);
             this.buttonCreate.TabIndex = 17;
@@ -185,7 +189,7 @@ namespace TGG_UI
             this.buttonCancel.BackColor = System.Drawing.Color.DodgerBlue;
             this.buttonCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCancel.ForeColor = System.Drawing.Color.White;
-            this.buttonCancel.Location = new System.Drawing.Point(109, 572);
+            this.buttonCancel.Location = new System.Drawing.Point(109, 597);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(146, 65);
             this.buttonCancel.TabIndex = 18;
@@ -193,13 +197,52 @@ namespace TGG_UI
             this.buttonCancel.UseVisualStyleBackColor = false;
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
+            // dateTimePickerDeadline
+            // 
+            this.dateTimePickerDeadline.Location = new System.Drawing.Point(257, 171);
+            this.dateTimePickerDeadline.Name = "dateTimePickerDeadline";
+            this.dateTimePickerDeadline.Size = new System.Drawing.Size(255, 20);
+            this.dateTimePickerDeadline.TabIndex = 20;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.Location = new System.Drawing.Point(105, 171);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(76, 20);
+            this.label8.TabIndex = 21;
+            this.label8.Text = "Deadline:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Black;
+            this.label9.Location = new System.Drawing.Point(105, 359);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(60, 20);
+            this.label9.TabIndex = 22;
+            this.label9.Text = "Status:";
+            // 
             // comboBoxPrioLevel
             // 
             this.comboBoxPrioLevel.FormattingEnabled = true;
-            this.comboBoxPrioLevel.Location = new System.Drawing.Point(257, 367);
+            this.comboBoxPrioLevel.Location = new System.Drawing.Point(257, 406);
             this.comboBoxPrioLevel.Name = "comboBoxPrioLevel";
             this.comboBoxPrioLevel.Size = new System.Drawing.Size(255, 21);
             this.comboBoxPrioLevel.TabIndex = 19;
+            // 
+            // comboBoxStatus
+            // 
+            this.comboBoxStatus.FormattingEnabled = true;
+            this.comboBoxStatus.Location = new System.Drawing.Point(257, 361);
+            this.comboBoxStatus.Name = "comboBoxStatus";
+            this.comboBoxStatus.Size = new System.Drawing.Size(255, 21);
+            this.comboBoxStatus.TabIndex = 23;
             // 
             // AddTicket
             // 
@@ -207,6 +250,10 @@ namespace TGG_UI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MintCream;
             this.ClientSize = new System.Drawing.Size(657, 685);
+            this.Controls.Add(this.comboBoxStatus);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.dateTimePickerDeadline);
             this.Controls.Add(this.comboBoxPrioLevel);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonCreate);
@@ -247,6 +294,10 @@ namespace TGG_UI
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button buttonCreate;
         private System.Windows.Forms.Button buttonCancel;
+        private System.Windows.Forms.DateTimePicker dateTimePickerDeadline;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox comboBoxPrioLevel;
+        private System.Windows.Forms.ComboBox comboBoxStatus;
     }
 }
