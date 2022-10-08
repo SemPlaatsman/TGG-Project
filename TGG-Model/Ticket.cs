@@ -34,16 +34,5 @@ namespace TGG_Model
 
         [BsonElement("status"), BsonRepresentation(BsonType.String)]
         public Status Status { get; set; }
-
-        public Ticket(int ticketID, int employeeID, string title, string description, DateTime timeAdded, DateTime timeDeadline, int priorityLevel, int status)
-        {
-            TicketID = ticketID;
-            EmployeeID = employeeID;
-            Title = title;
-            Description = description;
-            TimeAdded = timeAdded;
-            PriorityLevel = (TGGPriorityLevel)priorityLevel;
-            Status = (Status)status;
-        }
     }
 }
