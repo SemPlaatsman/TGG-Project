@@ -35,8 +35,7 @@ namespace TGG_UI
             ticket.TimeDeadline = dateTimePickerDeadline.Value;
             ticket.EmployeeID = int.Parse(textBoxEmployeeId.Text);
             ticket.Title = textBoxTitle.Text;
-            ticket.Branch = textBoxBranch.Text;
-            ticket.PriorityLevel = comboBoxPrioLevel.SelectedIndex;
+            ticket.PriorityLevel = (TGGPriorityLevel)comboBoxPrioLevel.SelectedIndex;
             ticket.Description = richTextBoxDescription.Text;
 
             ticketService.AddTicket(ticket);
