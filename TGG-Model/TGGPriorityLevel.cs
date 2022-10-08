@@ -8,8 +8,8 @@ namespace TGG_Model
 {
     public enum TGGPriorityLevel
     {
-        Low,
+        High,
         Normal,
-        High
+        Low
     }
 }

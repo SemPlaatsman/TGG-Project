@@ -132,6 +132,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEmployee.Designer.cs">
+      <DependentUpon>AddEmployee.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -164,6 +170,9 @@
     <Compile Include="TicketsOverview.Designer.cs">
       <DependentUpon>TicketsOverview.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddEmployee.resx">
+      <DependentUpon>AddEmployee.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -224,6 +233,8 @@
     <Content Include="Core\Compression\Snappy\lib\win\snappy64.dll" />
     <Content Include="Core\Compression\Zstandard\lib\win\libzstd.dll" />
     <Content Include="mongocrypt.dll" />
+    <None Include="Resources\UI-ELEMENT-TopBar.png" />
+    <None Include="Resources\noun-ticket-3263895.png" />
     <None Include="Resources\noun-deadline-4657504.png" />
     <None Include="Resources\noun-urgent-3883376.png" />
     <None Include="Resources\noun-urgent-2078688.png" />
