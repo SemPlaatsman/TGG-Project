@@ -40,7 +40,7 @@ namespace TGG_DAL
             allUpdateElements.AddRange(extraUpdateElements);
             foreach (BsonElement bsonElement in allUpdateElements.ToList())
             {
-                if (bsonElement.Name == "employeeId")
+                if (bsonElement.Name == filterElement.Name)
                 {
                     allUpdateElements[allUpdateElements.IndexOf(bsonElement)] = allUpdateElements.Last();
                     allUpdateElements[allUpdateElements.Count - 1] = bsonElement;

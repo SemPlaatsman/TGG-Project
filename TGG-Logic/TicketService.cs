@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using TGG_DAL;
 using TGG_Model;
+using MongoDB.Bson;
+using MongoDB.Driver;
 
 namespace TGG_Logic
 {
@@ -25,6 +27,11 @@ namespace TGG_Logic
         public void AddTicket(Ticket ticket)
         {
             ticketDAO.AddTicket(ticket);
+        }
+
+        public List<UpdateResult> UpdateTicketByElement(BsonElement filterElement, BsonElement updateElement, params BsonElement[] extraUpdateElements)
+        {
+            return ticketDAO.UpdateTicketByElement(filterElement, updateElement, extraUpdateElements);
         }
 
         public void Archive(List<Ticket> tickets)
