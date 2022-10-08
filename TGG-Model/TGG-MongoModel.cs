@@ -13,6 +13,6 @@ namespace TGG_Model
     public abstract class TGG_MongoModel
     {
         [BsonId, BsonElement("_id"), BsonRepresentation(BsonType.ObjectId)]
-        private ObjectId mongoId { get; set; }
+        public ObjectId MongoId { get; set; }
     }
 }
