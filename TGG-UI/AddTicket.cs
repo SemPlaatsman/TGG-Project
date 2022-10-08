@@ -7,12 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TGG_Logic;
 using TGG_Model;
 
 namespace TGG_UI
 {
     public partial class AddTicket : Form
     {
+        TicketService ticketService = new TicketService();
+
         public AddTicket()
         {
             InitializeComponent();
@@ -25,12 +28,26 @@ namespace TGG_UI
 
         private void buttonCreate_Click(object sender, EventArgs e)
         {
+
+            Ticket ticket = new Ticket();
+
+            ticket.TimeAdded = dateTimePickerTimeReported.Value;
+            ticket.TimeDeadline = dateTimePickerDeadline.Value;
+            ticket.EmployeeID = int.Parse(textBoxEmployeeId.Text);
+            ticket.Title = textBoxTitle.Text;
+            ticket.Branch = textBoxBranch.Text;
+            ticket.PriorityLevel = comboBoxPrioLevel.SelectedIndex;
+            ticket.Description = richTextBoxDescription.Text;
+
+            ticketService.AddTicket(ticket);
+
             CloseForm();
         }
 
         private void AddTickets_Load(object sender, EventArgs e)
         {
             comboBoxPrioLevel.DataSource = Enum.GetValues(typeof(TGGPriorityLevel));
+            //comboBoxStatus.DataSource = Enum.GetValues(typeof(TGGPriorityLevel));
         }
 
         private void CloseForm()

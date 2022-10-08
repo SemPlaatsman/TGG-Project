@@ -24,24 +24,32 @@ namespace TGG_Model
         [BsonElement("description"), BsonRepresentation(BsonType.String)]
         public string Description { get; set; }
 
-        [BsonElement("time"), BsonRepresentation(BsonType.DateTime)]
-        public DateTime Time { get; set; }
+        [BsonElement("timeAdded"), BsonRepresentation(BsonType.DateTime)]
+        public DateTime TimeAdded { get; set; }
+
+        [BsonElement("timeDeadline"), BsonRepresentation(BsonType.DateTime)]
+        public DateTime TimeDeadline { get; set; }
 
         [BsonElement("priorityLevel"), BsonRepresentation(BsonType.String)]
-        public string PriorityLevel { get; set; }
+        public int PriorityLevel { get; set; }
 
         [BsonElement("branch"), BsonRepresentation(BsonType.String)]
         public string Branch { get; set; }
 
-        public Ticket(int ticketID, int employeeID, string title, string description, DateTime time, string priorityLevel, string branch)
+        [BsonElement("status"), BsonRepresentation(BsonType.Int32)]
+        public int Status { get; set; }
+
+        /*public Ticket(int ticketID, int employeeID, string title, string description, DateTime timeAdded, DateTime timeDeadline, int priorityLevel, string branch, int status)
         {
             TicketID = ticketID;
             EmployeeID = employeeID;
             Title = title;
             Description = description;
-            Time = time;
+            TimeAdded = timeAdded;
+            TimeDeadline = timeDeadline;
             PriorityLevel = priorityLevel;
             Branch = branch;
-        }
+            Status = status;
+        }*/
     }
 }
