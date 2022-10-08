@@ -13,11 +13,11 @@ using MongoDB.Bson;
 
 namespace TGG_UI
 {
-    public partial class Tickets : Form
+    public partial class TicketsOverview : Form
     {
         TicketService ticketService = new TicketService();
 
-        public Tickets()
+        public TicketsOverview()
         {
             InitializeComponent();
         }
@@ -37,7 +37,8 @@ namespace TGG_UI
         private void ItemsToGridview(List<Ticket> tickets)
         {
             gridViewTickets.DataSource = tickets;
-            this.gridViewTickets.Columns["Time"].DefaultCellStyle.Format = "dd/MM/yyyy HH:mm:ss";
+            this.gridViewTickets.Columns["TimeAdded"].DefaultCellStyle.Format = "dd/MM/yyyy HH:mm:ss";
+            this.gridViewTickets.Columns["TimeDeadline"].DefaultCellStyle.Format = "dd/MM/yyyy HH:mm:ss";
         }
     }
 }
