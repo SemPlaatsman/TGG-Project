@@ -43,6 +43,8 @@ namespace TGG_UI
         }
 
         #endregion
+
+        private System.Windows.Forms.Button button1;
     }
 }
 

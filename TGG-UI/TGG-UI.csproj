@@ -121,6 +121,7 @@
     <Reference Include="System.Text.Encoding.CodePages, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Text.Encoding.CodePages.5.0.0\lib\net461\System.Text.Encoding.CodePages.dll</HintPath>
     </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -131,11 +132,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddEmployee.cs">
+    <Compile Include="Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddEmployee.Designer.cs">
-      <DependentUpon>AddEmployee.cs</DependentUpon>
+    <Compile Include="Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="Employees.cs">
       <SubType>Form</SubType>
@@ -157,8 +158,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AddEmployee.resx">
-      <DependentUpon>AddEmployee.cs</DependentUpon>
+    <Compile Include="TicketsOverview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TicketsOverview.Designer.cs">
+      <DependentUpon>TicketsOverview.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Employees.resx">
       <DependentUpon>Employees.cs</DependentUpon>
@@ -169,12 +176,6 @@
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <Compile Include="TicketsOverview.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TicketsOverview.Designer.cs">
-      <DependentUpon>TicketsOverview.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -183,7 +184,11 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="TicketsOverview.resx">
+      <DependentUpon>TicketsOverview.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Core\Compression\Snappy\lib\linux\libsnappy64.so" />
     <None Include="Core\Compression\Snappy\lib\osx\libsnappy64.dylib" />
     <None Include="Core\Compression\Zstandard\lib\linux\libzstd.so" />
@@ -191,9 +196,6 @@
     <None Include="libmongocrypt.dylib" />
     <None Include="libmongocrypt.so" />
     <None Include="packages.config" />
-    <EmbeddedResource Include="TicketsOverview.resx">
-      <DependentUpon>TicketsOverview.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -222,7 +224,10 @@
     <Content Include="Core\Compression\Snappy\lib\win\snappy64.dll" />
     <Content Include="Core\Compression\Zstandard\lib\win\libzstd.dll" />
     <Content Include="mongocrypt.dll" />
+    <None Include="Resources\noun-urgent-3883376.png" />
+    <None Include="Resources\noun-urgent-2078688.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MongoDB.Libmongocrypt.1.5.5\build\MongoDB.Libmongocrypt.targets" Condition="Exists('..\packages\MongoDB.Libmongocrypt.1.5.5\build\MongoDB.Libmongocrypt.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
