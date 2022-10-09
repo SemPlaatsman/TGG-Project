@@ -23,11 +23,16 @@ namespace TGG_UI
         {
             InitializeComponent();
             ticketService = new TicketService();
+            UpdateDashboard();
+        }
+
+        private void UpdateDashboard()
+        {
             tickets = ticketService.GetAllTickets();
             FillCharts();
-            UpdateTopBar(tickets);
-
+            FillTopBar();
         }
+
         public void FillCharts()
         {
             for(int i = Enum.GetValues(typeof(TGGPriorityLevel)).Length - 1; i >= 0; i--)
@@ -65,7 +70,7 @@ namespace TGG_UI
                 chart.Annotations.Add(ta);
             }
         }
-        public void UpdateTopBar(List<Ticket> tickets)
+        public void FillTopBar()
         {
             labelAmountOverdue.Text = tickets.Count(n => n.TimeDeadline <= DateTime.Today).ToString();
             labelAmountPendingHU.Text = tickets.Count(
@@ -77,5 +82,10 @@ namespace TGG_UI
             
         }
 
+        private void buttonShowAllTickets_Click(object sender, EventArgs e)
+        {
+            new TicketsOverview().ShowDialog();
+            UpdateDashboard();
+        }
     }
 }
