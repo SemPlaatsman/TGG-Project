@@ -84,7 +84,9 @@ namespace TGG_UI
 
         private void buttonShowAllTickets_Click(object sender, EventArgs e)
         {
+            this.Hide();
             new TicketsOverview().ShowDialog();
+            this.Show();
             UpdateDashboard();
         }
     }
