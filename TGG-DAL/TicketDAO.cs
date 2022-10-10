@@ -32,9 +32,15 @@ namespace TGG_DAL
             return tickets;
         }
 
-        public void AddTicket(Ticket ticket)
+        public Ticket AddTicket(Ticket ticket)
         {
-            CreateOperation(ticket.ToBsonDocument());
+            return BsonSerializer.Deserialize<Ticket>(CreateOperation(ticket.ToBsonDocument()));
         }
+
+        public List<Ticket> GetTicketByElement(BsonElement filterElement)
+        {
+            FilterDefinition<BsonDocument> filter = Builders<BsonDocument>.Filter.Eq(filterElement.Name, filterElement.Value);
+            return ReadTickets(ReadOperation(filter));
+        } 
     }
 }

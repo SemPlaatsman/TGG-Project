@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MongoDB.Bson;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,7 +15,7 @@ namespace TGG_UI
 {
     public partial class AddTicket : Form
     {
-        TicketService ticketService = new TicketService();
+        private TicketService ticketService = new TicketService();
 
         public AddTicket()
         {
@@ -28,15 +29,16 @@ namespace TGG_UI
 
         private void buttonCreate_Click(object sender, EventArgs e)
         {
-
             Ticket ticket = new Ticket();
 
-            ticket.TimeAdded = dateTimePickerTimeReported.Value;
-            ticket.TimeDeadline = dateTimePickerDeadline.Value;
             ticket.EmployeeID = int.Parse(textBoxEmployeeId.Text);
             ticket.Title = textBoxTitle.Text;
-            ticket.PriorityLevel = (TGGPriorityLevel)comboBoxPrioLevel.SelectedIndex;
             ticket.Description = richTextBoxDescription.Text;
+            ticket.TimeAdded = dateTimePickerTimeReported.Value;
+            ticket.TimeDeadline = dateTimePickerDeadline.Value;
+            ticket.PriorityLevel = (TGGPriorityLevel)Enum.Parse(typeof(TGGPriorityLevel), comboBoxPrioLevel.SelectedIndex.ToString());
+            ticket.Branch = textBoxBranch.Text;
+            ticket.Status = (TGGStatus)Enum.Parse(typeof(TGGStatus), comboBoxPrioLevel.SelectedIndex.ToString());
 
             ticketService.AddTicket(ticket);
 
@@ -46,7 +48,7 @@ namespace TGG_UI
         private void AddTickets_Load(object sender, EventArgs e)
         {
             comboBoxPrioLevel.DataSource = Enum.GetValues(typeof(TGGPriorityLevel));
-            //comboBoxStatus.DataSource = Enum.GetValues(typeof(TGGPriorityLevel));
+            comboBoxStatus.DataSource = Enum.GetValues(typeof(TGGStatus));
         }
 
         private void CloseForm()

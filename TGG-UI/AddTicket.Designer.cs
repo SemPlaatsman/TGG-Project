@@ -55,7 +55,7 @@ namespace TGG_UI
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(190)))), ((int)(((byte)(188)))));
             this.label1.Location = new System.Drawing.Point(138, 36);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(346, 37);
@@ -96,7 +96,7 @@ namespace TGG_UI
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(190)))), ((int)(((byte)(188)))));
             this.label2.Location = new System.Drawing.Point(105, 123);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(146, 20);
@@ -108,7 +108,7 @@ namespace TGG_UI
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(190)))), ((int)(((byte)(188)))));
             this.label3.Location = new System.Drawing.Point(105, 263);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(42, 20);
@@ -120,7 +120,7 @@ namespace TGG_UI
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(190)))), ((int)(((byte)(188)))));
             this.label4.Location = new System.Drawing.Point(105, 309);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(128, 20);
@@ -132,7 +132,7 @@ namespace TGG_UI
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(190)))), ((int)(((byte)(188)))));
             this.label5.Location = new System.Drawing.Point(105, 404);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(95, 20);
@@ -144,7 +144,7 @@ namespace TGG_UI
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(190)))), ((int)(((byte)(188)))));
             this.label6.Location = new System.Drawing.Point(105, 216);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(104, 20);
@@ -164,7 +164,7 @@ namespace TGG_UI
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(190)))), ((int)(((byte)(188)))));
             this.label7.Location = new System.Drawing.Point(105, 453);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(93, 20);
@@ -173,9 +173,9 @@ namespace TGG_UI
             // 
             // buttonCreate
             // 
-            this.buttonCreate.BackColor = System.Drawing.Color.PaleGreen;
+            this.buttonCreate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(179)))), ((int)(((byte)(61)))));
             this.buttonCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCreate.ForeColor = System.Drawing.Color.Black;
+            this.buttonCreate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(190)))), ((int)(((byte)(188)))));
             this.buttonCreate.Location = new System.Drawing.Point(366, 597);
             this.buttonCreate.Name = "buttonCreate";
             this.buttonCreate.Size = new System.Drawing.Size(146, 65);
@@ -186,9 +186,9 @@ namespace TGG_UI
             // 
             // buttonCancel
             // 
-            this.buttonCancel.BackColor = System.Drawing.Color.DodgerBlue;
+            this.buttonCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(231)))), ((int)(((byte)(213)))));
             this.buttonCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCancel.ForeColor = System.Drawing.Color.White;
+            this.buttonCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(179)))), ((int)(((byte)(61)))));
             this.buttonCancel.Location = new System.Drawing.Point(109, 597);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(146, 65);
@@ -209,7 +209,7 @@ namespace TGG_UI
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(190)))), ((int)(((byte)(188)))));
             this.label8.Location = new System.Drawing.Point(105, 171);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(76, 20);
@@ -221,7 +221,7 @@ namespace TGG_UI
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Black;
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(190)))), ((int)(((byte)(188)))));
             this.label9.Location = new System.Drawing.Point(105, 359);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(60, 20);
@@ -248,7 +248,7 @@ namespace TGG_UI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.MintCream;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(62)))), ((int)(((byte)(66)))));
             this.ClientSize = new System.Drawing.Size(657, 685);
             this.Controls.Add(this.comboBoxStatus);
             this.Controls.Add(this.label9);
