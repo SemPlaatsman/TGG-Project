@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Employee.cs" />
+    <Compile Include="TGG-Status.cs" />
     <Compile Include="TGG-MongoModel.cs" />
     <Compile Include="TGGCollections.cs" />
     <Compile Include="TGGErrorLogger.cs" />

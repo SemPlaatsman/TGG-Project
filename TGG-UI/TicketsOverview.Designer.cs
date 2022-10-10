@@ -37,7 +37,7 @@ namespace TGG_UI
             // 
             // gridViewTickets
             // 
-            this.gridViewTickets.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.gridViewTickets.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(160)))), ((int)(((byte)(55)))));
             this.gridViewTickets.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridViewTickets.GridColor = System.Drawing.Color.Black;
             this.gridViewTickets.Location = new System.Drawing.Point(70, 160);
@@ -47,9 +47,9 @@ namespace TGG_UI
             // 
             // buttonAddTicketsForm
             // 
-            this.buttonAddTicketsForm.BackColor = System.Drawing.Color.DodgerBlue;
+            this.buttonAddTicketsForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(179)))), ((int)(((byte)(61)))));
             this.buttonAddTicketsForm.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAddTicketsForm.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonAddTicketsForm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(190)))), ((int)(((byte)(188)))));
             this.buttonAddTicketsForm.Location = new System.Drawing.Point(549, 79);
             this.buttonAddTicketsForm.Name = "buttonAddTicketsForm";
             this.buttonAddTicketsForm.Size = new System.Drawing.Size(266, 54);
@@ -63,7 +63,7 @@ namespace TGG_UI
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(190)))), ((int)(((byte)(188)))));
             this.label1.Location = new System.Drawing.Point(64, 83);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(287, 45);
@@ -74,7 +74,7 @@ namespace TGG_UI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.MintCream;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(62)))), ((int)(((byte)(66)))));
             this.ClientSize = new System.Drawing.Size(884, 951);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonAddTicketsForm);

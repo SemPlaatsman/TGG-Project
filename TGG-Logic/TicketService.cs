@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MongoDB.Bson;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,9 +23,14 @@ namespace TGG_Logic
             return ticketDAO.GetAllTickets();
         }
 
-        public void AddTicket(Ticket ticket)
+        public Ticket AddTicket(Ticket ticket)
         {
-            ticketDAO.AddTicket(ticket);
+            return ticketDAO.AddTicket(ticket);
+        }
+
+        public List<Ticket> GetTicketByElement(BsonElement filterElement)
+        {
+            return ticketDAO.GetTicketByElement(filterElement);
         }
     }
 }
