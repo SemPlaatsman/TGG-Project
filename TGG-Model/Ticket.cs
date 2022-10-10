@@ -34,6 +34,6 @@ namespace TGG_Model
         public TGGPriorityLevel PriorityLevel { get; set; }
 		
         [BsonElement("status"), BsonRepresentation(BsonType.Int32)]
-        public TGGStatus Status { get; set; }
+        public TGGStatus TGGStatus { get; set; }
     }
 }

@@ -11,7 +11,6 @@ using TGG_Model;
 using TGG_Logic;
 using System.Windows.Forms.DataVisualization.Charting;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-using Status = TGG_Model.Status;
 
 namespace TGG_UI
 {
@@ -42,8 +41,8 @@ namespace TGG_UI
         }
         public void FillChart(TGGPriorityLevel priorityLevel)
         {
-            int countOfPendingTickets = tickets.Count(n => n.PriorityLevel == priorityLevel && n.Status == Status.Pending);
-            int countOfOpenTickets = tickets.Count(n => n.PriorityLevel == priorityLevel && n.Status == Status.Open);
+            int countOfPendingTickets = tickets.Count(n => n.PriorityLevel == priorityLevel && n.TGGStatus == TGGStatus.Pending);
+            int countOfOpenTickets = tickets.Count(n => n.PriorityLevel == priorityLevel && n.TGGStatus == TGGStatus.Open);
             int countOfOverdueTickets = tickets.Count(n => n.PriorityLevel == priorityLevel && n.TimeDeadline <= DateTime.Today);
             ((Chart)(flowLayoutPanelCharts.Controls[(int)priorityLevel])).Series[0].Points[0].SetValueXY(countOfPendingTickets.ToString(), countOfPendingTickets);
             ((Chart)(flowLayoutPanelCharts.Controls[(int)priorityLevel])).Series[0].Points[1].SetValueXY(countOfOpenTickets.ToString(), countOfOpenTickets);
@@ -74,11 +73,11 @@ namespace TGG_UI
         {
             labelAmountOverdue.Text = tickets.Count(n => n.TimeDeadline <= DateTime.Today).ToString();
             labelAmountPendingHU.Text = tickets.Count(
-                n => n.PriorityLevel == TGGPriorityLevel.High && n.Status ==Status.Pending).ToString();
+                n => n.PriorityLevel == TGGPriorityLevel.High && n.TGGStatus ==TGGStatus.Pending).ToString();
             labelAmountOpenHU.Text = tickets.Count(
-                n => n.PriorityLevel == TGGPriorityLevel.High && n.Status == Status.Open).ToString();   
+                n => n.PriorityLevel == TGGPriorityLevel.High && n.TGGStatus ==TGGStatus.Open).ToString();   
             labelAmountOpenPendingNU.Text = tickets.Count(
-                n => n.PriorityLevel <= TGGPriorityLevel.High && (n.Status == Status.Open|| n.Status == Status.Pending)).ToString();
+                n => n.PriorityLevel <= TGGPriorityLevel.High && (n.TGGStatus ==TGGStatus.Open|| n.TGGStatus ==TGGStatus.Pending)).ToString();
             
         }
 
