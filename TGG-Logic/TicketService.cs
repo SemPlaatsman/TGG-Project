@@ -27,10 +27,5 @@ namespace TGG_Logic
         {
             return ticketDAO.AddTicket(ticket);
         }
-
-        public List<Ticket> GetTicketByElement(BsonElement filterElement)
-        {
-            return ticketDAO.GetTicketByElement(filterElement);
-        }
     }
 }

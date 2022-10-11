@@ -230,16 +230,20 @@ namespace TGG_UI
             // 
             // comboBoxPrioLevel
             // 
+            this.comboBoxPrioLevel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxPrioLevel.FormattingEnabled = true;
             this.comboBoxPrioLevel.Location = new System.Drawing.Point(257, 406);
+            this.comboBoxPrioLevel.MaxDropDownItems = 3;
             this.comboBoxPrioLevel.Name = "comboBoxPrioLevel";
             this.comboBoxPrioLevel.Size = new System.Drawing.Size(255, 21);
             this.comboBoxPrioLevel.TabIndex = 19;
             // 
             // comboBoxStatus
             // 
+            this.comboBoxStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxStatus.FormattingEnabled = true;
             this.comboBoxStatus.Location = new System.Drawing.Point(257, 361);
+            this.comboBoxStatus.MaxDropDownItems = 5;
             this.comboBoxStatus.Name = "comboBoxStatus";
             this.comboBoxStatus.Size = new System.Drawing.Size(255, 21);
             this.comboBoxStatus.TabIndex = 23;

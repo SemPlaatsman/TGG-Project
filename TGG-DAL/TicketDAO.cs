@@ -36,11 +36,5 @@ namespace TGG_DAL
         {
             return BsonSerializer.Deserialize<Ticket>(CreateOperation(ticket.ToBsonDocument()));
         }
-
-        public List<Ticket> GetTicketByElement(BsonElement filterElement)
-        {
-            FilterDefinition<BsonDocument> filter = Builders<BsonDocument>.Filter.Eq(filterElement.Name, filterElement.Value);
-            return ReadTickets(ReadOperation(filter));
-        } 
     }
 }
