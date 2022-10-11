@@ -16,7 +16,9 @@ namespace TGG_DAL
 
         public Employee AddEmployee(Employee employee)
         {
-            return BsonSerializer.Deserialize<Employee>(CreateOperation(employee.ToBsonDocument()));
+            BsonDocument bsonDoc = employee.ToBsonDocument();
+            bsonDoc.Remove("employeeId");
+            return BsonSerializer.Deserialize<Employee>(CreateOperation(bsonDoc));
         }
 
         public List<Employee> GetAllEmployees()
