@@ -46,6 +46,7 @@ namespace TGG_UI
         {
             gridViewEmployees.DataSource = employeeService.GetAllEmployees();
             gridViewEmployees.Columns["MongoId"].Visible = false;
+            gridViewEmployees.Columns["Password"].Visible = false;
             gridViewEmployees.Columns["EmployeeId"].HeaderText = "Employee ID";
             gridViewEmployees.Columns["EmployeeId"].Width = 110;
             gridViewEmployees.Columns["Email"].HeaderText = "Email address";
