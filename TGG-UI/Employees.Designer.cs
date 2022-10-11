@@ -108,6 +108,7 @@
             this.Controls.Add(this.btnAddEmployee);
             this.Controls.Add(this.gridViewEmployees);
             this.Name = "Employees";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Employees";
             ((System.ComponentModel.ISupportInitialize)(this.gridViewEmployees)).EndInit();
             this.ResumeLayout(false);
