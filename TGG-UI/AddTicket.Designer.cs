@@ -249,6 +249,8 @@ namespace TGG_UI
             // 
             this.comboBoxPrioLevel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxPrioLevel.FormattingEnabled = true;
+            this.comboBoxPrioLevel.Location = new System.Drawing.Point(257, 406);
+            this.comboBoxPrioLevel.MaxDropDownItems = 3;
             this.comboBoxPrioLevel.Location = new System.Drawing.Point(343, 500);
             this.comboBoxPrioLevel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBoxPrioLevel.Name = "comboBoxPrioLevel";
@@ -259,6 +261,8 @@ namespace TGG_UI
             // 
             this.comboBoxStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxStatus.FormattingEnabled = true;
+            this.comboBoxStatus.Location = new System.Drawing.Point(257, 361);
+            this.comboBoxStatus.MaxDropDownItems = 5;
             this.comboBoxStatus.Location = new System.Drawing.Point(343, 444);
             this.comboBoxStatus.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBoxStatus.Name = "comboBoxStatus";
