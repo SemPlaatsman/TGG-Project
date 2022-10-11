@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace TGG_Model
 {
-    public enum TGGPriorityLevel
+    public enum Status
     {
-        High,
-        Normal,
-        Low
+        Pending, 
+        Open, 
+        Resolved, 
+        Closed, 
+        WaitingOnThirdParty
     }
 }

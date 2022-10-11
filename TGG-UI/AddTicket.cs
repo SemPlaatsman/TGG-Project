@@ -37,8 +37,7 @@ namespace TGG_UI
             ticket.TimeAdded = dateTimePickerTimeReported.Value;
             ticket.TimeDeadline = dateTimePickerDeadline.Value;
             ticket.PriorityLevel = (TGGPriorityLevel)Enum.Parse(typeof(TGGPriorityLevel), comboBoxPrioLevel.SelectedIndex.ToString());
-            ticket.Branch = textBoxBranch.Text;
-            ticket.Status = (TGGStatus)Enum.Parse(typeof(TGGStatus), comboBoxPrioLevel.SelectedIndex.ToString());
+            ticket.TGGStatus = (TGGStatus)Enum.Parse(typeof(TGGStatus), comboBoxPrioLevel.SelectedIndex.ToString());
 
             ticketService.AddTicket(ticket);
 

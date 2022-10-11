@@ -26,17 +26,14 @@ namespace TGG_Model
 
         [BsonElement("timeAdded"), BsonRepresentation(BsonType.DateTime)]
         public DateTime TimeAdded { get; set; }
-
+		
         [BsonElement("timeDeadline"), BsonRepresentation(BsonType.DateTime)]
         public DateTime TimeDeadline { get; set; }
-
+		
         [BsonElement("priorityLevel"), BsonRepresentation(BsonType.Int32)]
         public TGGPriorityLevel PriorityLevel { get; set; }
-
-        [BsonElement("branch"), BsonRepresentation(BsonType.String)]
-        public string Branch { get; set; }
-
+		
         [BsonElement("status"), BsonRepresentation(BsonType.Int32)]
-        public TGGStatus Status { get; set; }
+        public TGGStatus TGGStatus { get; set; }
     }
 }

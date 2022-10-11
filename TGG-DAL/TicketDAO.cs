@@ -36,5 +36,43 @@ namespace TGG_DAL
         {
             return BsonSerializer.Deserialize<Ticket>(CreateOperation(ticket.ToBsonDocument()));
         }
+
+        public List<UpdateResult> UpdateTicketByElement(BsonElement filterElement, BsonElement requiredUpdateElement, params BsonElement[] extraUpdateElements)
+        {
+            List<UpdateResult> updateResults = new List<UpdateResult>();
+            FilterDefinition<BsonDocument> filter = Builders<BsonDocument>.Filter.Eq(filterElement.Name, filterElement.Value);
+
+            List<BsonElement> allUpdateElements = new List<BsonElement>() { requiredUpdateElement };
+            allUpdateElements.AddRange(extraUpdateElements);
+            foreach (BsonElement bsonElement in allUpdateElements.ToList())
+            {
+                if (bsonElement.Name == filterElement.Name)
+                {
+                    allUpdateElements[allUpdateElements.IndexOf(bsonElement)] = allUpdateElements.Last();
+                    allUpdateElements[allUpdateElements.Count - 1] = bsonElement;
+                }
+            }
+
+            foreach (BsonElement updateElement in allUpdateElements)
+            {
+                UpdateDefinition<BsonDocument> update = Builders<BsonDocument>.Update.Set(updateElement.Name, updateElement.Value);
+                updateResults.Add(UpdateOperation(filter, update));
+            }
+
+            return updateResults;
+        }
+
+        public void Archive(List<Ticket> tickets)
+        {
+            List<BsonDocument> bsonDocs = new List<BsonDocument>();
+            foreach (Ticket ticket in tickets)
+                bsonDocs.Add(ticket.ToBsonDocument());
+            ArchiveOperation(bsonDocs);
+        }
+        public List<Ticket> GetTicketByElement(BsonElement filterElement)
+        {
+            FilterDefinition<BsonDocument> filter = Builders<BsonDocument>.Filter.Eq(filterElement.Name, filterElement.Value);
+            return ReadTickets(ReadOperation(filter));
+        } 
     }
 }
