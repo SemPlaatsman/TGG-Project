@@ -28,7 +28,11 @@ namespace TGG_DAL
 
         protected BsonDocument CreateOperation(BsonDocument bsonDoc)
         {
-            bsonDoc.Remove("employeeId");
+            if (currentCollection.CollectionNamespace.CollectionName == TGGCollections.Employees.ToString()) {
+                bsonDoc.Remove("employeeId");
+            } else if (currentCollection.CollectionNamespace.CollectionName == TGGCollections.Tickets.ToString())
+                bsonDoc.Remove("ticketId");
+
             currentCollection.InsertOne(bsonDoc);
             return bsonDoc;
         }

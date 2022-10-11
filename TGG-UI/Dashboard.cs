@@ -9,30 +9,84 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TGG_Model;
 using TGG_Logic;
+using System.Windows.Forms.DataVisualization.Charting;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace TGG_UI
 {
     public partial class Dashboard : Form
     {
         private TicketService ticketService;
-
+        private List<Ticket> tickets;
         public Dashboard()
         {
             InitializeComponent();
             ticketService = new TicketService();
-            aa();
-            List<Ticket> tickets = ticketService.GetAllTickets();
-
+            UpdateDashboard();
         }
-        public void aa()
+
+        private void UpdateDashboard()
         {
-            List<Ticket> tickets = ticketService.GetAllTickets();
-            chart1.Series["Tickets Status"].Points[0].SetValueXY($"{tickets.Count(n => n.Status == Status.Open)}", tickets.Count(n => n.Status == Status.Open));
-            chart1.Series["Tickets Status"].Points[0].LegendText = "Open";
-            chart1.Series["Tickets Status"].Points.AddXY("Resolved", tickets.Count(n => n.Status == Status.Resolved));
-            chart1.Series["Tickets Status"].Points.AddXY("Pending", tickets.Count(n => n.Status == Status.Pending));
-
+            tickets = ticketService.GetAllTickets();
+            FillCharts();
+            FillTopBar();
         }
 
+        public void FillCharts()
+        {
+            for(int i = Enum.GetValues(typeof(TGGPriorityLevel)).Length - 1; i >= 0; i--)
+            {
+                FillChart((TGGPriorityLevel)i);
+            }
+        }
+        public void FillChart(TGGPriorityLevel priorityLevel)
+        {
+            int countOfPendingTickets = tickets.Count(n => n.PriorityLevel == priorityLevel && n.TGGStatus == TGGStatus.Pending);
+            int countOfOpenTickets = tickets.Count(n => n.PriorityLevel == priorityLevel && n.TGGStatus == TGGStatus.Open);
+            int countOfOverdueTickets = tickets.Count(n => n.PriorityLevel == priorityLevel && n.TimeDeadline <= DateTime.Today);
+            ((Chart)(flowLayoutPanelCharts.Controls[(int)priorityLevel])).Series[0].Points[0].SetValueXY(countOfPendingTickets.ToString(), countOfPendingTickets);
+            ((Chart)(flowLayoutPanelCharts.Controls[(int)priorityLevel])).Series[0].Points[1].SetValueXY(countOfOpenTickets.ToString(), countOfOpenTickets);
+            ((Chart)(flowLayoutPanelCharts.Controls[(int)priorityLevel])).Series[0].Points[2].SetValueXY(countOfOverdueTickets.ToString(), countOfOverdueTickets);
+            CheckIfEmptyChart((Chart)(flowLayoutPanelCharts.Controls[(int)priorityLevel]));
+        }
+        public void CheckIfEmptyChart(Chart chart)
+        {
+            int count = 0;
+            foreach(DataPoint dataPoints in chart.Series[0].Points)
+            {
+                if (dataPoints.YValues[0] == 0)
+                {
+                    count++;
+                }
+            }
+            if(count == chart.Series[0].Points.Count())
+            {
+                TextAnnotation ta = new TextAnnotation();
+                ta.X = 30;
+                ta.Y = 45;
+                ta.Text = $"No tickets found with \n{chart.Titles[0].Text}";
+                ta.Font = new Font(Font.FontFamily, 10f);
+                chart.Annotations.Add(ta);
+            }
+        }
+        public void FillTopBar()
+        {
+            labelAmountOverdue.Text = tickets.Count(n => n.TimeDeadline <= DateTime.Today).ToString();
+            labelAmountPendingHU.Text = tickets.Count(
+                n => n.PriorityLevel == TGGPriorityLevel.High && n.TGGStatus ==TGGStatus.Pending).ToString();
+            labelAmountOpenHU.Text = tickets.Count(
+                n => n.PriorityLevel == TGGPriorityLevel.High && n.TGGStatus ==TGGStatus.Open).ToString();   
+            labelAmountOpenPendingNU.Text = tickets.Count(
+                n => n.PriorityLevel <= TGGPriorityLevel.High && (n.TGGStatus ==TGGStatus.Open|| n.TGGStatus ==TGGStatus.Pending)).ToString();
+            
+        }
+
+        private void buttonShowAllTickets_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new TicketsOverview().ShowDialog();
+            this.Show();
+            UpdateDashboard();
+        }
     }
 }
