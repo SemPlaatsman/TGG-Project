@@ -27,9 +27,13 @@ namespace TGG_DAL
             return ReadEmployees(ReadOperation(filter));
         }
 
-        public List<Employee> GetEmployeesByElement(BsonElement filterElement)
+        public List<Employee> GetEmployeesByElement(BsonElement filterElement, params BsonElement[] extraFilterElements)
         {
             FilterDefinition<BsonDocument> filter = Builders<BsonDocument>.Filter.Eq(filterElement.Name, filterElement.Value);
+            foreach (BsonElement element in extraFilterElements)
+            {
+                filter &= Builders<BsonDocument>.Filter.Eq(element.Name, element.Value);
+            }
             return ReadEmployees(ReadOperation(filter));
         }
 

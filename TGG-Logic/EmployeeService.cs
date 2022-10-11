@@ -32,9 +32,9 @@ namespace TGG_Logic
             return employeeDAO.GetAllEmployees();
         }
 
-        public List<Employee> GetEmployeesByElement(BsonElement filterElement)
+        public List<Employee> GetEmployeesByElement(BsonElement filterElement, params BsonElement[] extraFilterElement)
         {
-            return employeeDAO.GetEmployeesByElement(filterElement);
+            return employeeDAO.GetEmployeesByElement(filterElement, extraFilterElement);
         }
 
         public List<UpdateResult> UpdateEmployeeByElement(BsonElement filterElement, BsonElement updateElement, params BsonElement[] extraUpdateElements)
