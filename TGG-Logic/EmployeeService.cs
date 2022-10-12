@@ -13,14 +13,17 @@ namespace TGG_Logic
     public class EmployeeService
     {
         private EmployeeDAO employeeDAO;
+        private TGGEncryption encryptionService;
 
         public EmployeeService()
         {
             employeeDAO = new EmployeeDAO();
+            encryptionService = new TGGEncryption();
         }
 
         public Employee AddEmployee(Employee employee)
         {
+            employee.Password = encryptionService.HashWithSalt(employee.Password);
             return employeeDAO.AddEmployee(employee);
         }
 
@@ -29,9 +32,9 @@ namespace TGG_Logic
             return employeeDAO.GetAllEmployees();
         }
 
-        public List<Employee> GetEmployeesByElement(BsonElement filterElement)
+        public List<Employee> GetEmployeesByElement(BsonElement filterElement, params BsonElement[] extraFilterElement)
         {
-            return employeeDAO.GetEmployeesByElement(filterElement);
+            return employeeDAO.GetEmployeesByElement(filterElement, extraFilterElement);
         }
 
         public List<UpdateResult> UpdateEmployeeByElement(BsonElement filterElement, BsonElement updateElement, params BsonElement[] extraUpdateElements)

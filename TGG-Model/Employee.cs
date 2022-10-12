@@ -22,7 +22,7 @@ namespace TGG_Model
         public string FullName { get; set; }
 
         [BsonElement("password"), BsonRepresentation(BsonType.String)]
-        private string password;
+        public string Password { get; set; }
 
         [BsonElement("isSDEmployee"), BsonRepresentation(BsonType.Boolean)]
         public bool IsSDEmployee { get; set; }
@@ -31,7 +31,7 @@ namespace TGG_Model
         {
             Email = email;
             FullName = fullName;
-            this.password = password;
+            Password = password;
             IsSDEmployee = isSDEmployee;
         }
     }
