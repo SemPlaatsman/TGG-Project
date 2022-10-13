@@ -55,8 +55,6 @@ namespace TGG_UI
             gridViewEmployees.Columns["FullName"].Width = 260;
             gridViewEmployees.Columns["IsSDEmployee"].HeaderText = "SD Employee";
             gridViewEmployees.Columns["IsSDEmployee"].Width = 111;
-            gridViewEmployees.ReadOnly = true;
-            gridViewEmployees.RowHeadersVisible = false;
             gridViewEmployees.Columns.Cast<DataGridViewColumn>().ToList().ForEach(column => column.SortMode = DataGridViewColumnSortMode.NotSortable);
             gridViewEmployees.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
         }

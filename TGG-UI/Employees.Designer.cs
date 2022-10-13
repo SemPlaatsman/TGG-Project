@@ -76,6 +76,7 @@
             this.gridViewEmployees.Location = new System.Drawing.Point(70, 160);
             this.gridViewEmployees.MultiSelect = false;
             this.gridViewEmployees.Name = "gridViewEmployees";
+            this.gridViewEmployees.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -84,6 +85,7 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.gridViewEmployees.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.gridViewEmployees.RowHeadersVisible = false;
             this.gridViewEmployees.Size = new System.Drawing.Size(744, 690);
             this.gridViewEmployees.TabIndex = 3;
             // 
