@@ -19,5 +19,30 @@ namespace TGG_UI
         {
             InitializeComponent();
         }
+
+        private void buttonLogin_Click(object sender, EventArgs e)
+        {
+            string email, password;
+            email = txtUsername.Text;
+            password = txtPassword.Text;
+
+            EmployeeService employeeService = new EmployeeService();
+
+            Employee employee = new Employee(email, "-", password, false);
+            BsonDocument employeeBsonDoc = employee.ToBsonDocument();
+            List<Employee> employees = employeeService.GetEmployeesByElement(employeeBsonDoc.GetElement("email"), employeeBsonDoc.GetElement("password"));
+
+            if(employees.Count > 0)
+            {
+                this.Hide();
+                Dashboard newDashboard = new Dashboard(employee);
+                newDashboard.ShowDialog();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Incorrect username / password !");
+            }
+        }
     }
 }

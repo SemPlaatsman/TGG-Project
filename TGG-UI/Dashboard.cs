@@ -18,10 +18,12 @@ namespace TGG_UI
     {
         private TicketService ticketService;
         private List<Ticket> tickets;
-        public Dashboard()
+        private Employee employee;
+        public Dashboard(Employee employee)
         {
             InitializeComponent();
             ticketService = new TicketService();
+            this.employee = employee;
             UpdateDashboard();
         }
 
