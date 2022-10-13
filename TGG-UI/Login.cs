@@ -22,9 +22,10 @@ namespace TGG_UI
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
+            TGGEncryption encryption = new TGGEncryption();
             string email, password;
             email = txtUsername.Text;
-            password = txtPassword.Text;
+            password = encryption.HashWithSalt(txtPassword.Text);
 
             EmployeeService employeeService = new EmployeeService();
 
