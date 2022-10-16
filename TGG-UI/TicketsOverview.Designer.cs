@@ -32,6 +32,7 @@ namespace TGG_UI
             this.gridViewTickets = new System.Windows.Forms.DataGridView();
             this.buttonAddTicketsForm = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewTickets)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,12 +71,22 @@ namespace TGG_UI
             this.label1.TabIndex = 2;
             this.label1.Text = "Overview Tickets";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(630, 867);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(185, 60);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "sem is de beste\r\n(niet klikken als je een skill issue hebt)";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // TicketsOverview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(62)))), ((int)(((byte)(66)))));
             this.ClientSize = new System.Drawing.Size(884, 951);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonAddTicketsForm);
             this.Controls.Add(this.gridViewTickets);
@@ -94,5 +105,6 @@ namespace TGG_UI
         private System.Windows.Forms.DataGridView gridViewTickets;
         private System.Windows.Forms.Button buttonAddTicketsForm;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
     }
 }
