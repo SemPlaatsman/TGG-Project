@@ -26,10 +26,10 @@ namespace TGG_DAL
             currentCollection = mongoMainDB.GetCollection<BsonDocument>(collection.ToString());
         }
 
-        protected BsonDocument CreateOperation(BsonDocument bsonDoc)
+        protected List<BsonDocument> CreateOperation(List<BsonDocument> bsonDocs)
         {
-            currentCollection.InsertOne(bsonDoc);
-            return bsonDoc;
+            currentCollection.InsertMany(bsonDocs);
+            return bsonDocs;
         }
 
         protected List<BsonDocument> ReadOperation(FilterDefinition<BsonDocument> filter, SortDefinition<BsonDocument> sort = null)
