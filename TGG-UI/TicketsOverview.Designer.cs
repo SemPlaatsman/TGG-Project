@@ -33,6 +33,7 @@ namespace TGG_UI
             this.buttonAddTicketsForm = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonSortPriorityLevel = new System.Windows.Forms.Button();
+            this.btnArchive = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewTickets)).BeginInit();
             this.SuspendLayout();
             // 
@@ -89,6 +90,16 @@ namespace TGG_UI
             this.buttonSortPriorityLevel.UseVisualStyleBackColor = false;
             this.buttonSortPriorityLevel.Click += new System.EventHandler(this.buttonSortPriorityLevel_Click);
             // 
+            // btnArchive
+            // 
+            this.btnArchive.Location = new System.Drawing.Point(630, 867);
+            this.btnArchive.Name = "btnArchive";
+            this.btnArchive.Size = new System.Drawing.Size(185, 60);
+            this.btnArchive.TabIndex = 3;
+            this.btnArchive.Text = "sem is de beste\r\n(niet klikken als je een skill issue hebt)";
+            this.btnArchive.UseVisualStyleBackColor = true;
+            this.btnArchive.Click += new System.EventHandler(this.btnArchive_Click);
+            // 
             // TicketsOverview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -96,6 +107,7 @@ namespace TGG_UI
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(62)))), ((int)(((byte)(66)))));
             this.ClientSize = new System.Drawing.Size(884, 951);
             this.Controls.Add(this.buttonSortPriorityLevel);
+            this.Controls.Add(this.btnArchive);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonAddTicketsForm);
             this.Controls.Add(this.gridViewTickets);
@@ -118,5 +130,6 @@ namespace TGG_UI
         private System.Windows.Forms.Button buttonAddTicketsForm;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonSortPriorityLevel;
+        private System.Windows.Forms.Button btnArchive;
     }
 }

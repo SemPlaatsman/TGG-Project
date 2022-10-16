@@ -19,7 +19,9 @@ namespace TGG_UI
 
         private Timer timer;
 
-        public Employees()
+        private Employee employee;
+
+        public Employees(Employee employee)
         {
             try
             {
@@ -31,6 +33,14 @@ namespace TGG_UI
                 this.timer.Tick += EmployeesTickEvent;
                 this.timer.Interval = 10000;
                 this.timer.Start();
+
+                this.employee = employee;
+
+                if (!employee.IsSDEmployee)
+                {
+                    btnAddEmployee.Enabled = false;
+                    btnAddEmployee.Visible = false;
+                }
 
                 LoadEmployeeGrid();
             }
@@ -77,7 +87,7 @@ namespace TGG_UI
             try
             {
                 this.timer.Stop();
-                AddEmployee addEmployeeForm = new AddEmployee(employeeService);
+                AddEmployee addEmployeeForm = new AddEmployee(employeeService, employee);
                 addEmployeeForm.ShowDialog();
                 LoadEmployeeGrid();
                 this.timer.Start();
