@@ -71,5 +71,10 @@ namespace TGG_UI
         {
             tickets = ticketService.GetAllTickets();
         }
+
+        private void btnArchive_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
