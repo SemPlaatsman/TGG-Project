@@ -32,12 +32,17 @@ namespace TGG_UI
             this.gridViewTickets = new System.Windows.Forms.DataGridView();
             this.buttonAddTicketsForm = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.buttonSortPriorityLevel = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewTickets)).BeginInit();
             this.SuspendLayout();
             // 
             // gridViewTickets
             // 
+            this.gridViewTickets.AllowUserToAddRows = false;
+            this.gridViewTickets.AllowUserToDeleteRows = false;
+            this.gridViewTickets.AllowUserToResizeColumns = false;
+            this.gridViewTickets.AllowUserToResizeRows = false;
             this.gridViewTickets.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(160)))), ((int)(((byte)(55)))));
             this.gridViewTickets.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridViewTickets.GridColor = System.Drawing.Color.Black;
@@ -49,7 +54,7 @@ namespace TGG_UI
             // buttonAddTicketsForm
             // 
             this.buttonAddTicketsForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(179)))), ((int)(((byte)(61)))));
-            this.buttonAddTicketsForm.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAddTicketsForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold);
             this.buttonAddTicketsForm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(190)))), ((int)(((byte)(188)))));
             this.buttonAddTicketsForm.Location = new System.Drawing.Point(549, 79);
             this.buttonAddTicketsForm.Name = "buttonAddTicketsForm";
@@ -63,14 +68,27 @@ namespace TGG_UI
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(190)))), ((int)(((byte)(188)))));
-            this.label1.Location = new System.Drawing.Point(64, 83);
+            this.label1.Location = new System.Drawing.Point(302, 39);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(287, 45);
+            this.label1.Size = new System.Drawing.Size(273, 37);
             this.label1.TabIndex = 2;
             this.label1.Text = "Overview Tickets";
             // 
+            // buttonSortPriorityLevel
+            // 
+            this.buttonSortPriorityLevel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(179)))), ((int)(((byte)(61)))));
+            this.buttonSortPriorityLevel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSortPriorityLevel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(190)))), ((int)(((byte)(188)))));
+            this.buttonSortPriorityLevel.Location = new System.Drawing.Point(70, 79);
+            this.buttonSortPriorityLevel.Name = "buttonSortPriorityLevel";
+            this.buttonSortPriorityLevel.Padding = new System.Windows.Forms.Padding(0, 4, 0, 0);
+            this.buttonSortPriorityLevel.Size = new System.Drawing.Size(266, 54);
+            this.buttonSortPriorityLevel.TabIndex = 3;
+            this.buttonSortPriorityLevel.Text = "Sort Priority Level";
+            this.buttonSortPriorityLevel.UseVisualStyleBackColor = false;
+            this.buttonSortPriorityLevel.Click += new System.EventHandler(this.buttonSortPriorityLevel_Click);
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(630, 867);
@@ -86,6 +104,7 @@ namespace TGG_UI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(62)))), ((int)(((byte)(66)))));
             this.ClientSize = new System.Drawing.Size(884, 951);
+            this.Controls.Add(this.buttonSortPriorityLevel);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonAddTicketsForm);
@@ -105,6 +124,7 @@ namespace TGG_UI
         private System.Windows.Forms.DataGridView gridViewTickets;
         private System.Windows.Forms.Button buttonAddTicketsForm;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button buttonSortPriorityLevel;
         private System.Windows.Forms.Button button1;
     }
 }
