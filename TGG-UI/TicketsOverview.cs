@@ -18,10 +18,12 @@ namespace TGG_UI
         private TicketService ticketService = new TicketService();
         private List<Ticket> tickets;
         private Timer timer;
+        private Employee employee;
 
-        public TicketsOverview()
+        public TicketsOverview(Employee employee)
         {
             InitializeComponent();
+            this.employee = employee;
         }
 
         private void buttonAddTicketsForm_Click(object sender, EventArgs e)
