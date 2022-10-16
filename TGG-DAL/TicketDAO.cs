@@ -36,7 +36,7 @@ namespace TGG_DAL
         {
             BsonDocument bsonDoc = ticket.ToBsonDocument();
             bsonDoc.Remove("ticketId");
-            return BsonSerializer.Deserialize<Ticket>(CreateOperation(bsonDoc));
+            return BsonSerializer.Deserialize<Ticket>(CreateOperation(new List<BsonDocument>() { bsonDoc }).First());
         }
 
         public List<UpdateResult> UpdateTicketByElement(BsonElement filterElement, BsonElement requiredUpdateElement, params BsonElement[] extraUpdateElements)

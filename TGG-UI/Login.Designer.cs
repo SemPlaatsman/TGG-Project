@@ -98,7 +98,6 @@ namespace TGG_UI
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Button buttonLogin;

@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Configuration;
 using TGG_Logic;
+using TGG_Model;
 
 namespace TGG_UI
 {
@@ -18,7 +19,7 @@ namespace TGG_UI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login());
+            Application.Run(new Employees(new Employee("-", "-", "-", true)));
         }
     }
 }

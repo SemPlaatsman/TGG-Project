@@ -18,14 +18,19 @@ namespace TGG_UI
     public partial class AddEmployee : Form
     {
         private EmployeeService employeeService;
-        const int maxSecondsToAddEmployee = 3;
-        public AddEmployee(EmployeeService employeeService)
+
+        private Employee employee;
+
+        const int maxSecondsToAddEmployee = 5;
+        public AddEmployee(EmployeeService employeeService, Employee employee)
         {
             try
             {
                 InitializeComponent();
 
                 this.employeeService = employeeService;
+
+                this.employee = employee;
             }
             catch (Exception ex)
             {
@@ -128,6 +133,11 @@ namespace TGG_UI
         {
             btnPasswordHide.BringToFront();
             txtPassword.UseSystemPasswordChar = false;
+        }
+
+        private void AddEmployee_Paint(object sender, PaintEventArgs e)
+        {
+            e.Graphics.DrawRectangle(new Pen(Color.FromArgb(232, 231, 213), 5), new Rectangle(0, 0, Width - 1, Height - 1));
         }
     }
 }
