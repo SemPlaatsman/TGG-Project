@@ -35,11 +35,12 @@ namespace TGG_UI
 
         private void Tickets_Load(object sender, EventArgs e)
         {
+           
             LoadTickets();
             ItemsToGridview(tickets);
 
             timer = new Timer();
-            timer.Interval = 1000;
+            timer.Interval = 5000;
             timer.Tick += TimerTick;
             timer.Start();
         }
