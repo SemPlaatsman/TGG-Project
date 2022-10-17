@@ -31,15 +31,28 @@ namespace TGG_UI
         {
             Ticket ticket = new Ticket();
 
-            ticket.EmployeeID = int.Parse(textBoxEmployeeId.Text);
-            ticket.Title = textBoxTitle.Text;
-            ticket.Description = richTextBoxDescription.Text;
-            ticket.TimeAdded = dateTimePickerTimeReported.Value;
-            ticket.TimeDeadline = dateTimePickerDeadline.Value;
-            ticket.PriorityLevel = (TGGPriorityLevel)Enum.Parse(typeof(TGGPriorityLevel), comboBoxPrioLevel.SelectedIndex.ToString());
-            ticket.TGGStatus = (TGGStatus)Enum.Parse(typeof(TGGStatus), comboBoxPrioLevel.SelectedIndex.ToString());
+            try
+            {
+                if (String.IsNullOrEmpty(textBoxEmployeeId.Text) || String.IsNullOrEmpty(textBoxTitle.Text))
+                {
+                    MessageBox.Show("Please enter a employee id and title");
+                    return;
+                }
 
-            ticketService.AddTicket(ticket);
+                ticket.EmployeeID = int.Parse(textBoxEmployeeId.Text);
+                ticket.Title = textBoxTitle.Text;
+                ticket.Description = richTextBoxDescription.Text;
+                ticket.TimeAdded = dateTimePickerTimeReported.Value;
+                ticket.TimeDeadline = dateTimePickerDeadline.Value;
+                ticket.PriorityLevel = (TGGPriorityLevel)Enum.Parse(typeof(TGGPriorityLevel), comboBoxPrioLevel.SelectedIndex.ToString());
+                ticket.TGGStatus = (TGGStatus)Enum.Parse(typeof(TGGStatus), comboBoxPrioLevel.SelectedIndex.ToString());
+
+                ticketService.AddTicket(ticket);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Something went wrong with adding a ticket, please try and contact admin");
+            }
 
             CloseForm();
         }
