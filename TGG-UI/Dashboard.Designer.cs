@@ -75,9 +75,9 @@ namespace TGG_UI
             this.buttonShowAllTickets = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.logOutButton = new System.Windows.Forms.Button();
-            this.dashBoardButton = new System.Windows.Forms.Button();
-            this.ticketOverviewButton = new System.Windows.Forms.Button();
             this.employeeOverviewButton = new System.Windows.Forms.Button();
+            this.ticketOverviewButton = new System.Windows.Forms.Button();
+            this.dashBoardButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.chartHighPriority)).BeginInit();
             this.flowLayoutPanelCharts.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartNormalPriority)).BeginInit();
@@ -487,35 +487,7 @@ namespace TGG_UI
             this.logOutButton.TabIndex = 4;
             this.logOutButton.Text = "Log out  →";
             this.logOutButton.UseVisualStyleBackColor = true;
-            // 
-            // dashBoardButton
-            // 
-            this.dashBoardButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(179)))), ((int)(((byte)(61)))));
-            this.dashBoardButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dashBoardButton.FlatAppearance.BorderSize = 0;
-            this.dashBoardButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.dashBoardButton.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dashBoardButton.ForeColor = System.Drawing.Color.White;
-            this.dashBoardButton.Location = new System.Drawing.Point(6, 6);
-            this.dashBoardButton.Name = "dashBoardButton";
-            this.dashBoardButton.Size = new System.Drawing.Size(279, 39);
-            this.dashBoardButton.TabIndex = 1;
-            this.dashBoardButton.Text = "Dashboard";
-            this.dashBoardButton.UseVisualStyleBackColor = false;
-            // 
-            // ticketOverviewButton
-            // 
-            this.ticketOverviewButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ticketOverviewButton.FlatAppearance.BorderSize = 0;
-            this.ticketOverviewButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ticketOverviewButton.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ticketOverviewButton.ForeColor = System.Drawing.Color.White;
-            this.ticketOverviewButton.Location = new System.Drawing.Point(294, 6);
-            this.ticketOverviewButton.Name = "ticketOverviewButton";
-            this.ticketOverviewButton.Size = new System.Drawing.Size(279, 39);
-            this.ticketOverviewButton.TabIndex = 2;
-            this.ticketOverviewButton.Text = "Ticket Management";
-            this.ticketOverviewButton.UseVisualStyleBackColor = true;
+            this.logOutButton.Click += new System.EventHandler(this.logOutButton_Click);
             // 
             // employeeOverviewButton
             // 
@@ -530,6 +502,38 @@ namespace TGG_UI
             this.employeeOverviewButton.TabIndex = 3;
             this.employeeOverviewButton.Text = "Employee Managment";
             this.employeeOverviewButton.UseVisualStyleBackColor = true;
+            this.employeeOverviewButton.Click += new System.EventHandler(this.employeeOverviewButton_Click);
+            // 
+            // ticketOverviewButton
+            // 
+            this.ticketOverviewButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ticketOverviewButton.FlatAppearance.BorderSize = 0;
+            this.ticketOverviewButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ticketOverviewButton.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ticketOverviewButton.ForeColor = System.Drawing.Color.White;
+            this.ticketOverviewButton.Location = new System.Drawing.Point(294, 6);
+            this.ticketOverviewButton.Name = "ticketOverviewButton";
+            this.ticketOverviewButton.Size = new System.Drawing.Size(279, 39);
+            this.ticketOverviewButton.TabIndex = 2;
+            this.ticketOverviewButton.Text = "Ticket Management";
+            this.ticketOverviewButton.UseVisualStyleBackColor = true;
+            this.ticketOverviewButton.Click += new System.EventHandler(this.ticketOverviewButton_Click);
+            // 
+            // dashBoardButton
+            // 
+            this.dashBoardButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(179)))), ((int)(((byte)(61)))));
+            this.dashBoardButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dashBoardButton.Enabled = false;
+            this.dashBoardButton.FlatAppearance.BorderSize = 0;
+            this.dashBoardButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.dashBoardButton.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dashBoardButton.ForeColor = System.Drawing.Color.White;
+            this.dashBoardButton.Location = new System.Drawing.Point(6, 6);
+            this.dashBoardButton.Name = "dashBoardButton";
+            this.dashBoardButton.Size = new System.Drawing.Size(279, 39);
+            this.dashBoardButton.TabIndex = 1;
+            this.dashBoardButton.Text = "Dashboard";
+            this.dashBoardButton.UseVisualStyleBackColor = false;
             // 
             // Dashboard
             // 
