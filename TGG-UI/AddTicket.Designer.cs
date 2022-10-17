@@ -250,6 +250,9 @@ namespace TGG_UI
             this.Controls.Add(this.textBoxTitle);
             this.Controls.Add(this.textBoxEmployeeId);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximumSize = new System.Drawing.Size(673, 724);
+            this.MinimumSize = new System.Drawing.Size(673, 724);
             this.Name = "AddTicket";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddTickets";

@@ -35,7 +35,7 @@ namespace TGG_UI
             if(employees.Count > 0)
             {
                 this.Hide();
-                Dashboard newDashboard = new Dashboard(employee);
+                Dashboard newDashboard = new Dashboard(employees[0]);
                 newDashboard.ShowDialog();
                 this.Close();
             }
