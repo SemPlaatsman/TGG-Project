@@ -502,7 +502,6 @@ namespace TGG_UI
             this.dashBoardButton.TabIndex = 1;
             this.dashBoardButton.Text = "Dashboard";
             this.dashBoardButton.UseVisualStyleBackColor = false;
-            this.dashBoardButton.Click += new System.EventHandler(this.button2_Click);
             // 
             // ticketOverviewButton
             // 
