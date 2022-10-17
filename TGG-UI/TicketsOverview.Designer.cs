@@ -92,12 +92,15 @@ namespace TGG_UI
             // 
             // btnArchive
             // 
-            this.btnArchive.Location = new System.Drawing.Point(630, 867);
+            this.btnArchive.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(179)))), ((int)(((byte)(61)))));
+            this.btnArchive.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
+            this.btnArchive.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(190)))), ((int)(((byte)(188)))));
+            this.btnArchive.Location = new System.Drawing.Point(548, 867);
             this.btnArchive.Name = "btnArchive";
-            this.btnArchive.Size = new System.Drawing.Size(185, 60);
+            this.btnArchive.Size = new System.Drawing.Size(266, 54);
             this.btnArchive.TabIndex = 3;
-            this.btnArchive.Text = "sem is de beste\r\n(niet klikken als je een skill issue hebt)";
-            this.btnArchive.UseVisualStyleBackColor = true;
+            this.btnArchive.Text = "Archive (> 2 years)";
+            this.btnArchive.UseVisualStyleBackColor = false;
             this.btnArchive.Click += new System.EventHandler(this.btnArchive_Click);
             // 
             // TicketsOverview
