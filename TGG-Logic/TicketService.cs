@@ -34,14 +34,24 @@ namespace TGG_Logic
             return ticketDAO.GetTicketByElement(filterElement);
         }
 
+        public List<Ticket> GetTicketBelowAddedDate(BsonElement filterElement)
+        {
+            return ticketDAO.GetTicketBelowAddedDate(filterElement);
+        }
+
         public List<UpdateResult> UpdateTicketByElement(BsonElement filterElement, BsonElement updateElement, params BsonElement[] extraUpdateElements)
         {
             return ticketDAO.UpdateTicketByElement(filterElement, updateElement, extraUpdateElements);
         }
 
-        public void Archive(List<Ticket> tickets)
+        public DeleteResult DeleteTicketByCollection(ICollection<Ticket> filterCollection)
         {
-            ticketDAO.Archive(tickets);
+            return ticketDAO.DeleteTicketByCollection(filterCollection);
+        }
+
+        public List<Ticket> Archive(List<Ticket> tickets)
+        {
+            return ticketDAO.Archive(tickets);
         }
     }
 }

@@ -49,11 +49,12 @@ namespace TGG_DAL
             return currentCollection.DeleteMany(filter);
         }
 
-        protected void ArchiveOperation(List<BsonDocument> bsonDocs)
+        protected List<BsonDocument> ArchiveOperation(List<BsonDocument> bsonDocs)
         {
             currentCollection = mongoArchiveDB.GetCollection<BsonDocument>(currentCollection.CollectionNamespace.CollectionName);
-            currentCollection.InsertMany(bsonDocs);
+            bsonDocs = CreateOperation(bsonDocs);
             currentCollection = mongoMainDB.GetCollection<BsonDocument>(currentCollection.CollectionNamespace.CollectionName);
+            return bsonDocs;
         }
     }
 }
