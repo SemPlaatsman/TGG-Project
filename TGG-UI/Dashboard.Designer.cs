@@ -73,6 +73,11 @@ namespace TGG_UI
             this.labelTitleOpenPendingNU = new System.Windows.Forms.Label();
             this.labelTitleChartSummary = new System.Windows.Forms.Label();
             this.buttonShowAllTickets = new System.Windows.Forms.Button();
+            this.navigationBarPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.logOutButton = new System.Windows.Forms.Button();
+            this.employeeOverviewButton = new System.Windows.Forms.Button();
+            this.ticketOverviewButton = new System.Windows.Forms.Button();
+            this.dashBoardButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.chartHighPriority)).BeginInit();
             this.flowLayoutPanelCharts.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartNormalPriority)).BeginInit();
@@ -86,6 +91,7 @@ namespace TGG_UI
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOpenHighUrg)).BeginInit();
             this.panelOpenPendingNU.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNormalPriority)).BeginInit();
+            this.navigationBarPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // chartHighPriority
@@ -138,7 +144,7 @@ namespace TGG_UI
             this.flowLayoutPanelCharts.Controls.Add(this.chartHighPriority);
             this.flowLayoutPanelCharts.Controls.Add(this.chartNormalPriority);
             this.flowLayoutPanelCharts.Controls.Add(this.chartLowPriority);
-            this.flowLayoutPanelCharts.Location = new System.Drawing.Point(13, 248);
+            this.flowLayoutPanelCharts.Location = new System.Drawing.Point(13, 348);
             this.flowLayoutPanelCharts.Name = "flowLayoutPanelCharts";
             this.flowLayoutPanelCharts.Size = new System.Drawing.Size(1128, 326);
             this.flowLayoutPanelCharts.TabIndex = 6;
@@ -235,7 +241,7 @@ namespace TGG_UI
             this.flowLayoutPanelTopBar.Controls.Add(this.panelPendingHighUrg);
             this.flowLayoutPanelTopBar.Controls.Add(this.panelOpenHighUrg);
             this.flowLayoutPanelTopBar.Controls.Add(this.panelOpenPendingNU);
-            this.flowLayoutPanelTopBar.Location = new System.Drawing.Point(12, 12);
+            this.flowLayoutPanelTopBar.Location = new System.Drawing.Point(12, 112);
             this.flowLayoutPanelTopBar.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanelTopBar.Name = "flowLayoutPanelTopBar";
             this.flowLayoutPanelTopBar.Size = new System.Drawing.Size(1128, 95);
@@ -425,7 +431,7 @@ namespace TGG_UI
             // 
             this.labelTitleChartSummary.AutoSize = true;
             this.labelTitleChartSummary.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTitleChartSummary.Location = new System.Drawing.Point(12, 185);
+            this.labelTitleChartSummary.Location = new System.Drawing.Point(12, 285);
             this.labelTitleChartSummary.Name = "labelTitleChartSummary";
             this.labelTitleChartSummary.Size = new System.Drawing.Size(316, 46);
             this.labelTitleChartSummary.TabIndex = 7;
@@ -440,20 +446,102 @@ namespace TGG_UI
             this.buttonShowAllTickets.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonShowAllTickets.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonShowAllTickets.ForeColor = System.Drawing.Color.White;
-            this.buttonShowAllTickets.Location = new System.Drawing.Point(913, 152);
+            this.buttonShowAllTickets.Location = new System.Drawing.Point(913, 252);
             this.buttonShowAllTickets.Name = "buttonShowAllTickets";
             this.buttonShowAllTickets.Size = new System.Drawing.Size(203, 57);
-            this.buttonShowAllTickets.TabIndex = 8;
+            this.buttonShowAllTickets.TabIndex = 5;
             this.buttonShowAllTickets.Text = "Show All Tickets";
             this.buttonShowAllTickets.UseVisualStyleBackColor = false;
             this.buttonShowAllTickets.Click += new System.EventHandler(this.buttonShowAllTickets_Click);
+            // 
+            // navigationBarPanel
+            // 
+            this.navigationBarPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(62)))), ((int)(((byte)(66)))));
+            this.navigationBarPanel.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.InsetDouble;
+            this.navigationBarPanel.ColumnCount = 4;
+            this.navigationBarPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.navigationBarPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.navigationBarPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.navigationBarPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.navigationBarPanel.Controls.Add(this.logOutButton, 3, 0);
+            this.navigationBarPanel.Controls.Add(this.employeeOverviewButton, 2, 0);
+            this.navigationBarPanel.Controls.Add(this.ticketOverviewButton, 1, 0);
+            this.navigationBarPanel.Controls.Add(this.dashBoardButton, 0, 0);
+            this.navigationBarPanel.Location = new System.Drawing.Point(-3, -4);
+            this.navigationBarPanel.Name = "navigationBarPanel";
+            this.navigationBarPanel.RowCount = 1;
+            this.navigationBarPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.navigationBarPanel.Size = new System.Drawing.Size(1155, 51);
+            this.navigationBarPanel.TabIndex = 4;
+            // 
+            // logOutButton
+            // 
+            this.logOutButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.logOutButton.FlatAppearance.BorderSize = 0;
+            this.logOutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.logOutButton.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logOutButton.ForeColor = System.Drawing.Color.White;
+            this.logOutButton.Location = new System.Drawing.Point(870, 6);
+            this.logOutButton.Name = "logOutButton";
+            this.logOutButton.Size = new System.Drawing.Size(279, 39);
+            this.logOutButton.TabIndex = 4;
+            this.logOutButton.Text = "Log out  →";
+            this.logOutButton.UseVisualStyleBackColor = true;
+            this.logOutButton.Click += new System.EventHandler(this.logOutButton_Click);
+            // 
+            // employeeOverviewButton
+            // 
+            this.employeeOverviewButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.employeeOverviewButton.FlatAppearance.BorderSize = 0;
+            this.employeeOverviewButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.employeeOverviewButton.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.employeeOverviewButton.ForeColor = System.Drawing.Color.White;
+            this.employeeOverviewButton.Location = new System.Drawing.Point(582, 6);
+            this.employeeOverviewButton.Name = "employeeOverviewButton";
+            this.employeeOverviewButton.Size = new System.Drawing.Size(279, 39);
+            this.employeeOverviewButton.TabIndex = 3;
+            this.employeeOverviewButton.Text = "Employee Managment";
+            this.employeeOverviewButton.UseVisualStyleBackColor = true;
+            this.employeeOverviewButton.Click += new System.EventHandler(this.employeeOverviewButton_Click);
+            // 
+            // ticketOverviewButton
+            // 
+            this.ticketOverviewButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ticketOverviewButton.FlatAppearance.BorderSize = 0;
+            this.ticketOverviewButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ticketOverviewButton.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ticketOverviewButton.ForeColor = System.Drawing.Color.White;
+            this.ticketOverviewButton.Location = new System.Drawing.Point(294, 6);
+            this.ticketOverviewButton.Name = "ticketOverviewButton";
+            this.ticketOverviewButton.Size = new System.Drawing.Size(279, 39);
+            this.ticketOverviewButton.TabIndex = 2;
+            this.ticketOverviewButton.Text = "Ticket Management";
+            this.ticketOverviewButton.UseVisualStyleBackColor = true;
+            this.ticketOverviewButton.Click += new System.EventHandler(this.ticketOverviewButton_Click);
+            // 
+            // dashBoardButton
+            // 
+            this.dashBoardButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(179)))), ((int)(((byte)(61)))));
+            this.dashBoardButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dashBoardButton.Enabled = false;
+            this.dashBoardButton.FlatAppearance.BorderSize = 0;
+            this.dashBoardButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.dashBoardButton.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dashBoardButton.ForeColor = System.Drawing.Color.White;
+            this.dashBoardButton.Location = new System.Drawing.Point(6, 6);
+            this.dashBoardButton.Name = "dashBoardButton";
+            this.dashBoardButton.Size = new System.Drawing.Size(279, 39);
+            this.dashBoardButton.TabIndex = 1;
+            this.dashBoardButton.Text = "Dashboard";
+            this.dashBoardButton.UseVisualStyleBackColor = false;
             // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1149, 601);
+            this.ClientSize = new System.Drawing.Size(1149, 701);
+            this.Controls.Add(this.navigationBarPanel);
             this.Controls.Add(this.buttonShowAllTickets);
             this.Controls.Add(this.labelTitleChartSummary);
             this.Controls.Add(this.flowLayoutPanelTopBar);
@@ -479,6 +567,7 @@ namespace TGG_UI
             this.panelOpenPendingNU.ResumeLayout(false);
             this.panelOpenPendingNU.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNormalPriority)).EndInit();
+            this.navigationBarPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -509,5 +598,10 @@ namespace TGG_UI
         private System.Windows.Forms.DataVisualization.Charting.Chart chartNormalPriority;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartLowPriority;
         private System.Windows.Forms.Button buttonShowAllTickets;
+        private System.Windows.Forms.TableLayoutPanel navigationBarPanel;
+        private System.Windows.Forms.Button employeeOverviewButton;
+        private System.Windows.Forms.Button ticketOverviewButton;
+        private System.Windows.Forms.Button dashBoardButton;
+        private System.Windows.Forms.Button logOutButton;
     }
 }

@@ -84,12 +84,24 @@ namespace TGG_UI
 
         private void btnArchive_Click(object sender, EventArgs e)
         {
-            //all tickets older than 2 years will be moved to the archive database and deleted from the main database
-            List<Ticket> ticketsToArchive = ticketService.GetTicketBelowAddedDate(new Ticket() { TimeAdded = DateTime.Now.AddYears(-2) }.ToBsonDocument().GetElement("timeAdded"));
-            if (ticketsToArchive.Count <= 0)
-                return;
-            MessageBox.Show(ticketService.DeleteTicketByCollection(ticketService.Archive(ticketsToArchive)).DeletedCount.ToString());
-            MessageBox.Show("SUCCESS!!!");
+            try
+            {
+                //all tickets older than 2 years will be moved to the archive database and deleted from the main database
+                List<Ticket> ticketsToArchive = ticketService.GetTicketBelowAddedDate(new Ticket() { TimeAdded = DateTime.Now.AddYears(-2) }.ToBsonDocument().GetElement("timeAdded"));
+                if (ticketsToArchive.Count <= 0)
+                    throw new TGGException("There are no tickets older than 2 years to be moved to the archive database!");
+                MessageBox.Show($"{ticketService.DeleteTicketByCollection(ticketService.Archive(ticketsToArchive)).DeletedCount.ToString()} tickets were moved to the archive database!",
+                    "Archive result", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (TGGException tggex)
+            {
+                MessageBox.Show(tggex.Message, "Something unexpected happened...", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred! Please contact your application administrator", "An error occurred...", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                TGGErrorLogger.WriteLogToFile(ex);
+            }
         }
     }
 }
