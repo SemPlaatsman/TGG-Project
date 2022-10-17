@@ -23,8 +23,13 @@ namespace TGG_Logic
 
         public Employee AddEmployee(Employee employee)
         {
-            employee.Password = encryptionService.HashWithSalt(employee.Password);
-            return employeeDAO.AddEmployee(employee);
+            return this.AddEmployee(new List<Employee> { employee }).First();
+        }
+
+        public List<Employee> AddEmployee(List<Employee> employees)
+        {
+            employees.ForEach(x => x.Password = encryptionService.HashWithSalt(x.Password));
+            return employeeDAO.AddEmployee(employees);
         }
 
         public List<Employee> GetAllEmployees()
@@ -32,9 +37,9 @@ namespace TGG_Logic
             return employeeDAO.GetAllEmployees();
         }
 
-        public List<Employee> GetEmployeesByElement(BsonElement filterElement)
+        public List<Employee> GetEmployeesByElement(BsonElement filterElement, params BsonElement[] extraFilterElement)
         {
-            return employeeDAO.GetEmployeesByElement(filterElement);
+            return employeeDAO.GetEmployeesByElement(filterElement, extraFilterElement);
         }
 
         public List<UpdateResult> UpdateEmployeeByElement(BsonElement filterElement, BsonElement updateElement, params BsonElement[] extraUpdateElements)

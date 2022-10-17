@@ -19,7 +19,9 @@ namespace TGG_UI
 
         private Timer timer;
 
-        public Employees()
+        private Employee employee;
+
+        public Employees(Employee employee)
         {
             try
             {
@@ -31,6 +33,14 @@ namespace TGG_UI
                 this.timer.Tick += EmployeesTickEvent;
                 this.timer.Interval = 10000;
                 this.timer.Start();
+
+                this.employee = employee;
+
+                if (!employee.IsSDEmployee)
+                {
+                    btnAddEmployee.Enabled = false;
+                    btnAddEmployee.Visible = false;
+                }
 
                 LoadEmployeeGrid();
             }
@@ -55,8 +65,6 @@ namespace TGG_UI
             gridViewEmployees.Columns["FullName"].Width = 260;
             gridViewEmployees.Columns["IsSDEmployee"].HeaderText = "SD Employee";
             gridViewEmployees.Columns["IsSDEmployee"].Width = 111;
-            gridViewEmployees.ReadOnly = true;
-            gridViewEmployees.RowHeadersVisible = false;
             gridViewEmployees.Columns.Cast<DataGridViewColumn>().ToList().ForEach(column => column.SortMode = DataGridViewColumnSortMode.NotSortable);
             gridViewEmployees.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
         }
@@ -79,7 +87,7 @@ namespace TGG_UI
             try
             {
                 this.timer.Stop();
-                AddEmployee addEmployeeForm = new AddEmployee(employeeService);
+                AddEmployee addEmployeeForm = new AddEmployee(employeeService, employee);
                 addEmployeeForm.ShowDialog();
                 LoadEmployeeGrid();
                 this.timer.Start();

@@ -26,10 +26,10 @@ namespace TGG_DAL
             currentCollection = mongoMainDB.GetCollection<BsonDocument>(collection.ToString());
         }
 
-        protected BsonDocument CreateOperation(BsonDocument bsonDoc)
+        protected List<BsonDocument> CreateOperation(List<BsonDocument> bsonDocs)
         {
-            currentCollection.InsertOne(bsonDoc);
-            return bsonDoc;
+            currentCollection.InsertMany(bsonDocs);
+            return bsonDocs;
         }
 
         protected List<BsonDocument> ReadOperation(FilterDefinition<BsonDocument> filter, SortDefinition<BsonDocument> sort = null)
@@ -49,11 +49,12 @@ namespace TGG_DAL
             return currentCollection.DeleteMany(filter);
         }
 
-        protected void ArchiveOperation(List<BsonDocument> bsonDocs)
+        protected List<BsonDocument> ArchiveOperation(List<BsonDocument> bsonDocs)
         {
             currentCollection = mongoArchiveDB.GetCollection<BsonDocument>(currentCollection.CollectionNamespace.CollectionName);
-            currentCollection.InsertMany(bsonDocs);
+            bsonDocs = CreateOperation(bsonDocs);
             currentCollection = mongoMainDB.GetCollection<BsonDocument>(currentCollection.CollectionNamespace.CollectionName);
+            return bsonDocs;
         }
     }
 }

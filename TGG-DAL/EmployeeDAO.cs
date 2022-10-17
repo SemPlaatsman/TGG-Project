@@ -14,11 +14,16 @@ namespace TGG_DAL
     {
         public EmployeeDAO() : base(TGGCollections.Employees) { }
 
-        public Employee AddEmployee(Employee employee)
+        public List<Employee> AddEmployee(List<Employee> employees)
         {
-            BsonDocument bsonDoc = employee.ToBsonDocument();
-            bsonDoc.Remove("employeeId");
-            return BsonSerializer.Deserialize<Employee>(CreateOperation(bsonDoc));
+            List<BsonDocument> bsonDocs = new List<BsonDocument>();
+            foreach (Employee employee in employees)
+            {
+                BsonDocument bsonDoc = employee.ToBsonDocument();
+                bsonDoc.Remove("employeeId");
+                bsonDocs.Add(bsonDoc);
+            }
+            return ReadEmployees(CreateOperation(bsonDocs));
         }
 
         public List<Employee> GetAllEmployees()
@@ -27,9 +32,13 @@ namespace TGG_DAL
             return ReadEmployees(ReadOperation(filter));
         }
 
-        public List<Employee> GetEmployeesByElement(BsonElement filterElement)
+        public List<Employee> GetEmployeesByElement(BsonElement filterElement, params BsonElement[] extraFilterElements)
         {
             FilterDefinition<BsonDocument> filter = Builders<BsonDocument>.Filter.Eq(filterElement.Name, filterElement.Value);
+            foreach (BsonElement element in extraFilterElements)
+            {
+                filter &= Builders<BsonDocument>.Filter.Eq(element.Name, element.Value);
+            }
             return ReadEmployees(ReadOperation(filter));
         }
 
