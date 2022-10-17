@@ -31,7 +31,7 @@ namespace TGG_UI
         {
             if(!employee.IsSDEmployee)
             {
-                tableLayoutPanel1.ColumnStyles[2].Width = 0;
+                navigationBarPanel.ColumnStyles[2].Width = 0;
             }
         }
 
