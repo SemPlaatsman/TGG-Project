@@ -29,27 +29,27 @@ namespace TGG_UI
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint1 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint2 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint3 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
-            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint4 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint5 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint6 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
-            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint7 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint8 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint9 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
-            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint19 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint20 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint21 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.Title title7 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint22 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint23 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint24 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.Title title8 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend9 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint25 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint26 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint27 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.Title title9 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.chartHighPriority = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.flowLayoutPanelCharts = new System.Windows.Forms.FlowLayoutPanel();
             this.chartNormalPriority = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -73,6 +73,11 @@ namespace TGG_UI
             this.labelTitleOpenPendingNU = new System.Windows.Forms.Label();
             this.labelTitleChartSummary = new System.Windows.Forms.Label();
             this.buttonShowAllTickets = new System.Windows.Forms.Button();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.logOutButton = new System.Windows.Forms.Button();
+            this.dashBoardButton = new System.Windows.Forms.Button();
+            this.ticketOverviewButton = new System.Windows.Forms.Button();
+            this.employeeOverviewButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.chartHighPriority)).BeginInit();
             this.flowLayoutPanelCharts.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartNormalPriority)).BeginInit();
@@ -86,50 +91,51 @@ namespace TGG_UI
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOpenHighUrg)).BeginInit();
             this.panelOpenPendingNU.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNormalPriority)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // chartHighPriority
             // 
             this.chartHighPriority.BackColor = System.Drawing.Color.Transparent;
-            chartArea1.Name = "ChartArea1";
-            this.chartHighPriority.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chartHighPriority.Legends.Add(legend1);
+            chartArea7.Name = "ChartArea1";
+            this.chartHighPriority.ChartAreas.Add(chartArea7);
+            legend7.Name = "Legend1";
+            this.chartHighPriority.Legends.Add(legend7);
             this.chartHighPriority.Location = new System.Drawing.Point(3, 3);
             this.chartHighPriority.Name = "chartHighPriority";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series1.Color = System.Drawing.Color.Transparent;
-            series1.Legend = "Legend1";
-            series1.Name = "Tickets Status";
-            dataPoint1.Color = System.Drawing.Color.OrangeRed;
-            dataPoint1.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataPoint1.LabelForeColor = System.Drawing.Color.White;
-            dataPoint1.LegendText = "Pending";
-            dataPoint2.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold);
-            dataPoint2.LabelForeColor = System.Drawing.Color.White;
-            dataPoint2.LegendText = "Open";
-            dataPoint3.Color = System.Drawing.Color.Red;
-            dataPoint3.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold);
-            dataPoint3.LabelForeColor = System.Drawing.Color.White;
-            dataPoint3.LegendText = "Overdue";
-            series1.Points.Add(dataPoint1);
-            series1.Points.Add(dataPoint2);
-            series1.Points.Add(dataPoint3);
-            this.chartHighPriority.Series.Add(series1);
+            series7.ChartArea = "ChartArea1";
+            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series7.Color = System.Drawing.Color.Transparent;
+            series7.Legend = "Legend1";
+            series7.Name = "Tickets Status";
+            dataPoint19.Color = System.Drawing.Color.OrangeRed;
+            dataPoint19.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataPoint19.LabelForeColor = System.Drawing.Color.White;
+            dataPoint19.LegendText = "Pending";
+            dataPoint20.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold);
+            dataPoint20.LabelForeColor = System.Drawing.Color.White;
+            dataPoint20.LegendText = "Open";
+            dataPoint21.Color = System.Drawing.Color.Red;
+            dataPoint21.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold);
+            dataPoint21.LabelForeColor = System.Drawing.Color.White;
+            dataPoint21.LegendText = "Overdue";
+            series7.Points.Add(dataPoint19);
+            series7.Points.Add(dataPoint20);
+            series7.Points.Add(dataPoint21);
+            this.chartHighPriority.Series.Add(series7);
             this.chartHighPriority.Size = new System.Drawing.Size(367, 323);
             this.chartHighPriority.TabIndex = 0;
             this.chartHighPriority.Text = "chartHighPriority";
-            title1.Alignment = System.Drawing.ContentAlignment.TopLeft;
-            title1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title1.Name = "TitleHighPriority";
-            title1.Position.Auto = false;
-            title1.Position.Height = 8.872766F;
-            title1.Position.Width = 94F;
-            title1.Position.X = 3F;
-            title1.Position.Y = 3F;
-            title1.Text = "High Priority";
-            this.chartHighPriority.Titles.Add(title1);
+            title7.Alignment = System.Drawing.ContentAlignment.TopLeft;
+            title7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title7.Name = "TitleHighPriority";
+            title7.Position.Auto = false;
+            title7.Position.Height = 8.872766F;
+            title7.Position.Width = 94F;
+            title7.Position.X = 3F;
+            title7.Position.Y = 3F;
+            title7.Text = "High Priority";
+            this.chartHighPriority.Titles.Add(title7);
             // 
             // flowLayoutPanelCharts
             // 
@@ -138,7 +144,7 @@ namespace TGG_UI
             this.flowLayoutPanelCharts.Controls.Add(this.chartHighPriority);
             this.flowLayoutPanelCharts.Controls.Add(this.chartNormalPriority);
             this.flowLayoutPanelCharts.Controls.Add(this.chartLowPriority);
-            this.flowLayoutPanelCharts.Location = new System.Drawing.Point(13, 248);
+            this.flowLayoutPanelCharts.Location = new System.Drawing.Point(13, 348);
             this.flowLayoutPanelCharts.Name = "flowLayoutPanelCharts";
             this.flowLayoutPanelCharts.Size = new System.Drawing.Size(1128, 326);
             this.flowLayoutPanelCharts.TabIndex = 6;
@@ -146,86 +152,86 @@ namespace TGG_UI
             // chartNormalPriority
             // 
             this.chartNormalPriority.BackColor = System.Drawing.Color.Transparent;
-            chartArea2.Name = "ChartArea1";
-            this.chartNormalPriority.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chartNormalPriority.Legends.Add(legend2);
+            chartArea8.Name = "ChartArea1";
+            this.chartNormalPriority.ChartAreas.Add(chartArea8);
+            legend8.Name = "Legend1";
+            this.chartNormalPriority.Legends.Add(legend8);
             this.chartNormalPriority.Location = new System.Drawing.Point(376, 3);
             this.chartNormalPriority.Name = "chartNormalPriority";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-            series2.Legend = "Legend1";
-            series2.Name = "Tickets Status";
-            dataPoint4.Color = System.Drawing.Color.OrangeRed;
-            dataPoint4.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataPoint4.LabelForeColor = System.Drawing.Color.White;
-            dataPoint4.LegendText = "Pending";
-            dataPoint5.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold);
-            dataPoint5.LabelForeColor = System.Drawing.Color.White;
-            dataPoint5.LegendText = "Open";
-            dataPoint6.Color = System.Drawing.Color.Red;
-            dataPoint6.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold);
-            dataPoint6.LabelForeColor = System.Drawing.Color.White;
-            dataPoint6.LegendText = "Overdue";
-            series2.Points.Add(dataPoint4);
-            series2.Points.Add(dataPoint5);
-            series2.Points.Add(dataPoint6);
-            this.chartNormalPriority.Series.Add(series2);
+            series8.ChartArea = "ChartArea1";
+            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series8.Legend = "Legend1";
+            series8.Name = "Tickets Status";
+            dataPoint22.Color = System.Drawing.Color.OrangeRed;
+            dataPoint22.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataPoint22.LabelForeColor = System.Drawing.Color.White;
+            dataPoint22.LegendText = "Pending";
+            dataPoint23.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold);
+            dataPoint23.LabelForeColor = System.Drawing.Color.White;
+            dataPoint23.LegendText = "Open";
+            dataPoint24.Color = System.Drawing.Color.Red;
+            dataPoint24.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold);
+            dataPoint24.LabelForeColor = System.Drawing.Color.White;
+            dataPoint24.LegendText = "Overdue";
+            series8.Points.Add(dataPoint22);
+            series8.Points.Add(dataPoint23);
+            series8.Points.Add(dataPoint24);
+            this.chartNormalPriority.Series.Add(series8);
             this.chartNormalPriority.Size = new System.Drawing.Size(367, 323);
             this.chartNormalPriority.TabIndex = 1;
             this.chartNormalPriority.Text = "chartNormalPriority";
-            title2.Alignment = System.Drawing.ContentAlignment.TopLeft;
-            title2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            title2.Name = "TitleNormalPriority";
-            title2.Position.Auto = false;
-            title2.Position.Height = 8.872766F;
-            title2.Position.Width = 94F;
-            title2.Position.X = 3F;
-            title2.Position.Y = 3F;
-            title2.Text = "Normal Priority";
-            this.chartNormalPriority.Titles.Add(title2);
+            title8.Alignment = System.Drawing.ContentAlignment.TopLeft;
+            title8.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            title8.Name = "TitleNormalPriority";
+            title8.Position.Auto = false;
+            title8.Position.Height = 8.872766F;
+            title8.Position.Width = 94F;
+            title8.Position.X = 3F;
+            title8.Position.Y = 3F;
+            title8.Text = "Normal Priority";
+            this.chartNormalPriority.Titles.Add(title8);
             // 
             // chartLowPriority
             // 
             this.chartLowPriority.BackColor = System.Drawing.Color.Transparent;
-            chartArea3.Name = "ChartArea1";
-            this.chartLowPriority.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chartLowPriority.Legends.Add(legend3);
+            chartArea9.Name = "ChartArea1";
+            this.chartLowPriority.ChartAreas.Add(chartArea9);
+            legend9.Name = "Legend1";
+            this.chartLowPriority.Legends.Add(legend9);
             this.chartLowPriority.Location = new System.Drawing.Point(749, 3);
             this.chartLowPriority.Name = "chartLowPriority";
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-            series3.Legend = "Legend1";
-            series3.Name = "Tickets Status HU";
-            dataPoint7.Color = System.Drawing.Color.OrangeRed;
-            dataPoint7.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataPoint7.LabelForeColor = System.Drawing.Color.White;
-            dataPoint7.LegendText = "Pending";
-            dataPoint8.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold);
-            dataPoint8.LabelForeColor = System.Drawing.Color.White;
-            dataPoint8.LegendText = "Open";
-            dataPoint9.Color = System.Drawing.Color.Red;
-            dataPoint9.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold);
-            dataPoint9.LabelForeColor = System.Drawing.Color.White;
-            dataPoint9.LegendText = "Overdue";
-            series3.Points.Add(dataPoint7);
-            series3.Points.Add(dataPoint8);
-            series3.Points.Add(dataPoint9);
-            this.chartLowPriority.Series.Add(series3);
+            series9.ChartArea = "ChartArea1";
+            series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series9.Legend = "Legend1";
+            series9.Name = "Tickets Status HU";
+            dataPoint25.Color = System.Drawing.Color.OrangeRed;
+            dataPoint25.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataPoint25.LabelForeColor = System.Drawing.Color.White;
+            dataPoint25.LegendText = "Pending";
+            dataPoint26.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold);
+            dataPoint26.LabelForeColor = System.Drawing.Color.White;
+            dataPoint26.LegendText = "Open";
+            dataPoint27.Color = System.Drawing.Color.Red;
+            dataPoint27.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold);
+            dataPoint27.LabelForeColor = System.Drawing.Color.White;
+            dataPoint27.LegendText = "Overdue";
+            series9.Points.Add(dataPoint25);
+            series9.Points.Add(dataPoint26);
+            series9.Points.Add(dataPoint27);
+            this.chartLowPriority.Series.Add(series9);
             this.chartLowPriority.Size = new System.Drawing.Size(364, 323);
             this.chartLowPriority.TabIndex = 2;
             this.chartLowPriority.Text = "chartLowPriority";
-            title3.Alignment = System.Drawing.ContentAlignment.TopLeft;
-            title3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            title3.Name = "TitleLowPriority";
-            title3.Position.Auto = false;
-            title3.Position.Height = 8.872766F;
-            title3.Position.Width = 94F;
-            title3.Position.X = 3F;
-            title3.Position.Y = 3F;
-            title3.Text = "Low Priority";
-            this.chartLowPriority.Titles.Add(title3);
+            title9.Alignment = System.Drawing.ContentAlignment.TopLeft;
+            title9.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            title9.Name = "TitleLowPriority";
+            title9.Position.Auto = false;
+            title9.Position.Height = 8.872766F;
+            title9.Position.Width = 94F;
+            title9.Position.X = 3F;
+            title9.Position.Y = 3F;
+            title9.Text = "Low Priority";
+            this.chartLowPriority.Titles.Add(title9);
             // 
             // flowLayoutPanelTopBar
             // 
@@ -235,7 +241,7 @@ namespace TGG_UI
             this.flowLayoutPanelTopBar.Controls.Add(this.panelPendingHighUrg);
             this.flowLayoutPanelTopBar.Controls.Add(this.panelOpenHighUrg);
             this.flowLayoutPanelTopBar.Controls.Add(this.panelOpenPendingNU);
-            this.flowLayoutPanelTopBar.Location = new System.Drawing.Point(12, 12);
+            this.flowLayoutPanelTopBar.Location = new System.Drawing.Point(12, 112);
             this.flowLayoutPanelTopBar.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanelTopBar.Name = "flowLayoutPanelTopBar";
             this.flowLayoutPanelTopBar.Size = new System.Drawing.Size(1128, 95);
@@ -425,7 +431,7 @@ namespace TGG_UI
             // 
             this.labelTitleChartSummary.AutoSize = true;
             this.labelTitleChartSummary.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTitleChartSummary.Location = new System.Drawing.Point(12, 185);
+            this.labelTitleChartSummary.Location = new System.Drawing.Point(12, 285);
             this.labelTitleChartSummary.Name = "labelTitleChartSummary";
             this.labelTitleChartSummary.Size = new System.Drawing.Size(316, 46);
             this.labelTitleChartSummary.TabIndex = 7;
@@ -440,20 +446,99 @@ namespace TGG_UI
             this.buttonShowAllTickets.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonShowAllTickets.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonShowAllTickets.ForeColor = System.Drawing.Color.White;
-            this.buttonShowAllTickets.Location = new System.Drawing.Point(913, 152);
+            this.buttonShowAllTickets.Location = new System.Drawing.Point(913, 252);
             this.buttonShowAllTickets.Name = "buttonShowAllTickets";
             this.buttonShowAllTickets.Size = new System.Drawing.Size(203, 57);
-            this.buttonShowAllTickets.TabIndex = 8;
+            this.buttonShowAllTickets.TabIndex = 5;
             this.buttonShowAllTickets.Text = "Show All Tickets";
             this.buttonShowAllTickets.UseVisualStyleBackColor = false;
             this.buttonShowAllTickets.Click += new System.EventHandler(this.buttonShowAllTickets_Click);
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(62)))), ((int)(((byte)(66)))));
+            this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.InsetDouble;
+            this.tableLayoutPanel1.ColumnCount = 4;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.Controls.Add(this.logOutButton, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.employeeOverviewButton, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.ticketOverviewButton, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.dashBoardButton, 0, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(-3, -4);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1155, 51);
+            this.tableLayoutPanel1.TabIndex = 4;
+            // 
+            // logOutButton
+            // 
+            this.logOutButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.logOutButton.FlatAppearance.BorderSize = 0;
+            this.logOutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.logOutButton.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logOutButton.ForeColor = System.Drawing.Color.White;
+            this.logOutButton.Location = new System.Drawing.Point(870, 6);
+            this.logOutButton.Name = "logOutButton";
+            this.logOutButton.Size = new System.Drawing.Size(279, 39);
+            this.logOutButton.TabIndex = 4;
+            this.logOutButton.Text = "Log out  →";
+            this.logOutButton.UseVisualStyleBackColor = true;
+            // 
+            // dashBoardButton
+            // 
+            this.dashBoardButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(179)))), ((int)(((byte)(61)))));
+            this.dashBoardButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dashBoardButton.FlatAppearance.BorderSize = 0;
+            this.dashBoardButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.dashBoardButton.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dashBoardButton.ForeColor = System.Drawing.Color.White;
+            this.dashBoardButton.Location = new System.Drawing.Point(6, 6);
+            this.dashBoardButton.Name = "dashBoardButton";
+            this.dashBoardButton.Size = new System.Drawing.Size(279, 39);
+            this.dashBoardButton.TabIndex = 1;
+            this.dashBoardButton.Text = "Dashboard";
+            this.dashBoardButton.UseVisualStyleBackColor = false;
+            this.dashBoardButton.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // ticketOverviewButton
+            // 
+            this.ticketOverviewButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ticketOverviewButton.FlatAppearance.BorderSize = 0;
+            this.ticketOverviewButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ticketOverviewButton.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ticketOverviewButton.ForeColor = System.Drawing.Color.White;
+            this.ticketOverviewButton.Location = new System.Drawing.Point(294, 6);
+            this.ticketOverviewButton.Name = "ticketOverviewButton";
+            this.ticketOverviewButton.Size = new System.Drawing.Size(279, 39);
+            this.ticketOverviewButton.TabIndex = 2;
+            this.ticketOverviewButton.Text = "Ticket Management";
+            this.ticketOverviewButton.UseVisualStyleBackColor = true;
+            // 
+            // employeeOverviewButton
+            // 
+            this.employeeOverviewButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.employeeOverviewButton.FlatAppearance.BorderSize = 0;
+            this.employeeOverviewButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.employeeOverviewButton.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.employeeOverviewButton.ForeColor = System.Drawing.Color.White;
+            this.employeeOverviewButton.Location = new System.Drawing.Point(582, 6);
+            this.employeeOverviewButton.Name = "employeeOverviewButton";
+            this.employeeOverviewButton.Size = new System.Drawing.Size(279, 39);
+            this.employeeOverviewButton.TabIndex = 3;
+            this.employeeOverviewButton.Text = "Employee Managment";
+            this.employeeOverviewButton.UseVisualStyleBackColor = true;
             // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1149, 601);
+            this.ClientSize = new System.Drawing.Size(1149, 701);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.buttonShowAllTickets);
             this.Controls.Add(this.labelTitleChartSummary);
             this.Controls.Add(this.flowLayoutPanelTopBar);
@@ -479,6 +564,7 @@ namespace TGG_UI
             this.panelOpenPendingNU.ResumeLayout(false);
             this.panelOpenPendingNU.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNormalPriority)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -509,5 +595,10 @@ namespace TGG_UI
         private System.Windows.Forms.DataVisualization.Charting.Chart chartNormalPriority;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartLowPriority;
         private System.Windows.Forms.Button buttonShowAllTickets;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Button employeeOverviewButton;
+        private System.Windows.Forms.Button ticketOverviewButton;
+        private System.Windows.Forms.Button dashBoardButton;
+        private System.Windows.Forms.Button logOutButton;
     }
 }

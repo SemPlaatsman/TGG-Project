@@ -88,5 +88,10 @@ namespace TGG_UI
             this.Show();
             UpdateDashboard();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            tableLayoutPanel1.ColumnStyles[2].Width = 0;
+        }
     }
 }
