@@ -36,12 +36,6 @@ namespace TGG_UI
 
                 this.employee = employee;
 
-                if (!employee.IsSDEmployee)
-                {
-                    btnAddEmployee.Enabled = false;
-                    btnAddEmployee.Visible = false;
-                }
-
                 LoadEmployeeGrid();
             }
             catch (Exception ex)
