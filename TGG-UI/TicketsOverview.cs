@@ -24,6 +24,7 @@ namespace TGG_UI
         {
             InitializeComponent();
             this.employee = employee;
+            NavbarChange();
         }
 
         private void buttonAddTicketsForm_Click(object sender, EventArgs e)
@@ -102,6 +103,33 @@ namespace TGG_UI
                 MessageBox.Show("An error occurred! Please contact your application administrator", "An error occurred...", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 TGGErrorLogger.WriteLogToFile(ex);
             }
+        }
+
+        private void NavbarChange()
+        {
+            if (!employee.IsSDEmployee)
+            {
+                navigationBarPanel.ColumnStyles[2].Width = 0;
+            }
+        }
+
+        private void dashBoardButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new Dashboard(employee).ShowDialog();
+            this.Close();
+        }
+
+        private void employeeOverviewButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new Employees(employee).ShowDialog();
+            this.Close();
+        }
+
+        private void logOutButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
