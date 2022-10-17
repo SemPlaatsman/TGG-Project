@@ -63,11 +63,18 @@ namespace TGG_UI
 
         private void ItemsToGridview(List<Ticket> tickets)
         {
-            gridViewTickets.DataSource = tickets;
+            try
+            {
+                gridViewTickets.DataSource = tickets;
 
-            this.gridViewTickets.Columns["TimeAdded"].DefaultCellStyle.Format = "dd/MM/yyyy HH:mm:ss";
-            this.gridViewTickets.Columns["TimeDeadline"].DefaultCellStyle.Format = "dd/MM/yyyy HH:mm:ss";
-            this.gridViewTickets.Columns["MongoId"].Visible = false;
+                this.gridViewTickets.Columns["TimeAdded"].DefaultCellStyle.Format = "dd/MM/yyyy HH:mm:ss";
+                this.gridViewTickets.Columns["TimeDeadline"].DefaultCellStyle.Format = "dd/MM/yyyy HH:mm:ss";
+                this.gridViewTickets.Columns["MongoId"].Visible = false;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Something went wrong while loading the tickets list, please try and contact admin");
+            }
         }
 
         private void LoadTickets()
