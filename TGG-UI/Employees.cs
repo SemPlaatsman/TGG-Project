@@ -87,8 +87,7 @@ namespace TGG_UI
             try
             {
                 this.timer.Stop();
-                AddEmployee addEmployeeForm = new AddEmployee(employeeService, employee);
-                addEmployeeForm.ShowDialog();
+                new AddEmployee(employeeService, employee).ShowDialog();
                 LoadEmployeeGrid();
                 this.timer.Start();
             }
@@ -97,6 +96,25 @@ namespace TGG_UI
                 MessageBox.Show("Something went wrong while trying to load employees!\nPlease contact the application administrator!", "Something went wrong...", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 TGGErrorLogger.WriteLogToFile(ex);
             }
+        }
+
+        private void dashBoardButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new Dashboard(employee).ShowDialog();
+            this.Close();
+        }
+
+        private void ticketOverviewButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new TicketsOverview(employee).ShowDialog();
+            this.Close();
+        }
+
+        private void logOutButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
