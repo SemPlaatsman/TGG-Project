@@ -30,7 +30,6 @@ namespace TGG_UI
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBoxEmployeeId = new System.Windows.Forms.TextBox();
             this.textBoxTitle = new System.Windows.Forms.TextBox();
             this.dateTimePickerTimeReported = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
@@ -46,6 +45,7 @@ namespace TGG_UI
             this.label9 = new System.Windows.Forms.Label();
             this.comboBoxPrioLevel = new System.Windows.Forms.ComboBox();
             this.comboBoxStatus = new System.Windows.Forms.ComboBox();
+            this.comboBoxEmployeeId = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -59,13 +59,6 @@ namespace TGG_UI
             this.label1.Size = new System.Drawing.Size(346, 37);
             this.label1.TabIndex = 0;
             this.label1.Text = "Create a new incident";
-            // 
-            // textBoxEmployeeId
-            // 
-            this.textBoxEmployeeId.Location = new System.Drawing.Point(257, 218);
-            this.textBoxEmployeeId.Name = "textBoxEmployeeId";
-            this.textBoxEmployeeId.Size = new System.Drawing.Size(255, 20);
-            this.textBoxEmployeeId.TabIndex = 1;
             // 
             // textBoxTitle
             // 
@@ -227,12 +220,23 @@ namespace TGG_UI
             this.comboBoxStatus.Size = new System.Drawing.Size(255, 21);
             this.comboBoxStatus.TabIndex = 23;
             // 
+            // comboBoxEmployeeId
+            // 
+            this.comboBoxEmployeeId.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxEmployeeId.FormattingEnabled = true;
+            this.comboBoxEmployeeId.Location = new System.Drawing.Point(257, 218);
+            this.comboBoxEmployeeId.MaxDropDownItems = 3;
+            this.comboBoxEmployeeId.Name = "comboBoxEmployeeId";
+            this.comboBoxEmployeeId.Size = new System.Drawing.Size(255, 21);
+            this.comboBoxEmployeeId.TabIndex = 25;
+            // 
             // AddTicket
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(62)))), ((int)(((byte)(66)))));
-            this.ClientSize = new System.Drawing.Size(657, 685);
+            this.ClientSize = new System.Drawing.Size(673, 724);
+            this.Controls.Add(this.comboBoxEmployeeId);
             this.Controls.Add(this.comboBoxStatus);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -248,7 +252,6 @@ namespace TGG_UI
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dateTimePickerTimeReported);
             this.Controls.Add(this.textBoxTitle);
-            this.Controls.Add(this.textBoxEmployeeId);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximumSize = new System.Drawing.Size(673, 724);
@@ -265,7 +268,6 @@ namespace TGG_UI
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBoxEmployeeId;
         private System.Windows.Forms.TextBox textBoxTitle;
         private System.Windows.Forms.DateTimePicker dateTimePickerTimeReported;
         private System.Windows.Forms.Label label2;
@@ -281,5 +283,6 @@ namespace TGG_UI
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox comboBoxPrioLevel;
         private System.Windows.Forms.ComboBox comboBoxStatus;
+        private System.Windows.Forms.ComboBox comboBoxEmployeeId;
     }
 }
