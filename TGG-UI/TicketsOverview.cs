@@ -30,7 +30,7 @@ namespace TGG_UI
         private void buttonAddTicketsForm_Click(object sender, EventArgs e)
         {
             timer.Stop();
-            AddTicket addTicketsForm = new AddTicket();
+            AddTicket addTicketsForm = new AddTicket(employee);
             addTicketsForm.Show();
             ItemsToGridview(tickets);
             timer.Start();
@@ -43,7 +43,7 @@ namespace TGG_UI
             ItemsToGridview(tickets);
 
             timer = new Timer();
-            timer.Interval = 5000;
+            timer.Interval = 3000;
             timer.Tick += TimerTick;
             timer.Start();
         }
