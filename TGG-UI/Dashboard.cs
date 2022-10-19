@@ -31,7 +31,7 @@ namespace TGG_UI
         {
             if(!employee.IsSDEmployee)
             {
-                tableLayoutPanel1.ColumnStyles[2].Width = 0;
+                navigationBarPanel.ColumnStyles[2].Width = 0;
             }
         }
 
@@ -94,7 +94,9 @@ namespace TGG_UI
         private void buttonShowAllTickets_Click(object sender, EventArgs e)
         {
             this.Hide();
-            new TicketsOverview().ShowDialog();
+            new TicketsOverview(employee).ShowDialog();
+            this.Show();
+            UpdateDashboard();
             this.Close();
         }
 

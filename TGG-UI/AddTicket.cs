@@ -16,10 +16,15 @@ namespace TGG_UI
     public partial class AddTicket : Form
     {
         private TicketService ticketService = new TicketService();
+        private EmployeeService employeeService = new EmployeeService();
+        private List<Employee> employees;
+        private Employee employee;
 
-        public AddTicket()
+        public AddTicket(Employee employee)
         {
             InitializeComponent();
+
+            this.employee = employee;
         }
 
         private void buttonCancel_Click(object sender, EventArgs e)
@@ -31,21 +36,35 @@ namespace TGG_UI
         {
             Ticket ticket = new Ticket();
 
-            ticket.EmployeeID = int.Parse(textBoxEmployeeId.Text);
-            ticket.Title = textBoxTitle.Text;
-            ticket.Description = richTextBoxDescription.Text;
-            ticket.TimeAdded = dateTimePickerTimeReported.Value;
-            ticket.TimeDeadline = dateTimePickerDeadline.Value;
-            ticket.PriorityLevel = (TGGPriorityLevel)Enum.Parse(typeof(TGGPriorityLevel), comboBoxPrioLevel.SelectedIndex.ToString());
-            ticket.TGGStatus = (TGGStatus)Enum.Parse(typeof(TGGStatus), comboBoxPrioLevel.SelectedIndex.ToString());
+            try
+            {
+                if (String.IsNullOrEmpty(comboBoxEmployeeId.Text) || String.IsNullOrEmpty(textBoxTitle.Text))
+                {
+                    MessageBox.Show("Please enter a employee id and title");
+                    return;
+                }
 
-            ticketService.AddTicket(ticket);
+                ticket.EmployeeID = int.Parse(comboBoxEmployeeId.Text);
+                ticket.Title = textBoxTitle.Text;
+                ticket.Description = richTextBoxDescription.Text;
+                ticket.TimeAdded = dateTimePickerTimeReported.Value;
+                ticket.TimeDeadline = dateTimePickerDeadline.Value;
+                ticket.PriorityLevel = (TGGPriorityLevel)Enum.Parse(typeof(TGGPriorityLevel), comboBoxPrioLevel.SelectedIndex.ToString());
+                ticket.TGGStatus = (TGGStatus)Enum.Parse(typeof(TGGStatus), comboBoxPrioLevel.SelectedIndex.ToString());
+
+                ticketService.AddTicket(ticket);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Something went wrong with adding a ticket, please try and contact admin");
+            }
 
             CloseForm();
         }
 
         private void AddTickets_Load(object sender, EventArgs e)
         {
+            ValidateIsNotSDEmployee();
             comboBoxPrioLevel.DataSource = Enum.GetValues(typeof(TGGPriorityLevel));
             comboBoxStatus.DataSource = Enum.GetValues(typeof(TGGStatus));
         }
@@ -53,6 +72,25 @@ namespace TGG_UI
         private void CloseForm()
         {
             this.Close();
+        }
+
+        private void ValidateIsNotSDEmployee()
+        {
+            if (!employee.IsSDEmployee)
+            {
+                comboBoxEmployeeId.Items.Add(employee.EmployeeId);
+            } else {
+                EmployeesToComboBox();
+            }
+        }
+
+        private void EmployeesToComboBox()
+        {
+            employees = employeeService.GetAllEmployees();
+            foreach (Employee employee in employees)
+            {
+                comboBoxEmployeeId.Items.Add(employee.EmployeeId);
+            }
         }
     }
 }
