@@ -18,5 +18,26 @@ namespace TGG_DAL
             BsonDocument bsonDoc = validationCode.ToBsonDocument();
             BsonSerializer.Deserialize<TGGValidation>(CreateOperation(new List<BsonDocument>() { bsonDoc }).First());
         }
+        public bool CheckValidationByElement(BsonElement filterElement, params BsonElement[] extraFilterElements)
+        {
+            FilterDefinition<BsonDocument> filter = Builders<BsonDocument>.Filter.Eq(filterElement.Name, filterElement.Value);
+            foreach (BsonElement element in extraFilterElements)
+            {
+                filter &= Builders<BsonDocument>.Filter.Eq(element.Name, element.Value);
+            }
+            if (ReadValidationsDB(ReadOperation(filter)).Count == 0)
+            {
+                return false;
+            }
+            return true;
+        }
+        private List<TGGValidation> ReadValidationsDB(List<BsonDocument> filter)
+        {
+            List<TGGValidation> results = new List<TGGValidation>();
+
+            foreach (BsonDocument bsonDoc in filter)
+                results.Add(BsonSerializer.Deserialize<TGGValidation>(bsonDoc));
+            return results;
+        }
     }
 }

@@ -19,37 +19,36 @@ namespace TGG_UI
     {
         private EmployeeService employeeService;
         private ResetPasswordService resetPasswordService;
-        private TGGEncryption encryptionService;
+        private List<Employee> employees;
         public ForgotPassword(string emailAddress)
         {
             InitializeComponent();
             employeeService = new EmployeeService();
             resetPasswordService = new ResetPasswordService();
-            encryptionService = new TGGEncryption();
         }
 
         private void buttonNextEmailEntered_Click(object sender, EventArgs e)
         {
-            if (employeeService.GetEmployeesByElement(new Employee(textBoxEmail.Text).ToBsonDocument().GetElement("email")).Count != 0)
+            panelEnterEmail.Hide();
+            employees = employeeService.GetEmployeesByElement(new Employee(textBoxEmail.Text).ToBsonDocument().GetElement("email"));
+            if (employees.Count != 0)
             {
                 var client = new SmtpClient("smtp.mailtrap.io", 2525)
                 {
                     Credentials = new NetworkCredential("aee2f8f4701483", "119bbc2e9eaa33"),
                     EnableSsl = true
                 };
-                client.Send("Support@TGG.com", textBoxEmail.Text, "Reset Password", "Your confirmation code is: ");
-                resetPasswordService.InsertValidationCode(new TGGValidation(textBoxEmail.Text, encryptionService.HashWithSalt(RandomString())));
+                TGGValidation validationForUser = new TGGValidation(textBoxEmail.Text);
+                client.Send("Support@TGG.com", textBoxEmail.Text, "Reset Password", $"Your confirmation code is: {validationForUser.ValidationCode}." +
+                    $"\nThis code is only valid for 10 minutes.");
+                resetPasswordService.InsertValidationCode(validationForUser);
+
             }
-            panelEnterEmail.Hide();
+            labelExtraInformation.Text = "Verification mail has been sent!\nThis verification code is only valid for 10 minutes.";
+
 
         }
-        public static string RandomString()
-        {
-            Random r = new Random();
-            const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-            return new string(Enumerable.Repeat(chars, 10)
-              .Select(s => s[r.Next(s.Length)]).ToArray());
-        }
+
 
         private void buttonCancel_Click(object sender, EventArgs e)
         {
@@ -59,11 +58,50 @@ namespace TGG_UI
         private void buttonBack2EmailEnter_Click(object sender, EventArgs e)
         {
             panelEnterEmail.Show();
+            labelExtraInformation.Text = string.Empty;
         }
 
         private void buttonConfirmCode_Click(object sender, EventArgs e)
         {
 
+            if (resetPasswordService.CheckValidationByElement(new TGGValidation(textBoxEmail.Text, textBoxCode.Text)))
+            {
+                panelEnterCode.Hide();
+            }
+            else
+            {
+                labelExtraInformation.Text = "Wrong verification code!";
+            }
+
+        }
+
+        private void buttonConfirmNewPassword_Click(object sender, EventArgs e)
+        {
+            if(CheckForValidPassword())
+            {
+                resetPasswordService.UpdateEmployeePassword(employees[0]);
+                labelExtraInformation.Text = "success!";
+            }
+        }
+        private bool CheckForValidPassword()
+        {
+            try
+            {
+                if (textBoxEnterPass.Text.Length < 8)
+                {
+                    throw new Exception("minimum password size is 8 characters");
+                }
+                if (textBoxEnterPass.Text != textBoxConfirmPass.Text)
+                {
+                    throw new Exception("Passwords do not match!");
+                }
+            }
+            catch (Exception ex)
+            {
+                labelExtraInformation.Text = ex.Message;
+                return false;
+            }
+            return true;
         }
     }
 }

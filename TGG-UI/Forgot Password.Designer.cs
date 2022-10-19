@@ -35,21 +35,27 @@ namespace TGG_UI
             this.buttonCancel = new System.Windows.Forms.Button();
             this.labelTitleEnterCode = new System.Windows.Forms.Label();
             this.textBoxCode = new System.Windows.Forms.TextBox();
-            this.labelExtraInformation = new System.Windows.Forms.Label();
             this.panelEnterEmail = new System.Windows.Forms.Panel();
             this.panelEnterCode = new System.Windows.Forms.Panel();
             this.buttonConfirmCode = new System.Windows.Forms.Button();
             this.buttonBack2EmailEnter = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.panelResetPassword = new System.Windows.Forms.Panel();
+            this.labelConfirmPassword = new System.Windows.Forms.Label();
+            this.textBoxConfirmPass = new System.Windows.Forms.TextBox();
+            this.labelEnterNewPass = new System.Windows.Forms.Label();
+            this.textBoxEnterPass = new System.Windows.Forms.TextBox();
+            this.buttonConfirmNewPassword = new System.Windows.Forms.Button();
+            this.labelExtraInformation = new System.Windows.Forms.Label();
             this.panelEnterEmail.SuspendLayout();
             this.panelEnterCode.SuspendLayout();
+            this.panelResetPassword.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelTitleEmail
             // 
             this.labelTitleEmail.AutoSize = true;
             this.labelTitleEmail.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTitleEmail.Location = new System.Drawing.Point(-1, 0);
+            this.labelTitleEmail.Location = new System.Drawing.Point(0, 0);
             this.labelTitleEmail.Name = "labelTitleEmail";
             this.labelTitleEmail.Size = new System.Drawing.Size(205, 22);
             this.labelTitleEmail.TabIndex = 0;
@@ -103,7 +109,7 @@ namespace TGG_UI
             // 
             this.labelTitleEnterCode.AutoSize = true;
             this.labelTitleEnterCode.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTitleEnterCode.Location = new System.Drawing.Point(-1, -3);
+            this.labelTitleEnterCode.Location = new System.Drawing.Point(0, 0);
             this.labelTitleEnterCode.Name = "labelTitleEnterCode";
             this.labelTitleEnterCode.Size = new System.Drawing.Size(203, 22);
             this.labelTitleEnterCode.TabIndex = 8;
@@ -119,17 +125,8 @@ namespace TGG_UI
             this.textBoxCode.Size = new System.Drawing.Size(275, 28);
             this.textBoxCode.TabIndex = 9;
             // 
-            // labelExtraInformation
-            // 
-            this.labelExtraInformation.AutoSize = true;
-            this.labelExtraInformation.Location = new System.Drawing.Point(0, 0);
-            this.labelExtraInformation.Name = "labelExtraInformation";
-            this.labelExtraInformation.Size = new System.Drawing.Size(0, 17);
-            this.labelExtraInformation.TabIndex = 10;
-            // 
             // panelEnterEmail
             // 
-            this.panelEnterEmail.Controls.Add(this.labelExtraInformation);
             this.panelEnterEmail.Controls.Add(this.buttonNextEmailEntered);
             this.panelEnterEmail.Controls.Add(this.buttonCancel);
             this.panelEnterEmail.Controls.Add(this.textBoxEmail);
@@ -145,7 +142,6 @@ namespace TGG_UI
             this.panelEnterCode.Controls.Add(this.textBoxCode);
             this.panelEnterCode.Controls.Add(this.buttonConfirmCode);
             this.panelEnterCode.Controls.Add(this.buttonBack2EmailEnter);
-            this.panelEnterCode.Controls.Add(this.label2);
             this.panelEnterCode.Location = new System.Drawing.Point(137, 203);
             this.panelEnterCode.Name = "panelEnterCode";
             this.panelEnterCode.Size = new System.Drawing.Size(305, 290);
@@ -185,15 +181,85 @@ namespace TGG_UI
             this.buttonBack2EmailEnter.UseVisualStyleBackColor = false;
             this.buttonBack2EmailEnter.Click += new System.EventHandler(this.buttonBack2EmailEnter_Click);
             // 
-            // label2
+            // panelResetPassword
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(-1, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(205, 22);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Enter Email Address:";
+            this.panelResetPassword.Controls.Add(this.labelConfirmPassword);
+            this.panelResetPassword.Controls.Add(this.textBoxConfirmPass);
+            this.panelResetPassword.Controls.Add(this.labelEnterNewPass);
+            this.panelResetPassword.Controls.Add(this.textBoxEnterPass);
+            this.panelResetPassword.Controls.Add(this.buttonConfirmNewPassword);
+            this.panelResetPassword.Location = new System.Drawing.Point(137, 203);
+            this.panelResetPassword.Name = "panelResetPassword";
+            this.panelResetPassword.Size = new System.Drawing.Size(305, 290);
+            this.panelResetPassword.TabIndex = 13;
+            // 
+            // labelConfirmPassword
+            // 
+            this.labelConfirmPassword.AutoSize = true;
+            this.labelConfirmPassword.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelConfirmPassword.Location = new System.Drawing.Point(-2, 60);
+            this.labelConfirmPassword.Name = "labelConfirmPassword";
+            this.labelConfirmPassword.Size = new System.Drawing.Size(189, 22);
+            this.labelConfirmPassword.TabIndex = 10;
+            this.labelConfirmPassword.Text = "Confirm Password:";
+            // 
+            // textBoxConfirmPass
+            // 
+            this.textBoxConfirmPass.BackColor = System.Drawing.Color.White;
+            this.textBoxConfirmPass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxConfirmPass.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxConfirmPass.Location = new System.Drawing.Point(0, 85);
+            this.textBoxConfirmPass.Name = "textBoxConfirmPass";
+            this.textBoxConfirmPass.PasswordChar = '◍';
+            this.textBoxConfirmPass.Size = new System.Drawing.Size(275, 28);
+            this.textBoxConfirmPass.TabIndex = 11;
+            // 
+            // labelEnterNewPass
+            // 
+            this.labelEnterNewPass.AutoSize = true;
+            this.labelEnterNewPass.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEnterNewPass.Location = new System.Drawing.Point(0, 0);
+            this.labelEnterNewPass.Name = "labelEnterNewPass";
+            this.labelEnterNewPass.Size = new System.Drawing.Size(207, 22);
+            this.labelEnterNewPass.TabIndex = 8;
+            this.labelEnterNewPass.Text = "Enter new password:";
+            // 
+            // textBoxEnterPass
+            // 
+            this.textBoxEnterPass.BackColor = System.Drawing.Color.White;
+            this.textBoxEnterPass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxEnterPass.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxEnterPass.Location = new System.Drawing.Point(2, 25);
+            this.textBoxEnterPass.Name = "textBoxEnterPass";
+            this.textBoxEnterPass.PasswordChar = '◍';
+            this.textBoxEnterPass.Size = new System.Drawing.Size(275, 28);
+            this.textBoxEnterPass.TabIndex = 9;
+            // 
+            // buttonConfirmNewPassword
+            // 
+            this.buttonConfirmNewPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(179)))), ((int)(((byte)(61)))));
+            this.buttonConfirmNewPassword.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.buttonConfirmNewPassword.FlatAppearance.BorderSize = 0;
+            this.buttonConfirmNewPassword.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(160)))), ((int)(((byte)(55)))));
+            this.buttonConfirmNewPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonConfirmNewPassword.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonConfirmNewPassword.ForeColor = System.Drawing.Color.White;
+            this.buttonConfirmNewPassword.Location = new System.Drawing.Point(2, 156);
+            this.buttonConfirmNewPassword.Name = "buttonConfirmNewPassword";
+            this.buttonConfirmNewPassword.Size = new System.Drawing.Size(275, 120);
+            this.buttonConfirmNewPassword.TabIndex = 6;
+            this.buttonConfirmNewPassword.Text = "Confirm New Password";
+            this.buttonConfirmNewPassword.UseVisualStyleBackColor = false;
+            this.buttonConfirmNewPassword.Click += new System.EventHandler(this.buttonConfirmNewPassword_Click);
+            // 
+            // labelExtraInformation
+            // 
+            this.labelExtraInformation.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelExtraInformation.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(179)))), ((int)(((byte)(61)))));
+            this.labelExtraInformation.Location = new System.Drawing.Point(135, 64);
+            this.labelExtraInformation.Name = "labelExtraInformation";
+            this.labelExtraInformation.Size = new System.Drawing.Size(307, 136);
+            this.labelExtraInformation.TabIndex = 14;
             // 
             // ForgotPassword
             // 
@@ -201,8 +267,10 @@ namespace TGG_UI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(550, 577);
+            this.Controls.Add(this.labelExtraInformation);
             this.Controls.Add(this.panelEnterEmail);
             this.Controls.Add(this.panelEnterCode);
+            this.Controls.Add(this.panelResetPassword);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ForgotPassword";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -211,6 +279,8 @@ namespace TGG_UI
             this.panelEnterEmail.PerformLayout();
             this.panelEnterCode.ResumeLayout(false);
             this.panelEnterCode.PerformLayout();
+            this.panelResetPassword.ResumeLayout(false);
+            this.panelResetPassword.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -223,11 +293,16 @@ namespace TGG_UI
         private System.Windows.Forms.Button buttonCancel;
         private System.Windows.Forms.Label labelTitleEnterCode;
         private System.Windows.Forms.TextBox textBoxCode;
-        private System.Windows.Forms.Label labelExtraInformation;
         private System.Windows.Forms.Panel panelEnterEmail;
         private System.Windows.Forms.Panel panelEnterCode;
         private System.Windows.Forms.Button buttonConfirmCode;
         private System.Windows.Forms.Button buttonBack2EmailEnter;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panelResetPassword;
+        private System.Windows.Forms.Label labelConfirmPassword;
+        private System.Windows.Forms.TextBox textBoxConfirmPass;
+        private System.Windows.Forms.Label labelEnterNewPass;
+        private System.Windows.Forms.TextBox textBoxEnterPass;
+        private System.Windows.Forms.Button buttonConfirmNewPassword;
+        private System.Windows.Forms.Label labelExtraInformation;
     }
 }

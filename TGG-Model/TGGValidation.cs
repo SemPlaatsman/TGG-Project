@@ -17,11 +17,26 @@ namespace TGG_Model
 
             [BsonElement("validationCode"), BsonRepresentation(BsonType.String)]
             public string ValidationCode { get; set; }
+            [BsonElement("dateAdded"), BsonRepresentation(BsonType.DateTime)]
+            private DateTime dateAdded { get; set; }
 
-            public TGGValidation(string email, string validationCode)
+        public TGGValidation(string email)
             {
                 Email = email;
-                ValidationCode = validationCode;
+                ValidationCode = RandomString(10);
+                dateAdded = DateTime.Now;
             }
+        public TGGValidation(string email, string validationCode)
+        {
+            Email = email;
+            ValidationCode = validationCode;
+        }
+        public static string RandomString(int length)
+        {
+            Random r = new Random();
+            const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+            return new string(Enumerable.Repeat(chars, length)
+              .Select(s => s[r.Next(s.Length)]).ToArray());
+        }
     }
 }
