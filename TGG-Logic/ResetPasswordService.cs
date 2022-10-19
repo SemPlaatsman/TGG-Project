@@ -3,21 +3,24 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TGG_DAL;
 using TGG_Model;
+using MongoDB.Bson;
+using MongoDB.Driver;
 
 namespace TGG_Logic
 {
     public class ResetPasswordService
     {
-        public void InsertValidationCode(Validation validationUser)
+        private ResetPasswordDAO resetPasswordDAO;
+        public ResetPasswordService()
         {
-
+            resetPasswordDAO = new ResetPasswordDAO();
         }
-
-        public List<Employee> AddEmployee(List<Employee> employees)
+        public void InsertValidationCode(TGGValidation validationUser)
         {
-            employees.ForEach(x => x.Password = encryptionService.HashWithSalt(x.Password));
-            return employeeDAO.AddEmployee(employees);
+            resetPasswordDAO.AddValidationCodes(validationUser);
+
         }
     }
 }

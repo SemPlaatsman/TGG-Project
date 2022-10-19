@@ -10,77 +10,13 @@ using TGG_Model;
 
 namespace TGG_DAL
 {
-    public class EmployeeDAO : BaseDAO
+    public class ResetPasswordDAO : BaseDAO
     {
-        public EmployeeDAO() : base(TGGCollections.Employees) { }
-
-        public List<Employee> AddEmployee(List<Employee> employees)
+        public ResetPasswordDAO() : base(TGGCollections.ValidationCodes) { }
+        public void AddValidationCodes(TGGValidation validationCode)
         {
-            List<BsonDocument> bsonDocs = new List<BsonDocument>();
-            foreach (Employee employee in employees)
-            {
-                BsonDocument bsonDoc = employee.ToBsonDocument();
-                bsonDoc.Remove("employeeId");
-                bsonDocs.Add(bsonDoc);
-            }
-            return ReadEmployees(CreateOperation(bsonDocs));
-        }
-
-        public List<Employee> GetAllEmployees()
-        {
-            FilterDefinition<BsonDocument> filter = Builders<BsonDocument>.Filter.Empty;
-            return ReadEmployees(ReadOperation(filter));
-        }
-
-        public List<Employee> GetEmployeesByElement(BsonElement filterElement, params BsonElement[] extraFilterElements)
-        {
-            FilterDefinition<BsonDocument> filter = Builders<BsonDocument>.Filter.Eq(filterElement.Name, filterElement.Value);
-            foreach (BsonElement element in extraFilterElements)
-            {
-                filter &= Builders<BsonDocument>.Filter.Eq(element.Name, element.Value);
-            }
-            return ReadEmployees(ReadOperation(filter));
-        }
-
-        public List<UpdateResult> UpdateEmployeeByElement(BsonElement filterElement, BsonElement requiredUpdateElement, params BsonElement[] extraUpdateElements)
-        {
-            List<UpdateResult> updateResults = new List<UpdateResult>();
-            FilterDefinition<BsonDocument> filter = Builders<BsonDocument>.Filter.Eq(filterElement.Name, filterElement.Value);
-
-            List<BsonElement> allUpdateElements = new List<BsonElement>() { requiredUpdateElement };
-            allUpdateElements.AddRange(extraUpdateElements);
-            foreach (BsonElement bsonElement in allUpdateElements.ToList())
-            {
-                if (bsonElement.Name == filterElement.Name)
-                {
-                    allUpdateElements[allUpdateElements.IndexOf(bsonElement)] = allUpdateElements.Last();
-                    allUpdateElements[allUpdateElements.Count - 1] = bsonElement;
-                }
-            }
-
-            foreach (BsonElement updateElement in allUpdateElements)
-            {
-                UpdateDefinition<BsonDocument> update = Builders<BsonDocument>.Update.Set(updateElement.Name, updateElement.Value);
-                updateResults.Add(UpdateOperation(filter, update));
-            }
-
-            return updateResults;
-        }
-
-        public DeleteResult DeleteEmployeeByElement(BsonElement filterElement)
-        {
-            FilterDefinition<BsonDocument> filter = Builders<BsonDocument>.Filter.Eq(filterElement.Name, filterElement.Value);
-            return DeleteOperation(filter);
-        }
-
-        private List<Employee> ReadEmployees(List<BsonDocument> bsonDocs)
-        {
-            List<Employee> employees = new List<Employee>();
-
-            foreach (BsonDocument bsonDoc in bsonDocs)
-                employees.Add(BsonSerializer.Deserialize<Employee>(bsonDoc));
-
-            return employees;
+            BsonDocument bsonDoc = validationCode.ToBsonDocument();
+            BsonSerializer.Deserialize<TGGValidation>(CreateOperation(new List<BsonDocument>() { bsonDoc }).First());
         }
     }
 }
