@@ -39,6 +39,7 @@ namespace TGG_UI
             this.employeeOverviewButton = new System.Windows.Forms.Button();
             this.ticketOverviewButton = new System.Windows.Forms.Button();
             this.dashBoardButton = new System.Windows.Forms.Button();
+            this.buttonDeleteTicket = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewTickets)).BeginInit();
             this.navigationBarPanel.SuspendLayout();
             this.SuspendLayout();
@@ -54,8 +55,10 @@ namespace TGG_UI
             this.gridViewTickets.GridColor = System.Drawing.Color.Black;
             this.gridViewTickets.Location = new System.Drawing.Point(70, 160);
             this.gridViewTickets.Name = "gridViewTickets";
+            this.gridViewTickets.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridViewTickets.Size = new System.Drawing.Size(744, 690);
             this.gridViewTickets.TabIndex = 0;
+            this.gridViewTickets.Tag = "ticketTag";
             // 
             // buttonAddTicketsForm
             // 
@@ -196,12 +199,26 @@ namespace TGG_UI
             this.dashBoardButton.UseVisualStyleBackColor = false;
             this.dashBoardButton.Click += new System.EventHandler(this.dashBoardButton_Click);
             // 
+            // buttonDeleteTicket
+            // 
+            this.buttonDeleteTicket.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(179)))), ((int)(((byte)(61)))));
+            this.buttonDeleteTicket.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
+            this.buttonDeleteTicket.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(190)))), ((int)(((byte)(188)))));
+            this.buttonDeleteTicket.Location = new System.Drawing.Point(70, 867);
+            this.buttonDeleteTicket.Name = "buttonDeleteTicket";
+            this.buttonDeleteTicket.Size = new System.Drawing.Size(266, 54);
+            this.buttonDeleteTicket.TabIndex = 6;
+            this.buttonDeleteTicket.Text = "Delete Ticket";
+            this.buttonDeleteTicket.UseVisualStyleBackColor = false;
+            this.buttonDeleteTicket.Click += new System.EventHandler(this.buttonDeleteTicket_Click);
+            // 
             // TicketsOverview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(62)))), ((int)(((byte)(66)))));
-            this.ClientSize = new System.Drawing.Size(884, 951);
+            this.ClientSize = new System.Drawing.Size(900, 990);
+            this.Controls.Add(this.buttonDeleteTicket);
             this.Controls.Add(this.navigationBarPanel);
             this.Controls.Add(this.buttonSortPriorityLevel);
             this.Controls.Add(this.btnArchive);
@@ -234,5 +251,6 @@ namespace TGG_UI
         private System.Windows.Forms.Button employeeOverviewButton;
         private System.Windows.Forms.Button ticketOverviewButton;
         private System.Windows.Forms.Button dashBoardButton;
+        private System.Windows.Forms.Button buttonDeleteTicket;
     }
 }

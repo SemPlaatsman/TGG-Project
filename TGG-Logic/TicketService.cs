@@ -49,6 +49,11 @@ namespace TGG_Logic
             return ticketDAO.DeleteTicketByCollection(filterCollection);
         }
 
+        public DeleteResult DeleteTicketByElement(BsonElement filterElement)
+        {
+            return ticketDAO.DeleteTicketByElement(filterElement);
+        }
+
         public List<Ticket> Archive(List<Ticket> tickets)
         {
             return ticketDAO.Archive(tickets);
