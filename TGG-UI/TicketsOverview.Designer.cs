@@ -54,7 +54,9 @@ namespace TGG_UI
             this.gridViewTickets.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridViewTickets.GridColor = System.Drawing.Color.Black;
             this.gridViewTickets.Location = new System.Drawing.Point(70, 160);
+            this.gridViewTickets.MultiSelect = false;
             this.gridViewTickets.Name = "gridViewTickets";
+            this.gridViewTickets.ReadOnly = true;
             this.gridViewTickets.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridViewTickets.Size = new System.Drawing.Size(744, 690);
             this.gridViewTickets.TabIndex = 0;
