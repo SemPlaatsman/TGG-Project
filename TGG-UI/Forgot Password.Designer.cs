@@ -31,31 +31,31 @@ namespace TGG_UI
         {
             this.labelTitleEmail = new System.Windows.Forms.Label();
             this.textBoxEmail = new System.Windows.Forms.TextBox();
-            this.buttonNextEmailEntered = new System.Windows.Forms.Button();
+            this.buttonSendEmail = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.labelTitleEnterCode = new System.Windows.Forms.Label();
             this.textBoxCode = new System.Windows.Forms.TextBox();
             this.panelEnterEmail = new System.Windows.Forms.Panel();
-            this.panelEnterCode = new System.Windows.Forms.Panel();
+            this.labelExtraInformation = new System.Windows.Forms.Label();
             this.buttonConfirmCode = new System.Windows.Forms.Button();
-            this.buttonBack2EmailEnter = new System.Windows.Forms.Button();
             this.panelResetPassword = new System.Windows.Forms.Panel();
             this.labelConfirmPassword = new System.Windows.Forms.Label();
             this.textBoxConfirmPass = new System.Windows.Forms.TextBox();
             this.labelEnterNewPass = new System.Windows.Forms.Label();
             this.textBoxEnterPass = new System.Windows.Forms.TextBox();
             this.buttonConfirmNewPassword = new System.Windows.Forms.Button();
-            this.labelExtraInformation = new System.Windows.Forms.Label();
+            this.panelConfirmCode = new System.Windows.Forms.Panel();
+            this.buttonReturn2EnterEmail = new System.Windows.Forms.Button();
             this.panelEnterEmail.SuspendLayout();
-            this.panelEnterCode.SuspendLayout();
             this.panelResetPassword.SuspendLayout();
+            this.panelConfirmCode.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelTitleEmail
             // 
             this.labelTitleEmail.AutoSize = true;
             this.labelTitleEmail.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTitleEmail.Location = new System.Drawing.Point(0, 0);
+            this.labelTitleEmail.Location = new System.Drawing.Point(0, 164);
             this.labelTitleEmail.Name = "labelTitleEmail";
             this.labelTitleEmail.Size = new System.Drawing.Size(205, 22);
             this.labelTitleEmail.TabIndex = 0;
@@ -66,27 +66,27 @@ namespace TGG_UI
             this.textBoxEmail.BackColor = System.Drawing.Color.White;
             this.textBoxEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxEmail.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxEmail.Location = new System.Drawing.Point(2, 54);
+            this.textBoxEmail.Location = new System.Drawing.Point(4, 211);
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(275, 27);
-            this.textBoxEmail.TabIndex = 1;
+            this.textBoxEmail.TabIndex = 0;
             // 
-            // buttonNextEmailEntered
+            // buttonSendEmail
             // 
-            this.buttonNextEmailEntered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(179)))), ((int)(((byte)(61)))));
-            this.buttonNextEmailEntered.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.buttonNextEmailEntered.FlatAppearance.BorderSize = 0;
-            this.buttonNextEmailEntered.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(160)))), ((int)(((byte)(55)))));
-            this.buttonNextEmailEntered.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonNextEmailEntered.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonNextEmailEntered.ForeColor = System.Drawing.Color.White;
-            this.buttonNextEmailEntered.Location = new System.Drawing.Point(2, 156);
-            this.buttonNextEmailEntered.Name = "buttonNextEmailEntered";
-            this.buttonNextEmailEntered.Size = new System.Drawing.Size(275, 57);
-            this.buttonNextEmailEntered.TabIndex = 6;
-            this.buttonNextEmailEntered.Text = "Next";
-            this.buttonNextEmailEntered.UseVisualStyleBackColor = false;
-            this.buttonNextEmailEntered.Click += new System.EventHandler(this.buttonNextEmailEntered_Click);
+            this.buttonSendEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(179)))), ((int)(((byte)(61)))));
+            this.buttonSendEmail.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.buttonSendEmail.FlatAppearance.BorderSize = 0;
+            this.buttonSendEmail.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(160)))), ((int)(((byte)(55)))));
+            this.buttonSendEmail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSendEmail.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSendEmail.ForeColor = System.Drawing.Color.White;
+            this.buttonSendEmail.Location = new System.Drawing.Point(4, 255);
+            this.buttonSendEmail.Name = "buttonSendEmail";
+            this.buttonSendEmail.Size = new System.Drawing.Size(275, 57);
+            this.buttonSendEmail.TabIndex = 2;
+            this.buttonSendEmail.Text = "Send Email";
+            this.buttonSendEmail.UseVisualStyleBackColor = false;
+            this.buttonSendEmail.Click += new System.EventHandler(this.buttonNextEmailEntered_Click);
             // 
             // buttonCancel
             // 
@@ -95,13 +95,13 @@ namespace TGG_UI
             this.buttonCancel.FlatAppearance.BorderSize = 0;
             this.buttonCancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(160)))), ((int)(((byte)(55)))));
             this.buttonCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCancel.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCancel.Font = new System.Drawing.Font("Arial Black", 16.2F, System.Drawing.FontStyle.Bold);
             this.buttonCancel.ForeColor = System.Drawing.Color.White;
-            this.buttonCancel.Location = new System.Drawing.Point(2, 219);
+            this.buttonCancel.Location = new System.Drawing.Point(480, -1);
             this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(275, 57);
-            this.buttonCancel.TabIndex = 7;
-            this.buttonCancel.Text = "Cancel";
+            this.buttonCancel.Size = new System.Drawing.Size(70, 67);
+            this.buttonCancel.TabIndex = 0;
+            this.buttonCancel.Text = "X";
             this.buttonCancel.UseVisualStyleBackColor = false;
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
@@ -109,7 +109,7 @@ namespace TGG_UI
             // 
             this.labelTitleEnterCode.AutoSize = true;
             this.labelTitleEnterCode.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTitleEnterCode.Location = new System.Drawing.Point(0, 0);
+            this.labelTitleEnterCode.Location = new System.Drawing.Point(0, 164);
             this.labelTitleEnterCode.Name = "labelTitleEnterCode";
             this.labelTitleEnterCode.Size = new System.Drawing.Size(203, 22);
             this.labelTitleEnterCode.TabIndex = 8;
@@ -120,32 +120,32 @@ namespace TGG_UI
             this.textBoxCode.BackColor = System.Drawing.Color.White;
             this.textBoxCode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxCode.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCode.Location = new System.Drawing.Point(2, 54);
+            this.textBoxCode.Location = new System.Drawing.Point(4, 211);
             this.textBoxCode.Name = "textBoxCode";
             this.textBoxCode.Size = new System.Drawing.Size(275, 28);
-            this.textBoxCode.TabIndex = 9;
+            this.textBoxCode.TabIndex = 0;
             // 
             // panelEnterEmail
             // 
-            this.panelEnterEmail.Controls.Add(this.buttonNextEmailEntered);
-            this.panelEnterEmail.Controls.Add(this.buttonCancel);
-            this.panelEnterEmail.Controls.Add(this.textBoxEmail);
+            this.panelEnterEmail.BackColor = System.Drawing.Color.Transparent;
             this.panelEnterEmail.Controls.Add(this.labelTitleEmail);
-            this.panelEnterEmail.Location = new System.Drawing.Point(137, 203);
+            this.panelEnterEmail.Controls.Add(this.textBoxEmail);
+            this.panelEnterEmail.Controls.Add(this.buttonSendEmail);
+            this.panelEnterEmail.Location = new System.Drawing.Point(137, 57);
             this.panelEnterEmail.Name = "panelEnterEmail";
-            this.panelEnterEmail.Size = new System.Drawing.Size(305, 290);
+            this.panelEnterEmail.Size = new System.Drawing.Size(305, 376);
             this.panelEnterEmail.TabIndex = 11;
+            this.panelEnterEmail.TabStop = true;
             // 
-            // panelEnterCode
+            // labelExtraInformation
             // 
-            this.panelEnterCode.Controls.Add(this.labelTitleEnterCode);
-            this.panelEnterCode.Controls.Add(this.textBoxCode);
-            this.panelEnterCode.Controls.Add(this.buttonConfirmCode);
-            this.panelEnterCode.Controls.Add(this.buttonBack2EmailEnter);
-            this.panelEnterCode.Location = new System.Drawing.Point(137, 203);
-            this.panelEnterCode.Name = "panelEnterCode";
-            this.panelEnterCode.Size = new System.Drawing.Size(305, 290);
-            this.panelEnterCode.TabIndex = 12;
+            this.labelExtraInformation.BackColor = System.Drawing.Color.Transparent;
+            this.labelExtraInformation.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelExtraInformation.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(179)))), ((int)(((byte)(61)))));
+            this.labelExtraInformation.Location = new System.Drawing.Point(136, 455);
+            this.labelExtraInformation.Name = "labelExtraInformation";
+            this.labelExtraInformation.Size = new System.Drawing.Size(307, 162);
+            this.labelExtraInformation.TabIndex = 14;
             // 
             // buttonConfirmCode
             // 
@@ -156,42 +156,28 @@ namespace TGG_UI
             this.buttonConfirmCode.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonConfirmCode.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonConfirmCode.ForeColor = System.Drawing.Color.White;
-            this.buttonConfirmCode.Location = new System.Drawing.Point(2, 156);
+            this.buttonConfirmCode.Location = new System.Drawing.Point(4, 255);
             this.buttonConfirmCode.Name = "buttonConfirmCode";
             this.buttonConfirmCode.Size = new System.Drawing.Size(275, 57);
-            this.buttonConfirmCode.TabIndex = 6;
+            this.buttonConfirmCode.TabIndex = 1;
             this.buttonConfirmCode.Text = "Confirm Code";
             this.buttonConfirmCode.UseVisualStyleBackColor = false;
             this.buttonConfirmCode.Click += new System.EventHandler(this.buttonConfirmCode_Click);
             // 
-            // buttonBack2EmailEnter
-            // 
-            this.buttonBack2EmailEnter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(179)))), ((int)(((byte)(61)))));
-            this.buttonBack2EmailEnter.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.buttonBack2EmailEnter.FlatAppearance.BorderSize = 0;
-            this.buttonBack2EmailEnter.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(160)))), ((int)(((byte)(55)))));
-            this.buttonBack2EmailEnter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonBack2EmailEnter.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBack2EmailEnter.ForeColor = System.Drawing.Color.White;
-            this.buttonBack2EmailEnter.Location = new System.Drawing.Point(2, 219);
-            this.buttonBack2EmailEnter.Name = "buttonBack2EmailEnter";
-            this.buttonBack2EmailEnter.Size = new System.Drawing.Size(275, 57);
-            this.buttonBack2EmailEnter.TabIndex = 7;
-            this.buttonBack2EmailEnter.Text = "Back";
-            this.buttonBack2EmailEnter.UseVisualStyleBackColor = false;
-            this.buttonBack2EmailEnter.Click += new System.EventHandler(this.buttonBack2EmailEnter_Click);
-            // 
             // panelResetPassword
             // 
+            this.panelResetPassword.BackColor = System.Drawing.Color.Transparent;
             this.panelResetPassword.Controls.Add(this.labelConfirmPassword);
             this.panelResetPassword.Controls.Add(this.textBoxConfirmPass);
             this.panelResetPassword.Controls.Add(this.labelEnterNewPass);
             this.panelResetPassword.Controls.Add(this.textBoxEnterPass);
             this.panelResetPassword.Controls.Add(this.buttonConfirmNewPassword);
-            this.panelResetPassword.Location = new System.Drawing.Point(137, 203);
+            this.panelResetPassword.Hide();
+            this.panelResetPassword.Location = new System.Drawing.Point(137, 57);
             this.panelResetPassword.Name = "panelResetPassword";
             this.panelResetPassword.Size = new System.Drawing.Size(305, 290);
             this.panelResetPassword.TabIndex = 13;
+            this.panelResetPassword.TabStop = true;
             // 
             // labelConfirmPassword
             // 
@@ -212,7 +198,7 @@ namespace TGG_UI
             this.textBoxConfirmPass.Name = "textBoxConfirmPass";
             this.textBoxConfirmPass.PasswordChar = '◍';
             this.textBoxConfirmPass.Size = new System.Drawing.Size(275, 28);
-            this.textBoxConfirmPass.TabIndex = 11;
+            this.textBoxConfirmPass.TabIndex = 0;
             // 
             // labelEnterNewPass
             // 
@@ -233,7 +219,7 @@ namespace TGG_UI
             this.textBoxEnterPass.Name = "textBoxEnterPass";
             this.textBoxEnterPass.PasswordChar = '◍';
             this.textBoxEnterPass.Size = new System.Drawing.Size(275, 28);
-            this.textBoxEnterPass.TabIndex = 9;
+            this.textBoxEnterPass.TabIndex = 1;
             // 
             // buttonConfirmNewPassword
             // 
@@ -247,40 +233,62 @@ namespace TGG_UI
             this.buttonConfirmNewPassword.Location = new System.Drawing.Point(2, 156);
             this.buttonConfirmNewPassword.Name = "buttonConfirmNewPassword";
             this.buttonConfirmNewPassword.Size = new System.Drawing.Size(275, 120);
-            this.buttonConfirmNewPassword.TabIndex = 6;
+            this.buttonConfirmNewPassword.TabIndex = 2;
             this.buttonConfirmNewPassword.Text = "Confirm New Password";
             this.buttonConfirmNewPassword.UseVisualStyleBackColor = false;
             this.buttonConfirmNewPassword.Click += new System.EventHandler(this.buttonConfirmNewPassword_Click);
             // 
-            // labelExtraInformation
+            // panelConfirmCode
             // 
-            this.labelExtraInformation.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelExtraInformation.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(179)))), ((int)(((byte)(61)))));
-            this.labelExtraInformation.Location = new System.Drawing.Point(135, 64);
-            this.labelExtraInformation.Name = "labelExtraInformation";
-            this.labelExtraInformation.Size = new System.Drawing.Size(307, 136);
-            this.labelExtraInformation.TabIndex = 14;
+            this.panelConfirmCode.Controls.Add(this.labelTitleEnterCode);
+            this.panelConfirmCode.Controls.Add(this.textBoxCode);
+            this.panelConfirmCode.Controls.Add(this.buttonConfirmCode);
+            this.panelConfirmCode.Controls.Add(this.buttonReturn2EnterEmail);
+            this.panelConfirmCode.Hide();
+            this.panelConfirmCode.Location = new System.Drawing.Point(137, 57);
+            this.panelConfirmCode.Name = "panelConfirmCode";
+            this.panelConfirmCode.Size = new System.Drawing.Size(305, 395);
+            this.panelConfirmCode.TabIndex = 15;
+            this.panelConfirmCode.TabStop = true;
+            // 
+            // buttonReturn2EnterEmail
+            // 
+            this.buttonReturn2EnterEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(179)))), ((int)(((byte)(61)))));
+            this.buttonReturn2EnterEmail.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.buttonReturn2EnterEmail.FlatAppearance.BorderSize = 0;
+            this.buttonReturn2EnterEmail.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(160)))), ((int)(((byte)(55)))));
+            this.buttonReturn2EnterEmail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonReturn2EnterEmail.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonReturn2EnterEmail.ForeColor = System.Drawing.Color.White;
+            this.buttonReturn2EnterEmail.Location = new System.Drawing.Point(4, 318);
+            this.buttonReturn2EnterEmail.Name = "buttonReturn2EnterEmail";
+            this.buttonReturn2EnterEmail.Size = new System.Drawing.Size(273, 36);
+            this.buttonReturn2EnterEmail.TabIndex = 2;
+            this.buttonReturn2EnterEmail.Text = "back";
+            this.buttonReturn2EnterEmail.UseVisualStyleBackColor = false;
+            this.buttonReturn2EnterEmail.Click += new System.EventHandler(this.buttonReturn2EnterEmail_Click);
             // 
             // ForgotPassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(550, 577);
+            this.ClientSize = new System.Drawing.Size(550, 626);
+            this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.labelExtraInformation);
-            this.Controls.Add(this.panelEnterEmail);
-            this.Controls.Add(this.panelEnterCode);
             this.Controls.Add(this.panelResetPassword);
+            this.Controls.Add(this.panelEnterEmail);
+            this.Controls.Add(this.panelConfirmCode);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ForgotPassword";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.panelEnterEmail.ResumeLayout(false);
             this.panelEnterEmail.PerformLayout();
-            this.panelEnterCode.ResumeLayout(false);
-            this.panelEnterCode.PerformLayout();
             this.panelResetPassword.ResumeLayout(false);
             this.panelResetPassword.PerformLayout();
+            this.panelConfirmCode.ResumeLayout(false);
+            this.panelConfirmCode.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -289,14 +297,12 @@ namespace TGG_UI
 
         private System.Windows.Forms.Label labelTitleEmail;
         private System.Windows.Forms.TextBox textBoxEmail;
-        private System.Windows.Forms.Button buttonNextEmailEntered;
+        private System.Windows.Forms.Button buttonSendEmail;
         private System.Windows.Forms.Button buttonCancel;
         private System.Windows.Forms.Label labelTitleEnterCode;
         private System.Windows.Forms.TextBox textBoxCode;
         private System.Windows.Forms.Panel panelEnterEmail;
-        private System.Windows.Forms.Panel panelEnterCode;
         private System.Windows.Forms.Button buttonConfirmCode;
-        private System.Windows.Forms.Button buttonBack2EmailEnter;
         private System.Windows.Forms.Panel panelResetPassword;
         private System.Windows.Forms.Label labelConfirmPassword;
         private System.Windows.Forms.TextBox textBoxConfirmPass;
@@ -304,5 +310,7 @@ namespace TGG_UI
         private System.Windows.Forms.TextBox textBoxEnterPass;
         private System.Windows.Forms.Button buttonConfirmNewPassword;
         private System.Windows.Forms.Label labelExtraInformation;
+        private System.Windows.Forms.Panel panelConfirmCode;
+        private System.Windows.Forms.Button buttonReturn2EnterEmail;
     }
 }
