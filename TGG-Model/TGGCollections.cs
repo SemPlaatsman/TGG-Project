@@ -10,7 +10,7 @@ namespace TGG_Model
     public enum TGGCollections
     {
         Employees,
-        SDEmployees,
+        ValidationCodes,
         Tickets
     }
 }
