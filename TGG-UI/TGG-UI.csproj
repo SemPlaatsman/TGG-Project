@@ -150,11 +150,11 @@
     <Compile Include="Employees.Designer.cs">
       <DependentUpon>Employees.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddTicket.cs">
+    <Compile Include="AddEditTicket.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddTicket.Designer.cs">
-      <DependentUpon>AddTicket.cs</DependentUpon>
+    <Compile Include="AddEditTicket.Designer.cs">
+      <DependentUpon>AddEditTicket.cs</DependentUpon>
     </Compile>
     <Compile Include="Forgot Password.cs">
       <SubType>Form</SubType>
@@ -185,8 +185,8 @@
     <EmbeddedResource Include="Employees.resx">
       <DependentUpon>Employees.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddTicket.resx">
-      <DependentUpon>AddTicket.cs</DependentUpon>
+    <EmbeddedResource Include="AddEditTicket.resx">
+      <DependentUpon>AddEditTicket.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forgot Password.resx">
       <DependentUpon>Forgot Password.cs</DependentUpon>

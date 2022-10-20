@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,26 +14,60 @@ using TGG_Model;
 
 namespace TGG_UI
 {
-    public partial class AddTicket : Form
+    public partial class AddEditTicket : Form
     {
         private TicketService ticketService = new TicketService();
         private EmployeeService employeeService = new EmployeeService();
         private List<Employee> employees;
         private Employee employee;
+        private Ticket ticket;
 
-        public AddTicket(Employee employee)
+        public AddEditTicket(Employee employee)
         {
             InitializeComponent();
-
             this.employee = employee;
+            ValidateIsNotSDEmployee();
         }
+        public AddEditTicket(Employee employee, Ticket ticket)
+        {
+            InitializeComponent();
+            this.employee = employee;
+            this.ticket = ticket;
+            ValidateIsNotSDEmployee();
+            FillControlsWithTicketInformation(ticket);
+        }
+        private void FillControlsWithTicketInformation(Ticket ticket)
+        {
+            dateTimePickerTimeReported.Value = ticket.TimeAdded;
+            dateTimePickerDeadline.Value = ticket.TimeDeadline;
+            comboBoxEmployeeId.SelectedIndex = comboBoxEmployeeId.FindString(ticket.EmployeeID.ToString());
+            textBoxTitle.Text = ticket.Title;
+            comboBoxStatus.SelectedIndex = comboBoxStatus.FindString(ticket.TGGStatus.ToString());
+            comboBoxPrioLevel.SelectedIndex = comboBoxPrioLevel.FindString(ticket.PriorityLevel.ToString());
+            richTextBoxDescription.Text = ticket.Description;
+            labelTitleAddEditTickets.Text = "Update Ticket:";
+            buttonCreateUpdate.Text = "UPDATE";
 
+        }
         private void buttonCancel_Click(object sender, EventArgs e)
         {
             CloseForm();
         }
 
         private void buttonCreate_Click(object sender, EventArgs e)
+        {
+            if(ticket == new Ticket())
+            {
+                CreateTicket();
+            }
+            else
+            {
+                UpdateTicket();
+            }
+
+            CloseForm();
+        }
+        private void CreateTicket()
         {
             Ticket ticket = new Ticket();
 
@@ -58,13 +93,36 @@ namespace TGG_UI
             {
                 MessageBox.Show("Something went wrong with adding a ticket, please try and contact admin");
             }
+        }
+        private void UpdateTicket()
+        {
 
-            CloseForm();
+            try
+            {
+                if (String.IsNullOrEmpty(comboBoxEmployeeId.Text) || String.IsNullOrEmpty(textBoxTitle.Text))
+                {
+                    MessageBox.Show("Please enter a employee id and title");
+                    return;
+                }
+                ticket.EmployeeID = int.Parse(comboBoxEmployeeId.Text);
+                ticket.Title = textBoxTitle.Text;
+                ticket.Description = richTextBoxDescription.Text;
+                ticket.TimeAdded = dateTimePickerTimeReported.Value;
+                ticket.TimeDeadline = dateTimePickerDeadline.Value;
+                ticket.PriorityLevel = (TGGPriorityLevel)Enum.Parse(typeof(TGGPriorityLevel), comboBoxPrioLevel.SelectedIndex.ToString());
+                ticket.TGGStatus = (TGGStatus)Enum.Parse(typeof(TGGStatus), comboBoxPrioLevel.SelectedIndex.ToString());
+
+                ticketService.UpdateTicketByElement(ticket);
+                MessageBox.Show("Ticket Updated!");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Something went wrong with adding a ticket, please try and contact admin");
+            }
         }
 
         private void AddTickets_Load(object sender, EventArgs e)
         {
-            ValidateIsNotSDEmployee();
             comboBoxPrioLevel.DataSource = Enum.GetValues(typeof(TGGPriorityLevel));
             comboBoxStatus.DataSource = Enum.GetValues(typeof(TGGStatus));
         }
