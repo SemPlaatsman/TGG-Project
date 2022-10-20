@@ -70,6 +70,12 @@ namespace TGG_DAL
             return DeleteOperation(filter);
         }
 
+        public DeleteResult DeleteTicketByElement(BsonElement filterElement)
+        {
+            FilterDefinition<BsonDocument> filter = Builders<BsonDocument>.Filter.Eq(filterElement.Name, filterElement.Value);
+            return DeleteOperation(filter);
+        }
+
         public List<Ticket> Archive(List<Ticket> tickets)
         {
             List<BsonDocument> bsonDocs = new List<BsonDocument>();

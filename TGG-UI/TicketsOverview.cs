@@ -25,6 +25,7 @@ namespace TGG_UI
             InitializeComponent();
             this.employee = employee;
             NavbarChange();
+            DisableButtonsIfNotSD();
         }
 
         private void buttonAddTicketsForm_Click(object sender, EventArgs e)
@@ -36,6 +37,19 @@ namespace TGG_UI
             timer.Start();
         }
 
+        private void buttonDeleteTicket_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DeleteTicket();
+                timer.Start();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Something went wrong with deleting the tick, please contact the admin");
+            }
+        }
+
         private void Tickets_Load(object sender, EventArgs e)
         {
            
@@ -43,7 +57,7 @@ namespace TGG_UI
             ItemsToGridview(tickets);
 
             timer = new Timer();
-            timer.Interval = 3000;
+            timer.Interval = 5000;
             timer.Tick += TimerTick;
             timer.Start();
         }
@@ -83,6 +97,40 @@ namespace TGG_UI
             tickets = ticketService.GetAllTickets();
         }
 
+        private void DeleteTicket()
+        {
+            Ticket selectedItem = (Ticket)gridViewTickets.SelectedRows[0].DataBoundItem;
+
+            MessageBoxButtons buttons = MessageBoxButtons.OKCancel;
+            string titleMessage = "Delete ticket";
+            string message = $"Are you certain you wish to delete this ticket: {selectedItem.Title}?";
+
+            DialogResult answer = MessageBox.Show(message, titleMessage, buttons);
+
+            if (answer == DialogResult.OK)
+            {
+                ticketService.DeleteTicketByElement(selectedItem.ToBsonDocument().GetElement("_id"));
+                MessageBox.Show($"{selectedItem.Title} has succesfully been deleted");
+            }
+        }
+
+        private void DisableButtonsIfNotSD()
+        {
+            if (!employee.IsSDEmployee)
+            {
+                buttonDeleteTicket.Enabled = false;
+                btnArchive.Enabled = false;
+            }
+        }
+
+        private void NavbarChange()
+        {
+            if (!employee.IsSDEmployee)
+            {
+                navigationBarPanel.ColumnStyles[2].Width = 0;
+            }
+        }
+
         private void btnArchive_Click(object sender, EventArgs e)
         {
             try
@@ -102,14 +150,6 @@ namespace TGG_UI
             {
                 MessageBox.Show("An error occurred! Please contact your application administrator", "An error occurred...", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 TGGErrorLogger.WriteLogToFile(ex);
-            }
-        }
-
-        private void NavbarChange()
-        {
-            if (!employee.IsSDEmployee)
-            {
-                navigationBarPanel.ColumnStyles[2].Width = 0;
             }
         }
 
