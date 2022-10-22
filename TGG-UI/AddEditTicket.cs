@@ -73,19 +73,7 @@ namespace TGG_UI
 
             try
             {
-                if (String.IsNullOrEmpty(comboBoxEmployeeId.Text) || String.IsNullOrEmpty(textBoxTitle.Text))
-                {
-                    MessageBox.Show("Please enter a employee id and title");
-                    return;
-                }
-
-                ticket.EmployeeID = int.Parse(comboBoxEmployeeId.Text);
-                ticket.Title = textBoxTitle.Text;
-                ticket.Description = richTextBoxDescription.Text;
-                ticket.TimeAdded = dateTimePickerTimeReported.Value;
-                ticket.TimeDeadline = dateTimePickerDeadline.Value;
-                ticket.PriorityLevel = (TGGPriorityLevel)Enum.Parse(typeof(TGGPriorityLevel), comboBoxPrioLevel.SelectedIndex.ToString());
-                ticket.TGGStatus = (TGGStatus)Enum.Parse(typeof(TGGStatus), comboBoxPrioLevel.SelectedIndex.ToString());
+                ValueToTickets(ticket);
 
                 ticketService.AddTicket(ticket);
             }
@@ -96,21 +84,9 @@ namespace TGG_UI
         }
         private void UpdateTicket()
         {
-
             try
             {
-                if (String.IsNullOrEmpty(comboBoxEmployeeId.Text) || String.IsNullOrEmpty(textBoxTitle.Text))
-                {
-                    MessageBox.Show("Please enter a employee id and title");
-                    return;
-                }
-                ticket.EmployeeID = int.Parse(comboBoxEmployeeId.Text);
-                ticket.Title = textBoxTitle.Text;
-                ticket.Description = richTextBoxDescription.Text;
-                ticket.TimeAdded = dateTimePickerTimeReported.Value;
-                ticket.TimeDeadline = dateTimePickerDeadline.Value;
-                ticket.PriorityLevel = (TGGPriorityLevel)Enum.Parse(typeof(TGGPriorityLevel), comboBoxPrioLevel.SelectedIndex.ToString());
-                ticket.TGGStatus = (TGGStatus)Enum.Parse(typeof(TGGStatus), comboBoxPrioLevel.SelectedIndex.ToString());
+                ValueToTickets(ticket);
 
                 ticketService.UpdateTicketByElement(ticket);
                 MessageBox.Show("Ticket Updated!");
@@ -149,6 +125,21 @@ namespace TGG_UI
             {
                 comboBoxEmployeeId.Items.Add(employee.EmployeeId);
             }
+        }
+        private void ValueToTickets(Ticket ticket)
+        {
+            if (String.IsNullOrEmpty(comboBoxEmployeeId.Text) || String.IsNullOrEmpty(textBoxTitle.Text))
+            {
+                MessageBox.Show("Please enter a employee id and title");
+                return;
+            }
+            ticket.EmployeeID = int.Parse(comboBoxEmployeeId.Text);
+            ticket.Title = textBoxTitle.Text;
+            ticket.Description = richTextBoxDescription.Text;
+            ticket.TimeAdded = dateTimePickerTimeReported.Value;
+            ticket.TimeDeadline = dateTimePickerDeadline.Value;
+            ticket.PriorityLevel = (TGGPriorityLevel)Enum.Parse(typeof(TGGPriorityLevel), comboBoxPrioLevel.SelectedIndex.ToString());
+            ticket.TGGStatus = (TGGStatus)Enum.Parse(typeof(TGGStatus), comboBoxPrioLevel.SelectedIndex.ToString());
         }
     }
 }
