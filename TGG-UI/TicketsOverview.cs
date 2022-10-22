@@ -120,6 +120,7 @@ namespace TGG_UI
             {
                 buttonDeleteTicket.Enabled = false;
                 btnArchive.Enabled = false;
+                buttonUpdateTicket.Enabled = false;
             }
         }
 
