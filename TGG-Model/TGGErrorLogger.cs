@@ -10,6 +10,7 @@ namespace TGG_Model
 {
     public static class TGGErrorLogger
     {
+        //log error to errorLogs.txt file
         public static void WriteLogToFile(Exception exception)
         {
             string filepath = ConfigurationManager.AppSettings["ErrorlogPath"];
