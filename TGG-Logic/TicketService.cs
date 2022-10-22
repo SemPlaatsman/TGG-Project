@@ -39,9 +39,12 @@ namespace TGG_Logic
             return ticketDAO.GetTicketBelowAddedDate(filterElement);
         }
 
-        public List<UpdateResult> UpdateTicketByElement(BsonElement filterElement, BsonElement updateElement, params BsonElement[] extraUpdateElements)
+        public List<UpdateResult> UpdateTicketByElement(Ticket ticket)
         {
-            return ticketDAO.UpdateTicketByElement(filterElement, updateElement, extraUpdateElements);
+            BsonDocument ticketDocument = ticket.ToBsonDocument();
+            BsonElement filterElement = ticketDocument.GetElement("ticketId");
+            BsonElement[] updateElements = ticketDocument.Elements.ToArray();
+            return ticketDAO.UpdateTicketByElement(filterElement, updateElements);
         }
 
         public DeleteResult DeleteTicketByCollection(ICollection<Ticket> filterCollection)

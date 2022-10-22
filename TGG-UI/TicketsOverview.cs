@@ -31,7 +31,7 @@ namespace TGG_UI
         private void buttonAddTicketsForm_Click(object sender, EventArgs e)
         {
             timer.Stop();
-            AddTicket addTicketsForm = new AddTicket(employee);
+            AddEditTicket addTicketsForm = new AddEditTicket(employee);
             addTicketsForm.Show();
             ItemsToGridview(tickets);
             timer.Start();
@@ -170,6 +170,21 @@ namespace TGG_UI
         private void logOutButton_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void buttonUpdateTicket_Click(object sender, EventArgs e)
+        {
+            if(gridViewTickets.SelectedRows.Count != 0)
+            {
+                int currentRowSelectedIndex = gridViewTickets.CurrentCell.RowIndex;
+                Ticket ticketToUpdate = (Ticket)gridViewTickets.Rows[currentRowSelectedIndex].DataBoundItem;
+                new AddEditTicket(employee, ticketToUpdate).Show();
+                
+            }
+            else
+            {
+                MessageBox.Show("aa");
+            }
         }
     }
 }
