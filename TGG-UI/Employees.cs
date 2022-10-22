@@ -29,6 +29,7 @@ namespace TGG_UI
 
                 employeeService = new EmployeeService();
 
+                //set timer that invokes the EmployeesTickEvent every 10 seconds
                 this.timer = new Timer();
                 this.timer.Tick += EmployeesTickEvent;
                 this.timer.Interval = 10000;
@@ -48,9 +49,12 @@ namespace TGG_UI
 
         private void LoadEmployeeGrid()
         {
+            //set datasource
             gridViewEmployees.DataSource = employeeService.GetAllEmployees();
+            //hide MongoId and Password fields
             gridViewEmployees.Columns["MongoId"].Visible = false;
             gridViewEmployees.Columns["Password"].Visible = false;
+            //set appropriate header and width for EmployeeId, Email, FullName and IsSdEmployee columns
             gridViewEmployees.Columns["EmployeeId"].HeaderText = "Employee ID";
             gridViewEmployees.Columns["EmployeeId"].Width = 110;
             gridViewEmployees.Columns["Email"].HeaderText = "Email address";
@@ -59,7 +63,9 @@ namespace TGG_UI
             gridViewEmployees.Columns["FullName"].Width = 260;
             gridViewEmployees.Columns["IsSDEmployee"].HeaderText = "SD Employee";
             gridViewEmployees.Columns["IsSDEmployee"].Width = 111;
+            //make every column not sortable
             gridViewEmployees.Columns.Cast<DataGridViewColumn>().ToList().ForEach(column => column.SortMode = DataGridViewColumnSortMode.NotSortable);
+            //auto size all cells except headers
             gridViewEmployees.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
         }
 
@@ -67,6 +73,7 @@ namespace TGG_UI
         {
             try
             {
+                //reload employee grid every x amount of seconds (value provided in constructor by the timer)
                 LoadEmployeeGrid();
             }
             catch (Exception ex)
@@ -76,6 +83,7 @@ namespace TGG_UI
             }
         }
 
+        //open AddEmployee dialog
         private void btnAddEmployee_Click(object sender, EventArgs e)
         {
             try
@@ -92,6 +100,7 @@ namespace TGG_UI
             }
         }
 
+        //open dashboard
         private void dashBoardButton_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -99,6 +108,7 @@ namespace TGG_UI
             this.Close();
         }
 
+        //open tickets overview
         private void ticketOverviewButton_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -106,6 +116,7 @@ namespace TGG_UI
             this.Close();
         }
 
+        //log out
         private void logOutButton_Click(object sender, EventArgs e)
         {
             this.Close();
