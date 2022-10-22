@@ -150,11 +150,17 @@
     <Compile Include="Employees.Designer.cs">
       <DependentUpon>Employees.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddTicket.cs">
+    <Compile Include="AddEditTicket.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddTicket.Designer.cs">
-      <DependentUpon>AddTicket.cs</DependentUpon>
+    <Compile Include="AddEditTicket.Designer.cs">
+      <DependentUpon>AddEditTicket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forgot Password.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forgot Password.Designer.cs">
+      <DependentUpon>Forgot Password.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -179,8 +185,11 @@
     <EmbeddedResource Include="Employees.resx">
       <DependentUpon>Employees.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddTicket.resx">
-      <DependentUpon>AddTicket.cs</DependentUpon>
+    <EmbeddedResource Include="AddEditTicket.resx">
+      <DependentUpon>AddEditTicket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forgot Password.resx">
+      <DependentUpon>Forgot Password.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -233,6 +242,7 @@
     <Content Include="Core\Compression\Snappy\lib\win\snappy64.dll" />
     <Content Include="Core\Compression\Zstandard\lib\win\libzstd.dll" />
     <Content Include="mongocrypt.dll" />
+    <None Include="Resources\TGGBACKGROUND.png" />
     <None Include="Resources\UI-ELEMENT-TopBar.png" />
     <None Include="Resources\noun-ticket-3263895.png" />
     <None Include="Resources\noun-deadline-4657504.png" />

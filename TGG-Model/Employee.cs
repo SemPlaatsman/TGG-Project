@@ -39,5 +39,9 @@ namespace TGG_Model
             Password = password;
             IsSDEmployee = isSDEmployee;
         }
+        public Employee(string email)
+        {
+            Email = email;
+        }
     }
 }

@@ -95,6 +95,8 @@ namespace TGG_UI
         {
             this.Hide();
             new TicketsOverview(employee).ShowDialog();
+            this.Show();
+            UpdateDashboard();
             this.Close();
         }
 

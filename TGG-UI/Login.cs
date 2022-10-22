@@ -44,5 +44,12 @@ namespace TGG_UI
                 MessageBox.Show("Incorrect username / password !");
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ForgotPassword forgotPassword = new ForgotPassword(txtUsername.Text);
+            ResetPasswordController resetPasswordController = new ResetPasswordController(forgotPassword);
+            forgotPassword.ShowDialog();
+        }
     }
 }

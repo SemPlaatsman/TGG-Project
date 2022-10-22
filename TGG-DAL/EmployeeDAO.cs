@@ -95,5 +95,13 @@ namespace TGG_DAL
 
             return employees;
         }
+        public void UpdateEmployeePassword(BsonElement filterElement, BsonElement requiredUpdateElement)
+        {
+            List<UpdateResult> updateResults = new List<UpdateResult>();
+            FilterDefinition<BsonDocument> filter = Builders<BsonDocument>.Filter.Eq(filterElement.Name, filterElement.Value);
+            UpdateDefinition<BsonDocument> update = Builders<BsonDocument>.Update.Set(requiredUpdateElement.Name, requiredUpdateElement.Value);
+
+            UpdateOperation(filter, update);
+        }
     }
 }

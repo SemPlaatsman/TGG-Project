@@ -126,8 +126,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IForgotPassword.cs" />
+    <Compile Include="IResetPasswordController.cs" />
+    <Compile Include="ResetPasswordController.cs" />
     <Compile Include="EmployeeService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResetPasswordService.cs" />
     <Compile Include="TicketService.cs" />
   </ItemGroup>
   <ItemGroup>

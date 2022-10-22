@@ -24,15 +24,30 @@ namespace TGG_UI
         {
             InitializeComponent();
             this.employee = employee;
+            NavbarChange();
+            DisableButtonsIfNotSD();
         }
 
         private void buttonAddTicketsForm_Click(object sender, EventArgs e)
         {
             timer.Stop();
-            AddTicket addTicketsForm = new AddTicket();
+            AddEditTicket addTicketsForm = new AddEditTicket(employee);
             addTicketsForm.Show();
             ItemsToGridview(tickets);
             timer.Start();
+        }
+
+        private void buttonDeleteTicket_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DeleteTicket();
+                timer.Start();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Something went wrong with deleting the tick, please contact the admin");
+            }
         }
 
         private void Tickets_Load(object sender, EventArgs e)
@@ -63,16 +78,57 @@ namespace TGG_UI
 
         private void ItemsToGridview(List<Ticket> tickets)
         {
-            gridViewTickets.DataSource = tickets;
+            try
+            {
+                gridViewTickets.DataSource = tickets;
 
-            this.gridViewTickets.Columns["TimeAdded"].DefaultCellStyle.Format = "dd/MM/yyyy HH:mm:ss";
-            this.gridViewTickets.Columns["TimeDeadline"].DefaultCellStyle.Format = "dd/MM/yyyy HH:mm:ss";
-            this.gridViewTickets.Columns["MongoId"].Visible = false;
+                this.gridViewTickets.Columns["TimeAdded"].DefaultCellStyle.Format = "dd/MM/yyyy HH:mm:ss";
+                this.gridViewTickets.Columns["TimeDeadline"].DefaultCellStyle.Format = "dd/MM/yyyy HH:mm:ss";
+                this.gridViewTickets.Columns["MongoId"].Visible = false;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Something went wrong while loading the tickets list, please try and contact admin");
+            }
         }
 
         private void LoadTickets()
         {
             tickets = ticketService.GetAllTickets();
+        }
+
+        private void DeleteTicket()
+        {
+            Ticket selectedItem = (Ticket)gridViewTickets.SelectedRows[0].DataBoundItem;
+
+            MessageBoxButtons buttons = MessageBoxButtons.OKCancel;
+            string titleMessage = "Delete ticket";
+            string message = $"Are you certain you wish to delete this ticket: {selectedItem.Title}?";
+
+            DialogResult answer = MessageBox.Show(message, titleMessage, buttons);
+
+            if (answer == DialogResult.OK)
+            {
+                ticketService.DeleteTicketByElement(selectedItem.ToBsonDocument().GetElement("_id"));
+                MessageBox.Show($"{selectedItem.Title} has succesfully been deleted");
+            }
+        }
+
+        private void DisableButtonsIfNotSD()
+        {
+            if (!employee.IsSDEmployee)
+            {
+                buttonDeleteTicket.Enabled = false;
+                btnArchive.Enabled = false;
+            }
+        }
+
+        private void NavbarChange()
+        {
+            if (!employee.IsSDEmployee)
+            {
+                navigationBarPanel.ColumnStyles[2].Width = 0;
+            }
         }
 
         private void btnArchive_Click(object sender, EventArgs e)
@@ -94,6 +150,40 @@ namespace TGG_UI
             {
                 MessageBox.Show("An error occurred! Please contact your application administrator", "An error occurred...", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 TGGErrorLogger.WriteLogToFile(ex);
+            }
+        }
+
+        private void dashBoardButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new Dashboard(employee).ShowDialog();
+            this.Close();
+        }
+
+        private void employeeOverviewButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new Employees(employee).ShowDialog();
+            this.Close();
+        }
+
+        private void logOutButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void buttonUpdateTicket_Click(object sender, EventArgs e)
+        {
+            if(gridViewTickets.SelectedRows.Count != 0)
+            {
+                int currentRowSelectedIndex = gridViewTickets.CurrentCell.RowIndex;
+                Ticket ticketToUpdate = (Ticket)gridViewTickets.Rows[currentRowSelectedIndex].DataBoundItem;
+                new AddEditTicket(employee, ticketToUpdate).Show();
+                
+            }
+            else
+            {
+                MessageBox.Show("aa");
             }
         }
     }

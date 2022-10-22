@@ -39,12 +39,12 @@ namespace TGG_DAL
             return BsonSerializer.Deserialize<Ticket>(CreateOperation(new List<BsonDocument>() { bsonDoc }).First());
         }
 
-        public List<UpdateResult> UpdateTicketByElement(BsonElement filterElement, BsonElement requiredUpdateElement, params BsonElement[] extraUpdateElements)
+        public List<UpdateResult> UpdateTicketByElement(BsonElement filterElement, params BsonElement[] extraUpdateElements)
         {
             List<UpdateResult> updateResults = new List<UpdateResult>();
             FilterDefinition<BsonDocument> filter = Builders<BsonDocument>.Filter.Eq(filterElement.Name, filterElement.Value);
 
-            List<BsonElement> allUpdateElements = new List<BsonElement>() { requiredUpdateElement };
+            List<BsonElement> allUpdateElements = new List<BsonElement>();
             allUpdateElements.AddRange(extraUpdateElements);
             foreach (BsonElement bsonElement in allUpdateElements.ToList())
             {
@@ -67,6 +67,12 @@ namespace TGG_DAL
         public DeleteResult DeleteTicketByCollection(ICollection<Ticket> filterCollection)
         {
             FilterDefinition<BsonDocument> filter = Builders<BsonDocument>.Filter.In("_id", filterCollection.Select(x => x.MongoId));
+            return DeleteOperation(filter);
+        }
+
+        public DeleteResult DeleteTicketByElement(BsonElement filterElement)
+        {
+            FilterDefinition<BsonDocument> filter = Builders<BsonDocument>.Filter.Eq(filterElement.Name, filterElement.Value);
             return DeleteOperation(filter);
         }
 
