@@ -56,7 +56,7 @@ namespace TGG_UI
 
         private void buttonCreate_Click(object sender, EventArgs e)
         {
-            if(ticket == new Ticket())
+            if(ticket == null)
             {
                 CreateTicket();
             }
