@@ -71,6 +71,7 @@ namespace TGG_UI
         private void buttonConfirmNewPassword_Click(object sender, EventArgs e)
         {
             resetPasswordController.UpdatePassword();
+            panelConfirmCode.Hide();
         }
 
         public void SetController(IResetPasswordController controller)
