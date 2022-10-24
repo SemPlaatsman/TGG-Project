@@ -46,7 +46,7 @@ namespace TGG_UI
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void linkLabelForgotPassword_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             ForgotPassword forgotPassword = new ForgotPassword(txtUsername.Text);
             ResetPasswordController resetPasswordController = new ResetPasswordController(forgotPassword);
