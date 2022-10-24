@@ -29,6 +29,7 @@ namespace TGG_UI
         }
         private void ChangeNavBar()
         {
+            //make the employee management invisible
             if(!employee.IsSDEmployee)
             {
                 navigationBarPanel.ColumnStyles[2].Width = 0;
@@ -95,8 +96,6 @@ namespace TGG_UI
         {
             this.Hide();
             new TicketsOverview(employee).ShowDialog();
-            this.Show();
-            UpdateDashboard();
             this.Close();
         }
 
