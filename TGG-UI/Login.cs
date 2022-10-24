@@ -36,7 +36,7 @@ namespace TGG_UI
             if(employees.Count > 0)
             {
                 this.Hide();
-                Dashboard newDashboard = new Dashboard(employee);
+                Dashboard newDashboard = new Dashboard(employees[0]);
                 newDashboard.ShowDialog();
                 this.Close();
             }
@@ -44,6 +44,13 @@ namespace TGG_UI
             {
                 MessageBox.Show("Incorrect username / password !");
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ForgotPassword forgotPassword = new ForgotPassword(txtUsername.Text);
+            ResetPasswordController resetPasswordController = new ResetPasswordController(forgotPassword);
+            forgotPassword.ShowDialog();
         }
     }
 }

@@ -36,15 +36,15 @@ namespace TGG_DAL
         {
             BsonDocument bsonDoc = ticket.ToBsonDocument();
             bsonDoc.Remove("ticketId");
-            return BsonSerializer.Deserialize<Ticket>(CreateOperation(bsonDoc));
+            return BsonSerializer.Deserialize<Ticket>(CreateOperation(new List<BsonDocument>() { bsonDoc }).First());
         }
 
-        public List<UpdateResult> UpdateTicketByElement(BsonElement filterElement, BsonElement requiredUpdateElement, params BsonElement[] extraUpdateElements)
+        public List<UpdateResult> UpdateTicketByElement(BsonElement filterElement, params BsonElement[] extraUpdateElements)
         {
             List<UpdateResult> updateResults = new List<UpdateResult>();
             FilterDefinition<BsonDocument> filter = Builders<BsonDocument>.Filter.Eq(filterElement.Name, filterElement.Value);
 
-            List<BsonElement> allUpdateElements = new List<BsonElement>() { requiredUpdateElement };
+            List<BsonElement> allUpdateElements = new List<BsonElement>();
             allUpdateElements.AddRange(extraUpdateElements);
             foreach (BsonElement bsonElement in allUpdateElements.ToList())
             {
@@ -64,17 +64,40 @@ namespace TGG_DAL
             return updateResults;
         }
 
-        public void Archive(List<Ticket> tickets)
+        public DeleteResult DeleteTicketByCollection(ICollection<Ticket> filterCollection)
+        {
+            FilterDefinition<BsonDocument> filter = Builders<BsonDocument>.Filter.In("_id", filterCollection.Select(x => x.MongoId));
+            return DeleteOperation(filter);
+        }
+
+        public DeleteResult DeleteTicketByElement(BsonElement filterElement)
+        {
+            FilterDefinition<BsonDocument> filter = Builders<BsonDocument>.Filter.Eq(filterElement.Name, filterElement.Value);
+            return DeleteOperation(filter);
+        }
+
+        public List<Ticket> Archive(List<Ticket> tickets)
         {
             List<BsonDocument> bsonDocs = new List<BsonDocument>();
             foreach (Ticket ticket in tickets)
                 bsonDocs.Add(ticket.ToBsonDocument());
-            ArchiveOperation(bsonDocs);
+            bsonDocs = ArchiveOperation(bsonDocs);
+            tickets = new List<Ticket>();
+            foreach (BsonDocument bsonDoc in bsonDocs)
+                tickets.Add(BsonSerializer.Deserialize<Ticket>(bsonDoc));
+            return tickets;
         }
+
         public List<Ticket> GetTicketByElement(BsonElement filterElement)
         {
             FilterDefinition<BsonDocument> filter = Builders<BsonDocument>.Filter.Eq(filterElement.Name, filterElement.Value);
             return ReadTickets(ReadOperation(filter));
-        } 
+        }
+
+        public List<Ticket> GetTicketBelowAddedDate(BsonElement filterElement)
+        {
+            FilterDefinition<BsonDocument> filter = Builders<BsonDocument>.Filter.Where(x => x["timeAdded"] < filterElement.Value.AsBsonDateTime);
+            return ReadTickets(ReadOperation(filter));
+        }
     }
 }

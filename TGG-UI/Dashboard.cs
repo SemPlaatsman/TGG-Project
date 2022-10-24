@@ -25,6 +25,14 @@ namespace TGG_UI
             ticketService = new TicketService();
             this.employee = employee;
             UpdateDashboard();
+            ChangeNavBar();
+        }
+        private void ChangeNavBar()
+        {
+            if(!employee.IsSDEmployee)
+            {
+                navigationBarPanel.ColumnStyles[2].Width = 0;
+            }
         }
 
         private void UpdateDashboard()
@@ -86,9 +94,27 @@ namespace TGG_UI
         private void buttonShowAllTickets_Click(object sender, EventArgs e)
         {
             this.Hide();
-            new TicketsOverview().ShowDialog();
+            new TicketsOverview(employee).ShowDialog();
             this.Show();
             UpdateDashboard();
+            this.Close();
+        }
+
+        private void ticketOverviewButton_Click(object sender, EventArgs e)
+        {
+            buttonShowAllTickets_Click(sender, e);
+        }
+
+        private void employeeOverviewButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new Employees(employee).ShowDialog();
+            this.Close();
+        }
+
+        private void logOutButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

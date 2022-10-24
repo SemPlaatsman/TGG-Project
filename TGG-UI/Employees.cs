@@ -19,7 +19,9 @@ namespace TGG_UI
 
         private Timer timer;
 
-        public Employees()
+        private Employee employee;
+
+        public Employees(Employee employee)
         {
             try
             {
@@ -27,10 +29,13 @@ namespace TGG_UI
 
                 employeeService = new EmployeeService();
 
+                //set timer that invokes the EmployeesTickEvent every 10 seconds
                 this.timer = new Timer();
                 this.timer.Tick += EmployeesTickEvent;
                 this.timer.Interval = 10000;
                 this.timer.Start();
+
+                this.employee = employee;
 
                 LoadEmployeeGrid();
             }
@@ -44,9 +49,12 @@ namespace TGG_UI
 
         private void LoadEmployeeGrid()
         {
+            //set datasource
             gridViewEmployees.DataSource = employeeService.GetAllEmployees();
+            //hide MongoId and Password fields
             gridViewEmployees.Columns["MongoId"].Visible = false;
             gridViewEmployees.Columns["Password"].Visible = false;
+            //set appropriate header and width for EmployeeId, Email, FullName and IsSdEmployee columns
             gridViewEmployees.Columns["EmployeeId"].HeaderText = "Employee ID";
             gridViewEmployees.Columns["EmployeeId"].Width = 110;
             gridViewEmployees.Columns["Email"].HeaderText = "Email address";
@@ -55,9 +63,9 @@ namespace TGG_UI
             gridViewEmployees.Columns["FullName"].Width = 260;
             gridViewEmployees.Columns["IsSDEmployee"].HeaderText = "SD Employee";
             gridViewEmployees.Columns["IsSDEmployee"].Width = 111;
-            gridViewEmployees.ReadOnly = true;
-            gridViewEmployees.RowHeadersVisible = false;
+            //make every column not sortable
             gridViewEmployees.Columns.Cast<DataGridViewColumn>().ToList().ForEach(column => column.SortMode = DataGridViewColumnSortMode.NotSortable);
+            //auto size all cells except headers
             gridViewEmployees.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
         }
 
@@ -65,6 +73,7 @@ namespace TGG_UI
         {
             try
             {
+                //reload employee grid every x amount of seconds (value provided in constructor by the timer)
                 LoadEmployeeGrid();
             }
             catch (Exception ex)
@@ -74,13 +83,13 @@ namespace TGG_UI
             }
         }
 
+        //open AddEmployee dialog
         private void btnAddEmployee_Click(object sender, EventArgs e)
         {
             try
             {
                 this.timer.Stop();
-                AddEmployee addEmployeeForm = new AddEmployee(employeeService);
-                addEmployeeForm.ShowDialog();
+                new AddEmployee(employeeService, employee).ShowDialog();
                 LoadEmployeeGrid();
                 this.timer.Start();
             }
@@ -89,6 +98,28 @@ namespace TGG_UI
                 MessageBox.Show("Something went wrong while trying to load employees!\nPlease contact the application administrator!", "Something went wrong...", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 TGGErrorLogger.WriteLogToFile(ex);
             }
+        }
+
+        //open dashboard
+        private void dashBoardButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new Dashboard(employee).ShowDialog();
+            this.Close();
+        }
+
+        //open tickets overview
+        private void ticketOverviewButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new TicketsOverview(employee).ShowDialog();
+            this.Close();
+        }
+
+        //log out
+        private void logOutButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

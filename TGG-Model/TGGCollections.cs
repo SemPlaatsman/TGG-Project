@@ -7,10 +7,11 @@ using System.ComponentModel;
 
 namespace TGG_Model
 {
+    //all collections in the main mongo db that will be accessed
     public enum TGGCollections
     {
         Employees,
-        SDEmployees,
+        ValidationCodes,
         Tickets
     }
 }
