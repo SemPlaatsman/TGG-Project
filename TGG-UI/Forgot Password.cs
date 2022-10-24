@@ -25,6 +25,7 @@ namespace TGG_UI
         public TGG_ResetPasswordStatus StatusPassword 
         { set 
             {
+                //hide and show so user cannot tab to other panel and press other buttons
                 if (value == TGG_ResetPasswordStatus.CodeConfirmed)
                 {
                     panelResetPassword.Show();
