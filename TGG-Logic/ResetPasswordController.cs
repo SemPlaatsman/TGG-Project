@@ -86,6 +86,7 @@ namespace TGG_Logic
             {
                 if (CheckForValidPassword())
                 {
+                    employees[0].Password = forgotPasswordForm.Password;
                     resetPasswordService.UpdateEmployeePassword(employees[0]);
                     forgotPasswordForm.StatusPassword = TGG_ResetPasswordStatus.PasswordChanged;
                     forgotPasswordForm.InstructionsOrErrorLabel = "successfully changed password. You can now close this and return to the login screen.";
