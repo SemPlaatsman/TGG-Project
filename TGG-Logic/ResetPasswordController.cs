@@ -19,7 +19,6 @@ namespace TGG_Logic
         private EmployeeService employeeService;
         private ResetPasswordService resetPasswordService;
         IForgotPassword forgotPasswordForm;
-        private string email;
 
         public ResetPasswordController(IForgotPassword forgotPasswordForm)
         {
@@ -55,7 +54,6 @@ namespace TGG_Logic
                     {
                         SendMail(email);
                     }
-                    this.email = email;
                     forgotPasswordForm.InstructionsOrErrorLabel = $"Verification mail has been sent to address: {email}\n" +
                         "If you cannot find the email, please check your spam or look for spelling mistakes in the " +
                         "entered mail address, otherwise please contact an operator.";
