@@ -91,7 +91,7 @@ namespace TGG_UI
             labelAmountOpenHU.Text = tickets.Count(
                 n => n.PriorityLevel == TGGPriorityLevel.High && n.TGGStatus ==TGGStatus.Open).ToString();   
             labelAmountOpenPendingNU.Text = tickets.Count(
-                n => n.PriorityLevel <= TGGPriorityLevel.High && (n.TGGStatus ==TGGStatus.Open|| n.TGGStatus ==TGGStatus.Pending)).ToString();
+                n => n.PriorityLevel != TGGPriorityLevel.High && (n.TGGStatus ==TGGStatus.Open|| n.TGGStatus ==TGGStatus.Pending)).ToString();
             
         }
 
