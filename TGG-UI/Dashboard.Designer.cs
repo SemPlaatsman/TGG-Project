@@ -101,8 +101,7 @@ namespace TGG_UI
             this.chartHighPriority.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chartHighPriority.Legends.Add(legend1);
-            this.chartHighPriority.Location = new System.Drawing.Point(2, 2);
-            this.chartHighPriority.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chartHighPriority.Location = new System.Drawing.Point(3, 3);
             this.chartHighPriority.Name = "chartHighPriority";
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
@@ -124,7 +123,7 @@ namespace TGG_UI
             series1.Points.Add(dataPoint2);
             series1.Points.Add(dataPoint3);
             this.chartHighPriority.Series.Add(series1);
-            this.chartHighPriority.Size = new System.Drawing.Size(275, 262);
+            this.chartHighPriority.Size = new System.Drawing.Size(367, 323);
             this.chartHighPriority.TabIndex = 0;
             this.chartHighPriority.Text = "chartHighPriority";
             title1.Alignment = System.Drawing.ContentAlignment.TopLeft;
@@ -157,8 +156,7 @@ namespace TGG_UI
             this.chartNormalPriority.ChartAreas.Add(chartArea2);
             legend2.Name = "Legend1";
             this.chartNormalPriority.Legends.Add(legend2);
-            this.chartNormalPriority.Location = new System.Drawing.Point(281, 2);
-            this.chartNormalPriority.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chartNormalPriority.Location = new System.Drawing.Point(376, 3);
             this.chartNormalPriority.Name = "chartNormalPriority";
             series2.ChartArea = "ChartArea1";
             series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
@@ -179,7 +177,7 @@ namespace TGG_UI
             series2.Points.Add(dataPoint5);
             series2.Points.Add(dataPoint6);
             this.chartNormalPriority.Series.Add(series2);
-            this.chartNormalPriority.Size = new System.Drawing.Size(275, 262);
+            this.chartNormalPriority.Size = new System.Drawing.Size(367, 323);
             this.chartNormalPriority.TabIndex = 1;
             this.chartNormalPriority.Text = "chartNormalPriority";
             title2.Alignment = System.Drawing.ContentAlignment.TopLeft;
@@ -200,8 +198,7 @@ namespace TGG_UI
             this.chartLowPriority.ChartAreas.Add(chartArea3);
             legend3.Name = "Legend1";
             this.chartLowPriority.Legends.Add(legend3);
-            this.chartLowPriority.Location = new System.Drawing.Point(560, 2);
-            this.chartLowPriority.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chartLowPriority.Location = new System.Drawing.Point(749, 3);
             this.chartLowPriority.Name = "chartLowPriority";
             series3.ChartArea = "ChartArea1";
             series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
@@ -222,7 +219,7 @@ namespace TGG_UI
             series3.Points.Add(dataPoint8);
             series3.Points.Add(dataPoint9);
             this.chartLowPriority.Series.Add(series3);
-            this.chartLowPriority.Size = new System.Drawing.Size(273, 262);
+            this.chartLowPriority.Size = new System.Drawing.Size(364, 323);
             this.chartLowPriority.TabIndex = 2;
             this.chartLowPriority.Text = "chartLowPriority";
             title3.Alignment = System.Drawing.ContentAlignment.TopLeft;
@@ -268,7 +265,7 @@ namespace TGG_UI
             this.labelAmountOverdue.ForeColor = System.Drawing.Color.White;
             this.labelAmountOverdue.Location = new System.Drawing.Point(66, 52);
             this.labelAmountOverdue.Name = "labelAmountOverdue";
-            this.labelAmountOverdue.Size = new System.Drawing.Size(18, 18);
+            this.labelAmountOverdue.Size = new System.Drawing.Size(22, 23);
             this.labelAmountOverdue.TabIndex = 5;
             this.labelAmountOverdue.Text = "0";
             // 
@@ -291,7 +288,7 @@ namespace TGG_UI
             this.labelTitleOverdue.ForeColor = System.Drawing.Color.White;
             this.labelTitleOverdue.Location = new System.Drawing.Point(67, 19);
             this.labelTitleOverdue.Name = "labelTitleOverdue";
-            this.labelTitleOverdue.Size = new System.Drawing.Size(109, 15);
+            this.labelTitleOverdue.Size = new System.Drawing.Size(139, 19);
             this.labelTitleOverdue.TabIndex = 3;
             this.labelTitleOverdue.Text = "Overdue Tickets:";
             // 
@@ -314,7 +311,7 @@ namespace TGG_UI
             this.labelTitleHighUrg.ForeColor = System.Drawing.Color.White;
             this.labelTitleHighUrg.Location = new System.Drawing.Point(73, 16);
             this.labelTitleHighUrg.Name = "labelTitleHighUrg";
-            this.labelTitleHighUrg.Size = new System.Drawing.Size(138, 30);
+            this.labelTitleHighUrg.Size = new System.Drawing.Size(175, 38);
             this.labelTitleHighUrg.TabIndex = 2;
             this.labelTitleHighUrg.Text = "Pending High Priority \r\nTickets:";
             // 
@@ -336,7 +333,7 @@ namespace TGG_UI
             this.labelAmountPendingHU.ForeColor = System.Drawing.Color.White;
             this.labelAmountPendingHU.Location = new System.Drawing.Point(72, 52);
             this.labelAmountPendingHU.Name = "labelAmountPendingHU";
-            this.labelAmountPendingHU.Size = new System.Drawing.Size(18, 18);
+            this.labelAmountPendingHU.Size = new System.Drawing.Size(22, 23);
             this.labelAmountPendingHU.TabIndex = 3;
             this.labelAmountPendingHU.Text = "0";
             // 
@@ -358,7 +355,7 @@ namespace TGG_UI
             this.labelAmountOpenHU.ForeColor = System.Drawing.Color.White;
             this.labelAmountOpenHU.Location = new System.Drawing.Point(80, 52);
             this.labelAmountOpenHU.Name = "labelAmountOpenHU";
-            this.labelAmountOpenHU.Size = new System.Drawing.Size(18, 18);
+            this.labelAmountOpenHU.Size = new System.Drawing.Size(22, 23);
             this.labelAmountOpenHU.TabIndex = 5;
             this.labelAmountOpenHU.Text = "0";
             // 
@@ -381,7 +378,7 @@ namespace TGG_UI
             this.labelTitleOpenHU.ForeColor = System.Drawing.Color.White;
             this.labelTitleOpenHU.Location = new System.Drawing.Point(81, 16);
             this.labelTitleOpenHU.Name = "labelTitleOpenHU";
-            this.labelTitleOpenHU.Size = new System.Drawing.Size(153, 14);
+            this.labelTitleOpenHU.Size = new System.Drawing.Size(194, 16);
             this.labelTitleOpenHU.TabIndex = 3;
             this.labelTitleOpenHU.Text = "Open High Priority Tickets:";
             // 
@@ -393,7 +390,7 @@ namespace TGG_UI
             this.panelOpenPendingNU.Location = new System.Drawing.Point(839, 0);
             this.panelOpenPendingNU.Margin = new System.Windows.Forms.Padding(0);
             this.panelOpenPendingNU.Name = "panelOpenPendingNU";
-            this.panelOpenPendingNU.Size = new System.Drawing.Size(217, 77);
+            this.panelOpenPendingNU.Size = new System.Drawing.Size(289, 95);
             this.panelOpenPendingNU.TabIndex = 1;
             // 
             // labelAmountOpenPendingNU
@@ -403,7 +400,7 @@ namespace TGG_UI
             this.labelAmountOpenPendingNU.ForeColor = System.Drawing.Color.White;
             this.labelAmountOpenPendingNU.Location = new System.Drawing.Point(76, 52);
             this.labelAmountOpenPendingNU.Name = "labelAmountOpenPendingNU";
-            this.labelAmountOpenPendingNU.Size = new System.Drawing.Size(18, 18);
+            this.labelAmountOpenPendingNU.Size = new System.Drawing.Size(22, 23);
             this.labelAmountOpenPendingNU.TabIndex = 6;
             this.labelAmountOpenPendingNU.Text = "0";
             // 
@@ -426,7 +423,7 @@ namespace TGG_UI
             this.labelTitleOpenPendingNU.ForeColor = System.Drawing.Color.White;
             this.labelTitleOpenPendingNU.Location = new System.Drawing.Point(77, 18);
             this.labelTitleOpenPendingNU.Name = "labelTitleOpenPendingNU";
-            this.labelTitleOpenPendingNU.Size = new System.Drawing.Size(147, 28);
+            this.labelTitleOpenPendingNU.Size = new System.Drawing.Size(188, 32);
             this.labelTitleOpenPendingNU.TabIndex = 4;
             this.labelTitleOpenPendingNU.Text = "Open or Pending Normal/ \r\nLow Priority Tickets:";
             // 
@@ -436,7 +433,7 @@ namespace TGG_UI
             this.labelTitleChartSummary.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTitleChartSummary.Location = new System.Drawing.Point(12, 285);
             this.labelTitleChartSummary.Name = "labelTitleChartSummary";
-            this.labelTitleChartSummary.Size = new System.Drawing.Size(254, 37);
+            this.labelTitleChartSummary.Size = new System.Drawing.Size(316, 46);
             this.labelTitleChartSummary.TabIndex = 7;
             this.labelTitleChartSummary.Text = "Chart Summary";
             // 
@@ -540,17 +537,16 @@ namespace TGG_UI
             // 
             // Dashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(862, 570);
+            this.ClientSize = new System.Drawing.Size(1149, 701);
             this.Controls.Add(this.navigationBarPanel);
             this.Controls.Add(this.buttonShowAllTickets);
             this.Controls.Add(this.labelTitleChartSummary);
             this.Controls.Add(this.flowLayoutPanelTopBar);
             this.Controls.Add(this.flowLayoutPanelCharts);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Dashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard";
