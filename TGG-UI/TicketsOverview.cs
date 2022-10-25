@@ -193,7 +193,7 @@ namespace TGG_UI
             }
             else
             {
-                MessageBox.Show("aa");
+                MessageBox.Show("Nothing has been selected");
             }
         }
 

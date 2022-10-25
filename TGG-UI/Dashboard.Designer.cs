@@ -296,9 +296,9 @@ namespace TGG_UI
             this.labelTitleOverdue.Location = new System.Drawing.Point(50, 15);
             this.labelTitleOverdue.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelTitleOverdue.Name = "labelTitleOverdue";
-            this.labelTitleOverdue.Size = new System.Drawing.Size(109, 15);
+            this.labelTitleOverdue.Size = new System.Drawing.Size(189, 15);
             this.labelTitleOverdue.TabIndex = 3;
-            this.labelTitleOverdue.Text = "Overdue Tickets:";
+            this.labelTitleOverdue.Text = "Overdue High Priority Tickets:";
             // 
             // panelPendingHighUrg
             // 
@@ -387,12 +387,12 @@ namespace TGG_UI
             // 
             this.labelTitleOpenHU.AutoSize = true;
             this.labelTitleOpenHU.BackColor = System.Drawing.Color.Transparent;
-            this.labelTitleOpenHU.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitleOpenHU.Font = new System.Drawing.Font("Arial Black", 7.8F, System.Drawing.FontStyle.Bold);
             this.labelTitleOpenHU.ForeColor = System.Drawing.Color.White;
             this.labelTitleOpenHU.Location = new System.Drawing.Point(61, 13);
             this.labelTitleOpenHU.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelTitleOpenHU.Name = "labelTitleOpenHU";
-            this.labelTitleOpenHU.Size = new System.Drawing.Size(153, 14);
+            this.labelTitleOpenHU.Size = new System.Drawing.Size(170, 15);
             this.labelTitleOpenHU.TabIndex = 3;
             this.labelTitleOpenHU.Text = "Open High Priority Tickets:";
             // 
@@ -435,12 +435,12 @@ namespace TGG_UI
             // 
             this.labelTitleOpenPendingNU.AutoSize = true;
             this.labelTitleOpenPendingNU.BackColor = System.Drawing.Color.Transparent;
-            this.labelTitleOpenPendingNU.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitleOpenPendingNU.Font = new System.Drawing.Font("Arial Black", 7.8F, System.Drawing.FontStyle.Bold);
             this.labelTitleOpenPendingNU.ForeColor = System.Drawing.Color.White;
-            this.labelTitleOpenPendingNU.Location = new System.Drawing.Point(58, 15);
+            this.labelTitleOpenPendingNU.Location = new System.Drawing.Point(57, 13);
             this.labelTitleOpenPendingNU.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelTitleOpenPendingNU.Name = "labelTitleOpenPendingNU";
-            this.labelTitleOpenPendingNU.Size = new System.Drawing.Size(147, 28);
+            this.labelTitleOpenPendingNU.Size = new System.Drawing.Size(159, 30);
             this.labelTitleOpenPendingNU.TabIndex = 4;
             this.labelTitleOpenPendingNU.Text = "Open or Pending Normal/ \r\nLow Priority Tickets:";
             // 
@@ -515,7 +515,7 @@ namespace TGG_UI
             this.employeeOverviewButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.employeeOverviewButton.FlatAppearance.BorderSize = 0;
             this.employeeOverviewButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.employeeOverviewButton.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.employeeOverviewButton.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.employeeOverviewButton.ForeColor = System.Drawing.Color.White;
             this.employeeOverviewButton.Location = new System.Drawing.Point(583, 5);
             this.employeeOverviewButton.Margin = new System.Windows.Forms.Padding(2);
