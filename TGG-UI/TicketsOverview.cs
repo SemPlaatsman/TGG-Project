@@ -71,6 +71,7 @@ namespace TGG_UI
         private void buttonSortPriorityLevel_Click(object sender, EventArgs e)
         {
             timer.Stop();
+            //order tickets by PriorityLevel
             List<Ticket> sortPriorityLevel = tickets.OrderBy(p => p.PriorityLevel).ToList();
             tickets = sortPriorityLevel;
             ItemsToGridview(tickets);
@@ -80,8 +81,10 @@ namespace TGG_UI
         {
             try
             {
+                //gridview will begiven the tickets data from MongoDB
                 gridViewTickets.DataSource = tickets;
 
+                //formatting the specified columns below
                 this.gridViewTickets.Columns["TimeAdded"].DefaultCellStyle.Format = "dd/MM/yyyy HH:mm:ss";
                 this.gridViewTickets.Columns["TimeDeadline"].DefaultCellStyle.Format = "dd/MM/yyyy HH:mm:ss";
                 this.gridViewTickets.Columns["MongoId"].Visible = false;
@@ -94,13 +97,16 @@ namespace TGG_UI
 
         private void LoadTickets()
         {
+            //give tickets the allTickets method from the DAL layer
             tickets = ticketService.GetAllTickets();
         }
 
         private void DeleteTicket()
         {
+            //get the current clicked item
             Ticket selectedItem = (Ticket)gridViewTickets.SelectedRows[0].DataBoundItem;
 
+            //allow messagebox to show with the option to cancel
             MessageBoxButtons buttons = MessageBoxButtons.OKCancel;
             string titleMessage = "Delete ticket";
             string message = $"Are you certain you wish to delete this ticket: {selectedItem.Title}?";
@@ -109,6 +115,7 @@ namespace TGG_UI
 
             if (answer == DialogResult.OK)
             {
+                //get selected item and delete from db
                 ticketService.DeleteTicketByElement(selectedItem.ToBsonDocument().GetElement("_id"));
                 MessageBox.Show($"{selectedItem.Title} has succesfully been deleted");
             }
@@ -120,6 +127,7 @@ namespace TGG_UI
             {
                 buttonDeleteTicket.Enabled = false;
                 btnArchive.Enabled = false;
+                buttonUpdateTicket.Enabled = false;
             }
         }
 
@@ -169,6 +177,8 @@ namespace TGG_UI
 
         private void logOutButton_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            new Login().ShowDialog();
             this.Close();
         }
 
@@ -184,6 +194,43 @@ namespace TGG_UI
             else
             {
                 MessageBox.Show("aa");
+            }
+        }
+
+        private void buttonFilter_Click(object sender, EventArgs e)
+        {
+            string filterText = textBoxFilter.Text;
+
+            if (filterText.Length > 0)
+            {
+                string[] subString;
+                List<Ticket> foundTickets = new List<Ticket>();
+
+                foreach (Ticket t in tickets)
+                {
+                    subString = t.Description.Split(' ');
+
+                    foreach (string s in subString)
+                    {
+                        if (s == filterText)
+                        {
+                            foundTickets.Add(t);
+                            break;
+                        }
+                    }
+
+                    if (t.Title == filterText && foundTickets.Contains(t) == false)
+                    {
+                        foundTickets.Add(t);
+                    }
+                }
+
+                gridViewTickets.DataSource = foundTickets;
+            }
+
+            else
+            {
+                gridViewTickets.DataSource = tickets;
             }
         }
     }
