@@ -119,6 +119,8 @@ namespace TGG_UI
         //log out
         private void logOutButton_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            new Login().ShowDialog();
             this.Close();
         }
     }
