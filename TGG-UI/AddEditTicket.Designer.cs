@@ -260,6 +260,7 @@ namespace TGG_UI
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddTickets";
             this.Load += new System.EventHandler(this.AddTickets_Load);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.AddEditTicket_Paint);
             this.ResumeLayout(false);
             this.PerformLayout();
 

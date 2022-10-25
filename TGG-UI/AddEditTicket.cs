@@ -152,5 +152,11 @@ namespace TGG_UI
             ticket.PriorityLevel = (TGGPriorityLevel)Enum.Parse(typeof(TGGPriorityLevel), comboBoxPrioLevel.SelectedIndex.ToString());
             ticket.TGGStatus = (TGGStatus)Enum.Parse(typeof(TGGStatus), comboBoxPrioLevel.SelectedIndex.ToString());
         }
+
+        private void AddEditTicket_Paint(object sender, PaintEventArgs e)
+        {
+            Graphics g = e.Graphics;
+            g.DrawRectangle(Pens.White, new Rectangle(0, 0, Width - 1, Height - 1));
+        }
     }
 }
