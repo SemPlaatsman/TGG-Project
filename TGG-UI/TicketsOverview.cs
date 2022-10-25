@@ -177,6 +177,8 @@ namespace TGG_UI
 
         private void logOutButton_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            new Login().ShowDialog();
             this.Close();
         }
 
@@ -192,6 +194,43 @@ namespace TGG_UI
             else
             {
                 MessageBox.Show("aa");
+            }
+        }
+
+        private void buttonFilter_Click(object sender, EventArgs e)
+        {
+            string filterText = textBoxFilter.Text;
+
+            if (filterText.Length > 0)
+            {
+                string[] subString;
+                List<Ticket> foundTickets = new List<Ticket>();
+
+                foreach (Ticket t in tickets)
+                {
+                    subString = t.Description.Split(' ');
+
+                    foreach (string s in subString)
+                    {
+                        if (s == filterText)
+                        {
+                            foundTickets.Add(t);
+                            break;
+                        }
+                    }
+
+                    if (t.Title == filterText && foundTickets.Contains(t) == false)
+                    {
+                        foundTickets.Add(t);
+                    }
+                }
+
+                gridViewTickets.DataSource = foundTickets;
+            }
+
+            else
+            {
+                gridViewTickets.DataSource = tickets;
             }
         }
     }
