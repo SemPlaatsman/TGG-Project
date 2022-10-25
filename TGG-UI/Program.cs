@@ -19,7 +19,7 @@ namespace TGG_UI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Employees(new Employee("SEM@MILF.NL", "-", "-", true)));
+            Application.Run(new Login());
         }
     }
 }

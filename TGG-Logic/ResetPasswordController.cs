@@ -118,9 +118,7 @@ namespace TGG_Logic
             catch
             {
                 throw new Exception("Email address is invalid!\nPlease check for spelling mistakes and make sure you hava an @ symbol.");
-            } 
-                
+            }
         }
     }
 }
- 
