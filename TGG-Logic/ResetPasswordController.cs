@@ -48,7 +48,7 @@ namespace TGG_Logic
                 try
                 {
                     forgotPasswordForm.InstructionsOrErrorLabel = string.Empty;
-                    employees = employeeService.GetEmployeesByElement(new Employee(email).ToBsonDocument().GetElement("email"));
+                    employees = employeeService.GetEmployeesByElement(new Employee(email.ToLower()).ToBsonDocument().GetElement("email"));
                     CheckForValidEmail(email);
                     if (employees.Count != 0)
                     {
