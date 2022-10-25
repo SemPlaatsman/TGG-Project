@@ -78,7 +78,7 @@ namespace TGG_UI
                 ValueToTickets(ticket);
 
                 ticketService.AddTicket(ticket);
-                MessageBox.Show("You're ticket has been added.");
+                MessageBox.Show("The ticket has been successfully added");
             }
             catch (Exception)
             {
