@@ -144,9 +144,10 @@ namespace TGG_UI
             this.flowLayoutPanelCharts.Controls.Add(this.chartHighPriority);
             this.flowLayoutPanelCharts.Controls.Add(this.chartNormalPriority);
             this.flowLayoutPanelCharts.Controls.Add(this.chartLowPriority);
-            this.flowLayoutPanelCharts.Location = new System.Drawing.Point(13, 348);
+            this.flowLayoutPanelCharts.Location = new System.Drawing.Point(10, 283);
+            this.flowLayoutPanelCharts.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.flowLayoutPanelCharts.Name = "flowLayoutPanelCharts";
-            this.flowLayoutPanelCharts.Size = new System.Drawing.Size(1128, 326);
+            this.flowLayoutPanelCharts.Size = new System.Drawing.Size(846, 265);
             this.flowLayoutPanelCharts.TabIndex = 6;
             // 
             // chartNormalPriority
@@ -242,10 +243,10 @@ namespace TGG_UI
             this.flowLayoutPanelTopBar.Controls.Add(this.panelPendingHighUrg);
             this.flowLayoutPanelTopBar.Controls.Add(this.panelOpenHighUrg);
             this.flowLayoutPanelTopBar.Controls.Add(this.panelOpenPendingNU);
-            this.flowLayoutPanelTopBar.Location = new System.Drawing.Point(12, 112);
+            this.flowLayoutPanelTopBar.Location = new System.Drawing.Point(9, 91);
             this.flowLayoutPanelTopBar.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanelTopBar.Name = "flowLayoutPanelTopBar";
-            this.flowLayoutPanelTopBar.Size = new System.Drawing.Size(1128, 95);
+            this.flowLayoutPanelTopBar.Size = new System.Drawing.Size(846, 77);
             this.flowLayoutPanelTopBar.TabIndex = 5;
             // 
             // panelOpenPendingLowUrg
@@ -256,7 +257,7 @@ namespace TGG_UI
             this.panelOpenPendingLowUrg.Location = new System.Drawing.Point(0, 0);
             this.panelOpenPendingLowUrg.Margin = new System.Windows.Forms.Padding(0);
             this.panelOpenPendingLowUrg.Name = "panelOpenPendingLowUrg";
-            this.panelOpenPendingLowUrg.Size = new System.Drawing.Size(277, 95);
+            this.panelOpenPendingLowUrg.Size = new System.Drawing.Size(208, 77);
             this.panelOpenPendingLowUrg.TabIndex = 3;
             // 
             // labelAmountOverdue
@@ -264,7 +265,8 @@ namespace TGG_UI
             this.labelAmountOverdue.AutoSize = true;
             this.labelAmountOverdue.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelAmountOverdue.ForeColor = System.Drawing.Color.White;
-            this.labelAmountOverdue.Location = new System.Drawing.Point(66, 52);
+            this.labelAmountOverdue.Location = new System.Drawing.Point(50, 42);
+            this.labelAmountOverdue.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelAmountOverdue.Name = "labelAmountOverdue";
             this.labelAmountOverdue.Size = new System.Drawing.Size(18, 18);
             this.labelAmountOverdue.TabIndex = 5;
@@ -274,9 +276,10 @@ namespace TGG_UI
             // 
             this.pictureBoxOverdue.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxOverdue.Image = global::TGG_UI.Properties.Resources.noun_deadline_4657504;
-            this.pictureBoxOverdue.Location = new System.Drawing.Point(6, 18);
+            this.pictureBoxOverdue.Location = new System.Drawing.Point(4, 15);
+            this.pictureBoxOverdue.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBoxOverdue.Name = "pictureBoxOverdue";
-            this.pictureBoxOverdue.Size = new System.Drawing.Size(60, 57);
+            this.pictureBoxOverdue.Size = new System.Drawing.Size(45, 46);
             this.pictureBoxOverdue.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxOverdue.TabIndex = 4;
             this.pictureBoxOverdue.TabStop = false;
@@ -287,7 +290,8 @@ namespace TGG_UI
             this.labelTitleOverdue.BackColor = System.Drawing.Color.Transparent;
             this.labelTitleOverdue.Font = new System.Drawing.Font("Arial Black", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTitleOverdue.ForeColor = System.Drawing.Color.White;
-            this.labelTitleOverdue.Location = new System.Drawing.Point(67, 19);
+            this.labelTitleOverdue.Location = new System.Drawing.Point(50, 15);
+            this.labelTitleOverdue.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelTitleOverdue.Name = "labelTitleOverdue";
             this.labelTitleOverdue.Size = new System.Drawing.Size(109, 15);
             this.labelTitleOverdue.TabIndex = 3;
@@ -298,10 +302,10 @@ namespace TGG_UI
             this.panelPendingHighUrg.Controls.Add(this.labelTitleHighUrg);
             this.panelPendingHighUrg.Controls.Add(this.pictureBoxHighUrg);
             this.panelPendingHighUrg.Controls.Add(this.labelAmountPendingHU);
-            this.panelPendingHighUrg.Location = new System.Drawing.Point(277, 0);
+            this.panelPendingHighUrg.Location = new System.Drawing.Point(208, 0);
             this.panelPendingHighUrg.Margin = new System.Windows.Forms.Padding(0);
             this.panelPendingHighUrg.Name = "panelPendingHighUrg";
-            this.panelPendingHighUrg.Size = new System.Drawing.Size(281, 95);
+            this.panelPendingHighUrg.Size = new System.Drawing.Size(211, 77);
             this.panelPendingHighUrg.TabIndex = 2;
             // 
             // labelTitleHighUrg
@@ -310,7 +314,8 @@ namespace TGG_UI
             this.labelTitleHighUrg.BackColor = System.Drawing.Color.Transparent;
             this.labelTitleHighUrg.Font = new System.Drawing.Font("Arial Black", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTitleHighUrg.ForeColor = System.Drawing.Color.White;
-            this.labelTitleHighUrg.Location = new System.Drawing.Point(73, 16);
+            this.labelTitleHighUrg.Location = new System.Drawing.Point(55, 13);
+            this.labelTitleHighUrg.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelTitleHighUrg.Name = "labelTitleHighUrg";
             this.labelTitleHighUrg.Size = new System.Drawing.Size(138, 30);
             this.labelTitleHighUrg.TabIndex = 2;
@@ -320,9 +325,10 @@ namespace TGG_UI
             // 
             this.pictureBoxHighUrg.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxHighUrg.Image = global::TGG_UI.Properties.Resources.noun_urgent_2078688;
-            this.pictureBoxHighUrg.Location = new System.Drawing.Point(12, 18);
+            this.pictureBoxHighUrg.Location = new System.Drawing.Point(9, 15);
+            this.pictureBoxHighUrg.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBoxHighUrg.Name = "pictureBoxHighUrg";
-            this.pictureBoxHighUrg.Size = new System.Drawing.Size(60, 57);
+            this.pictureBoxHighUrg.Size = new System.Drawing.Size(45, 46);
             this.pictureBoxHighUrg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxHighUrg.TabIndex = 1;
             this.pictureBoxHighUrg.TabStop = false;
@@ -332,7 +338,8 @@ namespace TGG_UI
             this.labelAmountPendingHU.AutoSize = true;
             this.labelAmountPendingHU.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelAmountPendingHU.ForeColor = System.Drawing.Color.White;
-            this.labelAmountPendingHU.Location = new System.Drawing.Point(72, 52);
+            this.labelAmountPendingHU.Location = new System.Drawing.Point(54, 42);
+            this.labelAmountPendingHU.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelAmountPendingHU.Name = "labelAmountPendingHU";
             this.labelAmountPendingHU.Size = new System.Drawing.Size(18, 18);
             this.labelAmountPendingHU.TabIndex = 3;
@@ -343,10 +350,10 @@ namespace TGG_UI
             this.panelOpenHighUrg.Controls.Add(this.labelAmountOpenHU);
             this.panelOpenHighUrg.Controls.Add(this.pictureBoxOpenHighUrg);
             this.panelOpenHighUrg.Controls.Add(this.labelTitleOpenHU);
-            this.panelOpenHighUrg.Location = new System.Drawing.Point(558, 0);
+            this.panelOpenHighUrg.Location = new System.Drawing.Point(419, 0);
             this.panelOpenHighUrg.Margin = new System.Windows.Forms.Padding(0);
             this.panelOpenHighUrg.Name = "panelOpenHighUrg";
-            this.panelOpenHighUrg.Size = new System.Drawing.Size(281, 95);
+            this.panelOpenHighUrg.Size = new System.Drawing.Size(211, 77);
             this.panelOpenHighUrg.TabIndex = 0;
             // 
             // labelAmountOpenHU
@@ -354,7 +361,8 @@ namespace TGG_UI
             this.labelAmountOpenHU.AutoSize = true;
             this.labelAmountOpenHU.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelAmountOpenHU.ForeColor = System.Drawing.Color.White;
-            this.labelAmountOpenHU.Location = new System.Drawing.Point(80, 52);
+            this.labelAmountOpenHU.Location = new System.Drawing.Point(60, 42);
+            this.labelAmountOpenHU.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelAmountOpenHU.Name = "labelAmountOpenHU";
             this.labelAmountOpenHU.Size = new System.Drawing.Size(18, 18);
             this.labelAmountOpenHU.TabIndex = 5;
@@ -364,9 +372,10 @@ namespace TGG_UI
             // 
             this.pictureBoxOpenHighUrg.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxOpenHighUrg.Image = global::TGG_UI.Properties.Resources.noun_urgent_3883376;
-            this.pictureBoxOpenHighUrg.Location = new System.Drawing.Point(14, 18);
+            this.pictureBoxOpenHighUrg.Location = new System.Drawing.Point(10, 15);
+            this.pictureBoxOpenHighUrg.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBoxOpenHighUrg.Name = "pictureBoxOpenHighUrg";
-            this.pictureBoxOpenHighUrg.Size = new System.Drawing.Size(60, 57);
+            this.pictureBoxOpenHighUrg.Size = new System.Drawing.Size(45, 46);
             this.pictureBoxOpenHighUrg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxOpenHighUrg.TabIndex = 4;
             this.pictureBoxOpenHighUrg.TabStop = false;
@@ -377,7 +386,8 @@ namespace TGG_UI
             this.labelTitleOpenHU.BackColor = System.Drawing.Color.Transparent;
             this.labelTitleOpenHU.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTitleOpenHU.ForeColor = System.Drawing.Color.White;
-            this.labelTitleOpenHU.Location = new System.Drawing.Point(81, 16);
+            this.labelTitleOpenHU.Location = new System.Drawing.Point(61, 13);
+            this.labelTitleOpenHU.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelTitleOpenHU.Name = "labelTitleOpenHU";
             this.labelTitleOpenHU.Size = new System.Drawing.Size(153, 14);
             this.labelTitleOpenHU.TabIndex = 3;
@@ -388,7 +398,7 @@ namespace TGG_UI
             this.panelOpenPendingNU.Controls.Add(this.labelAmountOpenPendingNU);
             this.panelOpenPendingNU.Controls.Add(this.pictureBoxNormalPriority);
             this.panelOpenPendingNU.Controls.Add(this.labelTitleOpenPendingNU);
-            this.panelOpenPendingNU.Location = new System.Drawing.Point(839, 0);
+            this.panelOpenPendingNU.Location = new System.Drawing.Point(0, 77);
             this.panelOpenPendingNU.Margin = new System.Windows.Forms.Padding(0);
             this.panelOpenPendingNU.Name = "panelOpenPendingNU";
             this.panelOpenPendingNU.Size = new System.Drawing.Size(276, 95);
@@ -399,7 +409,8 @@ namespace TGG_UI
             this.labelAmountOpenPendingNU.AutoSize = true;
             this.labelAmountOpenPendingNU.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelAmountOpenPendingNU.ForeColor = System.Drawing.Color.White;
-            this.labelAmountOpenPendingNU.Location = new System.Drawing.Point(76, 52);
+            this.labelAmountOpenPendingNU.Location = new System.Drawing.Point(57, 42);
+            this.labelAmountOpenPendingNU.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelAmountOpenPendingNU.Name = "labelAmountOpenPendingNU";
             this.labelAmountOpenPendingNU.Size = new System.Drawing.Size(18, 18);
             this.labelAmountOpenPendingNU.TabIndex = 6;
@@ -409,9 +420,10 @@ namespace TGG_UI
             // 
             this.pictureBoxNormalPriority.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxNormalPriority.Image = global::TGG_UI.Properties.Resources.noun_ticket_3263895;
-            this.pictureBoxNormalPriority.Location = new System.Drawing.Point(16, 18);
+            this.pictureBoxNormalPriority.Location = new System.Drawing.Point(12, 15);
+            this.pictureBoxNormalPriority.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBoxNormalPriority.Name = "pictureBoxNormalPriority";
-            this.pictureBoxNormalPriority.Size = new System.Drawing.Size(60, 57);
+            this.pictureBoxNormalPriority.Size = new System.Drawing.Size(45, 46);
             this.pictureBoxNormalPriority.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxNormalPriority.TabIndex = 5;
             this.pictureBoxNormalPriority.TabStop = false;
@@ -422,7 +434,8 @@ namespace TGG_UI
             this.labelTitleOpenPendingNU.BackColor = System.Drawing.Color.Transparent;
             this.labelTitleOpenPendingNU.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTitleOpenPendingNU.ForeColor = System.Drawing.Color.White;
-            this.labelTitleOpenPendingNU.Location = new System.Drawing.Point(77, 18);
+            this.labelTitleOpenPendingNU.Location = new System.Drawing.Point(58, 15);
+            this.labelTitleOpenPendingNU.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelTitleOpenPendingNU.Name = "labelTitleOpenPendingNU";
             this.labelTitleOpenPendingNU.Size = new System.Drawing.Size(147, 28);
             this.labelTitleOpenPendingNU.TabIndex = 4;
@@ -432,7 +445,8 @@ namespace TGG_UI
             // 
             this.labelTitleChartSummary.AutoSize = true;
             this.labelTitleChartSummary.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTitleChartSummary.Location = new System.Drawing.Point(12, 285);
+            this.labelTitleChartSummary.Location = new System.Drawing.Point(9, 232);
+            this.labelTitleChartSummary.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelTitleChartSummary.Name = "labelTitleChartSummary";
             this.labelTitleChartSummary.Size = new System.Drawing.Size(254, 37);
             this.labelTitleChartSummary.TabIndex = 7;
@@ -447,9 +461,10 @@ namespace TGG_UI
             this.buttonShowAllTickets.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonShowAllTickets.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonShowAllTickets.ForeColor = System.Drawing.Color.White;
-            this.buttonShowAllTickets.Location = new System.Drawing.Point(913, 252);
+            this.buttonShowAllTickets.Location = new System.Drawing.Point(685, 205);
+            this.buttonShowAllTickets.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonShowAllTickets.Name = "buttonShowAllTickets";
-            this.buttonShowAllTickets.Size = new System.Drawing.Size(203, 57);
+            this.buttonShowAllTickets.Size = new System.Drawing.Size(152, 46);
             this.buttonShowAllTickets.TabIndex = 5;
             this.buttonShowAllTickets.Text = "Show All Tickets";
             this.buttonShowAllTickets.UseVisualStyleBackColor = false;
@@ -468,11 +483,12 @@ namespace TGG_UI
             this.navigationBarPanel.Controls.Add(this.employeeOverviewButton, 2, 0);
             this.navigationBarPanel.Controls.Add(this.ticketOverviewButton, 1, 0);
             this.navigationBarPanel.Controls.Add(this.dashBoardButton, 0, 0);
-            this.navigationBarPanel.Location = new System.Drawing.Point(-3, -4);
+            this.navigationBarPanel.Location = new System.Drawing.Point(-2, -3);
+            this.navigationBarPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.navigationBarPanel.Name = "navigationBarPanel";
             this.navigationBarPanel.RowCount = 1;
             this.navigationBarPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.navigationBarPanel.Size = new System.Drawing.Size(1155, 51);
+            this.navigationBarPanel.Size = new System.Drawing.Size(866, 41);
             this.navigationBarPanel.TabIndex = 4;
             // 
             // logOutButton
@@ -482,9 +498,10 @@ namespace TGG_UI
             this.logOutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.logOutButton.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logOutButton.ForeColor = System.Drawing.Color.White;
-            this.logOutButton.Location = new System.Drawing.Point(870, 6);
+            this.logOutButton.Location = new System.Drawing.Point(650, 5);
+            this.logOutButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.logOutButton.Name = "logOutButton";
-            this.logOutButton.Size = new System.Drawing.Size(279, 39);
+            this.logOutButton.Size = new System.Drawing.Size(211, 31);
             this.logOutButton.TabIndex = 4;
             this.logOutButton.Text = "Log out  →";
             this.logOutButton.UseVisualStyleBackColor = true;
@@ -497,9 +514,10 @@ namespace TGG_UI
             this.employeeOverviewButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.employeeOverviewButton.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold);
             this.employeeOverviewButton.ForeColor = System.Drawing.Color.White;
-            this.employeeOverviewButton.Location = new System.Drawing.Point(582, 6);
+            this.employeeOverviewButton.Location = new System.Drawing.Point(435, 5);
+            this.employeeOverviewButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.employeeOverviewButton.Name = "employeeOverviewButton";
-            this.employeeOverviewButton.Size = new System.Drawing.Size(279, 39);
+            this.employeeOverviewButton.Size = new System.Drawing.Size(208, 31);
             this.employeeOverviewButton.TabIndex = 3;
             this.employeeOverviewButton.Text = "Employee Managment";
             this.employeeOverviewButton.UseVisualStyleBackColor = true;
@@ -512,9 +530,10 @@ namespace TGG_UI
             this.ticketOverviewButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ticketOverviewButton.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ticketOverviewButton.ForeColor = System.Drawing.Color.White;
-            this.ticketOverviewButton.Location = new System.Drawing.Point(294, 6);
+            this.ticketOverviewButton.Location = new System.Drawing.Point(220, 5);
+            this.ticketOverviewButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ticketOverviewButton.Name = "ticketOverviewButton";
-            this.ticketOverviewButton.Size = new System.Drawing.Size(279, 39);
+            this.ticketOverviewButton.Size = new System.Drawing.Size(208, 31);
             this.ticketOverviewButton.TabIndex = 2;
             this.ticketOverviewButton.Text = "Ticket Management";
             this.ticketOverviewButton.UseVisualStyleBackColor = true;
@@ -529,9 +548,10 @@ namespace TGG_UI
             this.dashBoardButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.dashBoardButton.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dashBoardButton.ForeColor = System.Drawing.Color.White;
-            this.dashBoardButton.Location = new System.Drawing.Point(6, 6);
+            this.dashBoardButton.Location = new System.Drawing.Point(5, 5);
+            this.dashBoardButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dashBoardButton.Name = "dashBoardButton";
-            this.dashBoardButton.Size = new System.Drawing.Size(279, 39);
+            this.dashBoardButton.Size = new System.Drawing.Size(208, 31);
             this.dashBoardButton.TabIndex = 1;
             this.dashBoardButton.Text = "Dashboard";
             this.dashBoardButton.UseVisualStyleBackColor = false;
