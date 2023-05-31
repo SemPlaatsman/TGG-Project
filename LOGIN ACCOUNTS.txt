@@ -1,0 +1,7 @@
+service desk account:
+username : admin@admin.com
+password : admin123
+
+Normal Employee:
+username : employee@employee.com
+password employee123
