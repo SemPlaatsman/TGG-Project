@@ -14,3 +14,17 @@ This repository contains the source code for a NoSQL ticketing application devel
 - Sorting a ticket list based on priority level
 - Transfer a ticket to another person
 - Archiving the entire database
+
+## My contributions
+In this project I assisted my team members with any problems they had, particularly with issues like the connection to the database and BSON serialization, making it easier for their objects to be sent to the database.
+- BaseDAO. A Base DAO used by every DAO to provide a simple and OOP way to reliably connect to the MongoDB collections. It provides all CRUD operations with optional sort definitions for reading operations. An archive operation is also added to add the current state of a collection to an archive database.
+- EmployeeDAO. A DAO that inherits from the BaseDAO to provide CRUD operations for the employees.
+- EmployeeService. A service layer to connect the EmployeeDAO with the different controllers.
+- Employee. BSON serializable model which is used in the MongoDB Employees collection.
+- TGG-MongoModel. Base model for objects that are used in the MongoDB collections.
+- TGGCollections. An enum used to list the different MongoDB collections.
+- TGGEncryption. Used to hash password with salt.
+- TGGErrorLogger. Used to log all unexpected errors to errorLogs.txt
+- TGGException. Mostly used for expected exceptions which require no logging.
+- AddEmployee Form. A WinForm used to easily add an employee by providing all the fields needed for the employee.
+- Employees Form. A WinForm to show all the current employees.
